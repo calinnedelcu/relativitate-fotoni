@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 2 · Spațiu-timp și intervalul — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Evenimentul ca punct în spațiu-timp, intervalul Δs ca „distanța” pe care o găsesc toți observatorii la fel, și diagrama Minkowski, explicate vizual.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-chapter="2">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul 2</span></div>
+  <h1>Spațiu-timp și intervalul</h1>
+  <p class="hero__idea">Un observator spune „s-a întâmplat acolo”, altul „s-a întâmplat dincolo”; unul „acum”, altul „puțin mai târziu”. Dacă nici <strong>unde</strong>, nici <strong>când</strong> nu sunt la fel pentru toți, ce mai rămâne? Răspunsul: o „distanță” în <strong>spațiu-timp</strong> — <strong>intervalul Δ<var>s</var></strong> — pe care toți observatorii o găsesc identică.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici ce este un <span class="term">eveniment</span> și de ce același eveniment primește coordonate diferite în S.R.I. diferite;</li>
+    <li>să enunți intervalul spațio-temporal și să spui de ce este un <span class="term">invariant relativist</span>, deși Δ<var>x</var> și Δ<var>t</var>, separat, nu sunt;</li>
+    <li>să eviți cele trei capcane: Δ<var>s</var> nu e distanța în spațiu, timpul nu e „încă o lungime”, iar (Δ<var>s</var>)² poate fi negativ.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 15 min</span><span class="pill">4 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="eveniment">
+  <h2>Un eveniment: unde și când</h2>
+  <p>La finalul capitolului 1 am rămas cu o veste proastă: doi observatori în mișcare relativă nu se pun de acord nici asupra distanțelor, nici asupra duratelor. Vestea bună: <strong>ceva tot rămâne la fel</strong> pentru toți. Ca să-l găsim, ne trebuie întâi un limbaj precis.</p>
+  <p>Piesa de bază a acestui limbaj este <strong>evenimentul</strong>: ceva ce se întâmplă <em>într-un loc anume și la un moment anume</em> — o scânteie, o ciocnire, un ceas care bate ora zero. Ca să-l descrii îți trebuie <strong>patru numere</strong>: trei pentru „unde” și unul pentru „când”.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ideea-cheie</span>
+    <p>Un <span class="term">eveniment</span> este un <strong>punct în spațiu-timp</strong>, descris prin patru numere: <var>E</var>(<var>x</var>, <var>y</var>, <var>z</var>, <var>t</var>). Cele trei dimensiuni ale spațiului, împreună cu timpul, formează <span class="term">spațiu-timp</span>ul cu patru dimensiuni (4D).</p>
+  </aside>
+
+  <p>Cum desenezi patru dimensiuni? Desenezi spațiul ca un plan (sau, mai simplu, ca o dreaptă) și <strong>suprapui mai multe asemenea plane</strong>, câte unul pentru fiecare moment: sunt „straturile de timp”. Un eveniment este un punct pe unul dintre straturi.</p>
+  <p>Mai ai nevoie de două nume. <strong>S</strong> este sistemul „fix” (peronul); <strong>S′</strong> este sistemul „mobil” (trenul), care se mișcă cu viteza <var>v</var> față de S, pe axa <var>x</var>. Amândouă sunt <span class="term" data-def="Sistem de referință inerțial: un sistem în care un corp liber păstrează viteza constantă. Orice sistem în mișcare rectilinie uniformă față de un S.R.I. este tot S.R.I.">S.R.I.</span></p>
+  <p>Evenimentul în sine nu depinde de nimeni — scânteia a avut loc și gata. Cele patru numere sunt doar <strong>etichetele</strong> lui într-un anumit sistem de referință. Alt S.R.I. pune <em>alte etichete pe același eveniment</em>, ca două adrese date aceleiași case: „la 200 m de gară” sau „la 3 km de primărie”.</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">O scânteie apare într-un punct al peronului. Observatorul S (de pe peron) și observatorul S′ (dintr-un tren care trece uniform) notează fiecare, în sistemul lui, unde și când s-a produs scânteia. Ce afirmație este corectă?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Scânteia are loc doar pentru unul dintre ei; celălalt vede altceva.</li>
+      <li data-k="b">Evenimentul este același pentru amândoi, dar îi atribuie coordonate (<var>x</var>, <var>t</var>) diferite.</li>
+      <li data-k="c">Dacă numerele diferă, înseamnă că ei au văzut două scântei diferite.</li>
+      <li data-k="d">Numerele sunt aceleași; doar le interpretează diferit.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Același eveniment, etichete diferite.</strong> Scânteia a avut loc — pentru toți. Ce diferă este <em>numerotarea</em>: S și S′ au origini, axe și mișcări diferite, deci pun alte numere (<var>x</var>, <var>t</var>) pe același eveniment.</p>
+      <p>Chiar și în fizica clasică poziția diferă (trenul se mișcă). Noutatea relativității: diferă și <strong>momentul</strong>.</p>
+    </div>
+  </div>
+
+  <p>Dacă etichetele se schimbă de la un observator la altul, ne trebuie o mărime care să <strong>nu depindă de ele</strong>. Pe o hartă obișnuită ai deja una.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="distanta">
+  <h2>Pe hartă: distanța nu depinde de axe</h2>
+  <p>Doi prieteni desenează fiecare un sistem de axe pe aceeași hartă, dar al doilea își <em>rotește</em> foaia. Orașele <strong>A</strong> și <strong>B</strong> nu se mută — se schimbă doar axele.</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Rotești axele cu 30°, fără să muți orașele. Ce se schimbă?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Și deplasările pe axe (Δ<var>x</var>, Δ<var>y</var>), și distanța AB.</li>
+      <li data-k="b">Deplasările pe axe (Δ<var>x</var>, Δ<var>y</var>) se schimbă; distanța AB rămâne la fel.</li>
+      <li data-k="c">Nimic: orașele n-au fost mutate, deci toate numerele rămân aceleași.</li>
+      <li data-k="d">Distanța AB se schimbă, dar Δ<var>x</var> și Δ<var>y</var> rămân aceleași.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Δ<var>x</var> și Δ<var>y</var> se schimbă; AB nu.</strong> Δ<var>x</var> și Δ<var>y</var> sunt doar <em>proiecțiile</em> segmentului AB pe axe — rotești axele, se schimbă proiecțiile. Segmentul însuși nu s-a mișcat, deci nici lungimea lui. Verifică în simulare.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c02Roteste">
+    <figcaption>Rotește axele: ce se schimbă și ce nu</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> lasă rotirea automată sau trage cursorul. Δ<var>x</var> și Δ<var>y</var> se schimbă tot timpul, dar distanța AB, calculată din oricare pereche, rămâne 5,00 m. Spre φ ≈ 37° axa <var>x</var>′ cade chiar peste AB: toată „depărtarea” stă pe o singură axă (Δ<var>y</var>′ = 0).</p>
+  </figure>
+
+  <p>Cu a treia coordonată, în spațiu, se întâmplă la fel:</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Distanța în 3D</span>
+    <p>Distanța dintre A(<var>x</var><sub>A</sub>, <var>y</var><sub>A</sub>, <var>z</var><sub>A</sub>) și B(<var>x</var><sub>B</sub>, <var>y</var><sub>B</sub>, <var>z</var><sub>B</sub>) este <strong>aceeași în orice sistem de axe <var>x</var>O<var>yz</var></strong>, oricum l-am roti. Componentele se schimbă; AB nu.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Distanța în spațiul 3D</span>
+    <math display="block"><mi>A</mi><mi>B</mi><mo>=</mo><msqrt><msup><mrow><mo>(</mo><msub><mi>x</mi><mi>A</mi></msub><mo>−</mo><msub><mi>x</mi><mi>B</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>A</mi></msub><mo>−</mo><msub><mi>y</mi><mi>B</mi></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><msub><mi>z</mi><mi>A</mi></msub><mo>−</mo><msub><mi>z</mi><mi>B</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></msqrt></math>
+    <p class="formula__read">Citește-o așa: „distanța dintre A și B este rădăcina din suma pătratelor diferențelor pe fiecare axă”. Diferențele depind de cum așezi axele; <strong>rezultatul nu</strong>.</p>
+  </aside>
+
+  <p>Păstrează rețeta: <em>ia componentele care depind de axe, combină-le într-o sumă de pătrate și obții un număr care nu depinde de ele.</em> Întrebarea capitolului: <strong>există o rețetă la fel pentru evenimente?</strong> Parcurge povestea de mai jos.</p>
+</section>
+
+<section class="sec" id="interval">
+  <h2>Intervalul spațio-temporal</h2>
+  <p>Pentru două <strong>evenimente</strong> E<sub>1</sub>(<var>x</var><sub>1</sub>, <var>y</var><sub>1</sub>, <var>z</var><sub>1</sub>, <var>t</var><sub>1</sub>) și E<sub>2</sub>(<var>x</var><sub>2</sub>, <var>y</var><sub>2</sub>, <var>z</var><sub>2</sub>, <var>t</var><sub>2</sub>) rețeta pentru „distanță” trebuie să includă și timpul. Cu o singură deosebire față de hartă: <strong>termenul de timp intră cu minus</strong>.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț</span>
+    <p>Distanța dintre două evenimente se numește <span class="term">interval spațio-temporal</span> Δ<var>s</var>:</p>
+    <p style="text-align:center"><strong>(Δ<var>s</var>)² = (Δ<var>x</var>)² + (Δ<var>y</var>)² + (Δ<var>z</var>)² − (<var>c</var>Δ<var>t</var>)²</strong></p>
+    <p>Δ<var>s</var> este un <span class="term">invariant relativist</span>: are <strong>aceeași valoare în orice S.R.I.</strong>, deși Δ<var>x</var> și Δ<var>t</var>, luate separat, diferă de la un S.R.I. la altul.</p>
+  </aside>
+
+  <p>Ca la hartă: <em>componentele</em> se schimbă când schimbi observatorul, <em>combinația</em> nu. Doar că aici schimbarea de S.R.I. nu mai e o rotație obișnuită, ci o „rotație” în spațiu-timp: axa timpului și axa spațiului se înclină împreună.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="poveste">
+  <h2>Povestea: de la hartă la diagrama Minkowski</h2>
+  <div class="steps" data-title="Același eveniment, două observatoare">
+    <div class="steps__stage"><figure data-sim="c02Poveste"><figcaption>Spațiu-timp</figcaption></figure></div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Ce știm de pe hartă</h3>
+      <p>Când rotești axele, Δ<var>x</var> și Δ<var>y</var> se schimbă, dar distanța AB nu. Căutăm aceeași ideie pentru evenimente.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Un plan cu spațiu și timp</h3>
+      <p>Desenăm doar o dimensiune de spațiu, <var>x</var> (orizontal), și timpul, <var>ct</var> (vertical). Un eveniment este un <strong>punct</strong> al acestui plan: „unde” și „când”. Lumina trasează linia la 45°.</p>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Al doilea observator</h3>
+      <p>Observatorul S′ se mișcă față de S. Pentru el axele sunt înclinate, iar <strong>aceleași două evenimente</strong> primesc alte numere: alt Δ<var>x</var>′, alt Δ<var>t</var>′.</p>
+      <div class="predict" data-correct="c">
+        <p class="predict__q">Care dintre mărimile următoare ar putea să rămână <em>aceeași</em> în S și în S′?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Δ<var>x</var> (depărtarea în spațiu).</li>
+          <li data-k="b"><var>c</var>Δ<var>t</var> (timpul dintre evenimente).</li>
+          <li data-k="c">O combinație a lor: (Δ<var>x</var>)² − (<var>c</var>Δ<var>t</var>)².</li>
+          <li data-k="d">Niciuna: totul depinde de observator.</li>
+        </ul>
+        <div class="predict__reveal"><p><strong>Combinația.</strong> Δ<var>x</var> și Δ<var>t</var> se schimbă amândouă, dar în așa fel încât diferența pătratelor rămâne neschimbată — exact ca la hartă, doar cu minus.</p></div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · Invariantul</h3>
+      <p>(Δ<var>s</var>)² = (Δ<var>x</var>)² − (<var>c</var>Δ<var>t</var>)² iese <strong>același</strong> în S și în S′. Asta e intervalul: ce văd toți observatorii la fel.</p>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · Trucul „ict”</h3>
+      <p>Dacă folosești <var>i</var><var>c</var><var>t</var> (cu <var>i</var>² = −1) ca a patra coordonată, formula devine o sumă de pătrate, ca la hartă, iar schimbarea S.R.I. arată ca o <strong>rotație a axelor</strong> <var>x</var>–<var>ict</var> (cu tg α = <var>v</var>/(<var>ic</var>)). E o scurtătură de scriere, nu „timp imaginar” în realitate.</p>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="minkowski">
+  <h2>Diagrama Minkowski, în mână</h2>
+  <p>Schimbă viteza lui S′ și alege o pereche de evenimente. Numerele din S și din S′ se schimbă; intervalul nu.</p>
+  <figure data-sim="c02Minkowski">
+    <figcaption>Diagrama Minkowski: S și S′</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> mărește viteza lui S′ și urmărește Δ<var>x</var> și Δ<var>t</var> — ele se schimbă mereu, dar (Δ<var>s</var>)² calculat în S și în S′ rămâne același. Axele roz se apleacă spre linia luminii, care nu se mișcă niciodată.</p>
+  </figure>
+
+  <aside class="callout idea" id="lumina">
+    <span class="callout__title">Lumina are Δs = 0 pentru toți</span>
+    <p>Două evenimente aflate pe drumul aceluiași impuls de lumină au Δ<var>x</var> = <var>c</var>Δ<var>t</var>, deci (Δ<var>s</var>)² = 0 — și rămâne 0 în orice S.R.I. Asta este, în limbajul intervalului, Postulatul I: viteza luminii este aceeași pentru toți.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="adaos">
+  <h2>Semnul intervalului <span class="badge bonus">Adaos</span></h2>
+  <p>Nu e în notițe, dar explică de ce minusul contează: (Δ<var>s</var>)² poate fi pozitiv, negativ sau zero, și semnul este și el același pentru toți observatorii.</p>
+  <figure data-sim="c02Con">
+    <figcaption>Pot fi cauza și efectul?</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> fixează E<sub>1</sub> în origine și mută E<sub>2</sub>. Dacă lumina are timp să ajungă de la E<sub>1</sub> la E<sub>2</sub> ((Δ<var>s</var>)² &lt; 0, „de tip timp”), E<sub>1</sub> poate fi cauza lui E<sub>2</sub>. Dacă nu ((Δ<var>s</var>)² &gt; 0, „de tip spațiu”), niciun semnal nu le poate lega.</p>
+  </figure>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth"><p class="myth__false">Δs este distanța în spațiu dintre cele două evenimente.</p>
+      <div class="myth__true"><p>Δ<var>s</var> combină spațiul și timpul. Distanța în spațiu (Δ<var>x</var>) depinde de observator; Δ<var>s</var> nu.</p></div></article>
+    <article class="myth"><p class="myth__false">Timpul este pur și simplu încă o lungime, ca x, y, z.</p>
+      <div class="myth__true"><p>Intră în formulă cu <strong>alt semn</strong> (minus). De aceea spațiu-timpul nu se comportă ca un spațiu obișnuit cu patru lungimi.</p></div></article>
+    <article class="myth"><p class="myth__false">(Δs)² nu poate fi negativ, fiindcă e un pătrat.</p>
+      <div class="myth__true"><p>(Δ<var>s</var>)² este o <em>combinație</em> cu minus, nu un pătrat de număr real: poate fi negativ (evenimente legate prin viteze sub <var>c</var>), zero (lumină) sau pozitiv.</p></div></article>
+    <article class="myth"><p class="myth__false">Invariant înseamnă că ceva rămâne constant în timp.</p>
+      <div class="myth__true"><p>Invariant înseamnă același pentru <strong>toți observatorii</strong>, nu neschimbat în timp.</p></div></article>
+    <article class="myth"><p class="myth__false">Cu „ict”, timpul chiar devine un număr imaginar.</p>
+      <div class="myth__true"><p>„ict” e doar un artificiu de scriere care face formula să arate ca o distanță obișnuită și schimbarea S.R.I. să arate ca o rotație.</p></div></article>
+  </div>
+</section>
+
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="2"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formula, în cuvinte</h2>
+  <aside class="formula">
+    <span class="formula__label">Intervalul spațio-temporal</span>
+    <math display="block"><msup><mrow><mo>(</mo><mi>Δ</mi><mi>s</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo>(</mo><mi>Δ</mi><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mi>Δ</mi><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mi>Δ</mi><mi>z</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mi>c</mi><mi>Δ</mi><mi>t</mi><mo>)</mo></mrow><mn>2</mn></msup></math>
+    <p class="formula__read">„Intervalul la pătrat = suma pătratelor deplasărilor în spațiu, minus pătratul distanței pe care ar parcurge-o lumina în timpul dintre evenimente.” Fiecare termen depinde de observator; rezultatul nu.</p>
+  </aside>
+</section>
+
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="2" data-n="7"></div>
+</section>
+
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap02.js"></script>
+<script src="../assets/js/sims/cap02-sims.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

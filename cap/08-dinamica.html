@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 8 · Dinamica relativistă — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Impulsul p = γm₀v, masa de repaus și masa de mișcare, F = Δp/Δt și F = γ³m₀a: de ce aceeași forță accelerează tot mai puțin și de ce nu se ajunge niciodată la c.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-chapter="8">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea a II-a · Mișcare și energie</span><span class="pill">Capitolul 8</span></div>
+  <h1>Dinamica relativistă</h1>
+  <p class="hero__idea">Până acum am descris <em>cum se vede</em> o mișcare din sisteme diferite. Acum <strong>împingem</strong> corpul: cu cât viteza lui se apropie de <var>c</var>, cu atât <strong>impulsul și inerția cresc</strong>, iar aceeași forță dă o accelerație tot mai mică. De aceea niciun corp cu masă nu ajunge la viteza luminii.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici de ce impulsul unui corp crește fără limită când <var>v</var> → <var>c</var>, deși viteza rămâne sub <var>c</var>;</li>
+    <li>să deosebești <strong>masa de repaus</strong> <var>m</var><sub>0</sub> de <strong>masa de mișcare</strong> <var>m</var> = γ<var>m</var><sub>0</sub> și să spui care dintre ele depinde de observator;</li>
+    <li>să explici de ce aceeași forță accelerează tot mai puțin, de ce <var>F</var> nu mai e simplu <var>m</var>·<var>a</var> și de ce un corp cu masă nu atinge <var>c</var>.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 14 min</span><span class="pill">4 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="legatura">
+  <h2>De la „cum se vede” la „cum se împinge”</h2>
+  <p>Capitolele 2–7 au fost despre <strong>cinematică</strong>: ce coordonate, lungimi, durate și viteze măsoară doi observatori în mișcare relativă. Aici schimbăm întrebarea: ce se întâmplă când <strong>acționezi</strong> asupra unui corp cu o <strong>forță</strong>?</p>
+  <p>Mecanica clasică (<span class="term">m.c.</span>) răspunde cu două reguli despre un <span class="term">punct material</span>:</p>
+  <ul>
+    <li><strong>impulsul</strong> <var>p</var> = <var>m</var>·<var>v</var> — „cât de multă mișcare” are corpul;</li>
+    <li><strong>legea fundamentală</strong> <var>F</var> = Δ<var>p</var>/Δ<var>t</var> — forța este ritmul cu care crește impulsul. (Pentru masă constantă, ea dă <var>F</var> = <var>m</var>·<var>a</var>.)</li>
+  </ul>
+  <p>Din ele iese o predicție care sună firesc: o forță constantă dă o accelerație constantă, deci viteza crește <strong>proporțional cu timpul de împingere, fără nicio limită</strong>. Împingi de 10× mai mult timp, ajungi de 10× mai repede.</p>
+  <p>În capitolul 7 ai văzut că adunând viteze nu depășești <var>c</var>. Dar dacă nu aduni nimic și pur și simplu <strong>tot împingi</strong> aceeași particulă, limita rezistă? Răspunsul stă în felul în care se schimbă <em>impulsul</em> și <em>inerția</em>.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="impuls">
+  <h2>Impulsul crește mai repede decât viteza</h2>
+  <p>În <span class="term">TRR</span>, impulsul unui punct material nu mai este <var>m</var>·<var>v</var>. Diferența este un singur factor, <strong>γ</strong>:</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Din curs</span>
+    <p>Mecanica clasică: <strong><var>p</var> = <var>m</var>·<var>v</var></strong>. TRR: <strong><var>p</var> = γ·<var>m</var><sub>0</sub>·<var>v</var></strong>, unde <var>m</var><sub>0</sub> este <span class="term">masa de repaus</span> a corpului, iar γ = 1/√(1 − <var>v</var>²/<var>c</var>²) este <span class="term" data-def="Factorul Lorentz: γ = 1/√(1 − β²), cu β = v/c. Este 1 pentru v = 0, crește odată cu v și tinde la infinit când v → c.">factorul Lorentz</span> (γ ≥ 1). Impulsul are direcția vitezei.</p>
+  </aside>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th></th><th>Mecanica clasică</th><th>TRR</th></tr></thead>
+    <tbody>
+      <tr><td>impulsul</td><td><var>m</var>·<var>v</var></td><td>γ·<var>m</var><sub>0</sub>·<var>v</var></td></tr>
+      <tr><td>la viteze mici</td><td><var>m</var>·<var>v</var></td><td>γ ≈ 1: aproape aceeași valoare</td></tr>
+      <tr><td>când <var>v</var> se apropie de <var>c</var></td><td>nimic special: <var>v</var> poate crește mai departe</td><td>γ → ∞, deci <var>p</var> → ∞; viteza rămâne sub <var>c</var></td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Cum poate impulsul să crească fără limită când viteza nu poate? Pentru că <var>p</var> este un <strong>produs de doi factori</strong>. Viteza <var>v</var> este blocată sub <var>c</var>, dar γ nu este blocat: aproape de <var>c</var> el <strong>explodează</strong>. Cel care explodează câștigă.</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcană</span>
+    <p>„<var>p</var> → ∞” <strong>nu</strong> înseamnă „viteza devine infinită”. Viteza rămâne sub <var>c</var>. Ce crește fără limită este impulsul (și, odată cu el, γ).</p>
+  </aside>
+
+  <p>Ține minte ideea asta, e cheia capitolului: o împingere adaugă <strong>impuls</strong>. Cât de multă <strong>viteză</strong> iese din acel impuls depinde de γ — la început aproape tot, lângă <var>c</var> aproape nimic.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="masa">
+  <h2>Masa de repaus și masa de mișcare</h2>
+  <p>Cum γ apare în orice formulă, cursul îl „ascunde” într-o masă nouă. Sunt două mase, cu roluri diferite:</p>
+  <ul>
+    <li><strong><var>m</var><sub>0</sub> — masa de repaus.</strong> Masa corpului când stă pe loc. Este o <em>proprietate a corpului</em>: toți observatorii o obțin la fel.</li>
+    <li><strong><var>m</var> — <span class="term">masa de mișcare</span>.</strong> Masa corpului văzut în mișcare cu viteza <var>v</var> față de observator. Depinde de observator.</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Din curs</span>
+    <p><strong><var>m</var> = γ<var>m</var><sub>0</sub> = <var>m</var><sub>0</sub>/√(1 − <var>v</var>²/<var>c</var>²) = <var>m</var>(<var>v</var>)</strong> — masa de mișcare <strong>crește când <var>v</var> crește</strong>. Cu ea, impulsul se scrie ca în m.c.: <var>p</var> = <var>m</var>·<var>v</var>.</p>
+  </aside>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Ana și Bogdan urmăresc același electron. Ana îl vede trecând cu 0,6 <var>c</var>, Bogdan cu 0,99 <var>c</var>. Ce spun ei despre masă?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Amândoi obțin aceeași masă de mișcare, pentru că electronul este același.</li>
+      <li data-k="b">Bogdan obține o masă de mișcare mai mare, dar amândoi obțin aceeași masă de repaus.</li>
+      <li data-k="c">Bogdan obține și o masă de mișcare, și o masă de repaus mai mari.</li>
+      <li data-k="d">Nu pot vorbi de masă: ea nu se poate defini pentru un corp în mișcare.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Varianta b.</strong> Față de Bogdan electronul e mai rapid, deci γ și masa de mișcare sunt mai mari. Masa de mișcare este o <em>relație între corp și observator</em>. Masa de repaus este a electronului, iar fiecare observator o poate deduce din impulsul și viteza pe care le măsoară.</p>
+    </div>
+  </div>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcană</span>
+    <p>„Masa crește” <strong>nu</strong> înseamnă că în corp apar mai mulți atomi. Numărul de particule rămâne același. Crește <strong>inerția</strong>: cât impuls are corpul pentru viteza lui, deci cât de greu îi schimbi mișcarea.</p>
+  </aside>
+
+  <p><strong>Ce se schimbă și ce nu</strong>, de la un observator la altul:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Mărime</th><th>La fel pentru toți observatorii?</th></tr></thead>
+    <tbody>
+      <tr><td><var>m</var><sub>0</sub> — masa de repaus</td><td><span class="pill">da</span> proprietate a corpului</td></tr>
+      <tr><td><var>m</var> = γ<var>m</var><sub>0</sub> — masa de mișcare</td><td><span class="pill">nu</span> depinde de viteza corpului față de observator</td></tr>
+      <tr><td><var>p</var> — impulsul</td><td><span class="pill">nu</span> depinde de viteza față de observator</td></tr>
+      <tr><td><var>c</var> — viteza luminii în vid</td><td><span class="pill">da</span> Postulatul I</td></tr>
+      <tr><td>forma legii <var>F</var> = Δ<var>p</var>/Δ<var>t</var></td><td><span class="pill">da</span> Postulatul al II-lea</td></tr>
+    </tbody>
+  </table></div>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p>Atenție la vocabular: în multe texte de fizică modernă „masă” înseamnă doar <var>m</var><sub>0</sub>, iar γ rămâne în formulă (<var>p</var> = γ<var>m</var><sub>0</sub><var>v</var>). Predicțiile sunt aceleași; „masa de mișcare” este doar numele lui γ<var>m</var><sub>0</sub>. La test folosește vocabularul de la curs.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="forta">
+  <h2>Forța: legea rămâne, viteza se saturează</h2>
+  <p>Ce se întâmplă cu <strong>forța</strong>? Veste bună: legea fundamentală nu se schimbă.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Din curs</span>
+    <p>Legea fundamentală a dinamicii: <strong><var>F</var> = lim<sub>Δ<var>t</var>→0</sub> Δ<var>p</var>/Δ<var>t</var></strong> — forța este ritmul cu care variază impulsul. Rămâne valabilă și în TRR; se schimbă doar impulsul: <var>p</var> = γ<var>m</var><sub>0</sub><var>v</var>. În m.c. ea se scrie <var>F</var> = <var>m</var><var>a</var> = Δ(<var>m</var><var>v</var>)/Δ<var>t</var>.</p>
+  </aside>
+
+  <p>Consecința: când împingi, <strong>nu crește doar viteza</strong>. Crește și γ, deci o parte din fiecare împingere „se duce” în γ, nu în viteză. Parcurge povestea și răspunde la întrebarea din mijloc ca să continui.</p>
+
+  <div class="steps" data-title="Cât de tare împingi?">
+    <div class="steps__stage"><figure data-sim="c08Poveste"><figcaption>Împingeri egale, viteze diferite</figcaption></figure></div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · O forță constantă = împingeri egale</h3>
+      <p>Forța este impulsul primit într-o unitate de timp (<var>F</var> = Δ<var>p</var>/Δ<var>t</var>). O forță <strong>constantă</strong> îți dă, secundă după secundă, <strong>același spor de impuls</strong>: împingeri egale, una după alta.</p>
+      <p>În mecanica clasică <var>p</var> = <var>m</var><var>v</var>, deci împingeri egale dau <strong>sărituri egale de viteză</strong>. În imagine, fiecare săritură este o împingere.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Clasic, nu există frână</h3>
+      <p>Săritură după săritură, viteza clasică ajunge la <var>c</var> (peretele galben) și trece de el. Zona roșie nu a fost observată niciodată: nu s-a văzut nicio particulă mai rapidă decât lumina.</p>
+      <p>Deci ceva din <var>p</var> = <var>m</var><var>v</var> trebuie schimbat. Legea <var>F</var> = Δ<var>p</var>/Δ<var>t</var> o păstrăm; ne uităm la <em>impuls</em>.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>3 · Ghicește înainte să vezi</h3>
+      <p>O particulă pornește din repaus și este împinsă cu o forță constantă. După prima oră ajunge la aproximativ 0,7 <var>c</var>.</p>
+      <div class="predict" data-correct="b">
+        <p class="predict__q">Continui să împingi la fel încă 9 ore, deci în total de 10 ori mai mult timp. Ce se întâmplă?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Viteza devine de 10 ori mai mare, ≈ 7 <var>c</var>, ca în mecanica clasică.</li>
+          <li data-k="b">Impulsul devine de 10 ori mai mare, dar viteza abia crește și rămâne sub <var>c</var>.</li>
+          <li data-k="c">Particula atinge exact <var>c</var> și rămâne la viteza maximă.</li>
+          <li data-k="d">Nici impulsul nu mai crește: la viteze mari, forța nu mai are efect.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Varianta b.</strong> Forța constantă adaugă <strong>același impuls în fiecare oră</strong> (<var>F</var> = Δ<var>p</var>/Δ<var>t</var>), deci după 10 ore impulsul este de 10 ori mai mare. Dar viteza nu mai e proporțională cu impulsul: lângă <var>c</var>, un impuls uriaș adaugă doar o fărâmă de viteză. Aici ajunge la ≈ 0,995 <var>c</var>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>4 · Impulsul adevărat: <var>p</var> = γ<var>m</var><sub>0</sub><var>v</var></h3>
+      <p>Cu impulsul relativist, aceleași împingeri egale dau sărituri care <strong>se scurtează</strong> pe măsură ce viteza crește: γ „înghite” o parte din fiecare împingere. Săriturile se îngrămădesc lângă <var>c</var>, fără să-l atingă.</p>
+      <p>Aici, 2 împingeri (prima oră) duc la ≈ 0,7 <var>c</var>, iar 20 de împingeri (de 10 ori mai mult timp) la ≈ 0,995 <var>c</var>. Impulsul s-a înmulțit cu 10; viteza, cu mult mai puțin.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>5 · De ce nu se ajunge la <var>c</var></h3>
+      <p>Pentru <var>v</var> = <var>c</var> ar trebui γ infinit, deci și un impuls infinit. Dar fiecare împingere adaugă un impuls <strong>finit</strong>, iar un număr finit de împingeri nu ajunge niciodată la infinit.</p>
+      <aside class="callout idea">
+        <span class="callout__title">Concluzie</span>
+        <p>Un corp cu masă de repaus nenulă poate fi adus oricât de aproape de <var>c</var>, dar <strong>niciodată la <var>c</var></strong>. Nu e o limită de tehnologie sau de frecare: ține de felul în care crește impulsul.</p>
+      </aside>
+    </section>
+  </div>
+
+  <p>Acum rulează tu experimentul, în timp real. Forța este constantă — tu alegi cât de mare.</p>
+
+  <figure data-sim="c08Impinge">
+    <figcaption>Împinge particula</figcaption>
+    <p class="sim__hint"><b>Observă:</b> linia punctată arată ce ar zice mecanica clasică — viteza urcă drept și trece de <var>c</var>. Linia verde este realitatea: se curbează și se apropie de <var>c</var>. O forță mai mare te duce mai repede lângă <var>c</var>, dar nu dincolo. Urmărește „Accelerația acum”: scade, deși forța rămâne aceeași.</p>
+  </figure>
+
+  <aside class="callout note">
+    <span class="callout__title">Ce rămâne la fel, ce se schimbă</span>
+    <p><strong>La fel:</strong> forța și sporul de impuls pe secundă (impulsul crește liniar în timp). <strong>Se schimbă:</strong> cât de multă viteză iese din acel spor — tot mai puțină, pe măsură ce γ crește.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="acceleratie">
+  <h2>Accelerația nu mai este simplu <var>F</var>/<var>m</var></h2>
+  <p>În m.c. totul se rezumă la <var>a</var> = <var>F</var>/<var>m</var>: accelerația are direcția forței, iar masa este un număr. În TRR, masa de mișcare <var>m</var> = γ<var>m</var><sub>0</sub> nu mai poate face aceeași treabă:</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Din curs</span>
+    <p>În TRR, cu <var>m</var> = γ<var>m</var><sub>0</sub>:</p>
+    <math display="block"><mover accent="true"><mi>a</mi><mo>→</mo></mover><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><mover accent="true"><mi>F</mi><mo>→</mo></mover><mo>−</mo><mfrac><mrow><mo>(</mo><mover accent="true"><mi>F</mi><mo>→</mo></mover><mo>·</mo><mover accent="true"><mi>v</mi><mo>→</mo></mover><mo>)</mo><mover accent="true"><mi>v</mi><mo>→</mo></mover></mrow><mrow><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></math>
+  </aside>
+
+  <p>Nu trebuie să calculezi cu ea. Citește-o așa: al doilea termen depinde de <strong>cât din forță este paralelă cu viteza</strong> (produsul scalar <var>F</var>·<var>v</var>) și scade din accelerație tocmai acea parte. Rezultatul: <strong>accelerația nu mai are, în general, direcția forței</strong>.</p>
+  <p>Are direcția forței doar în cazuri speciale:</p>
+  <ul>
+    <li><var>F</var> ⊥ <var>v</var> (forța e perpendiculară pe viteză): atunci <var>F</var>·<var>v</var> = 0 și <var>a</var> = <var>F</var>/<var>m</var>, cu <var>m</var> = γ<var>m</var><sub>0</sub>;</li>
+    <li><var>F</var> ∥ <var>v</var> (forța e în sensul mișcării): <span class="term">mișcarea rectilinie</span>, în secțiunea următoare;</li>
+    <li><var>v</var> ≪ <var>c</var>: termenul în plus dispare și regăsești <var>a</var> = <var>F</var>/<var>m</var><sub>0</sub>.</li>
+  </ul>
+
+  <div class="predict" data-correct="c">
+    <p class="predict__q">Împingi oblic o particulă foarte rapidă: forța face un unghi cu viteza. Față de direcția forței, accelerația ei va fi:</p>
+    <ul class="predict__opts">
+      <li data-k="a">exact în direcția forței, ca în mecanica clasică;</li>
+      <li data-k="b">rotită spre direcția vitezei (mai „înainte” decât forța);</li>
+      <li data-k="c">rotită spre perpendiculara pe viteză (mai „lateral” decât forța);</li>
+      <li data-k="d">întotdeauna în sensul vitezei, oricum ai împinge.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Varianta c: mai „lateral” decât forța.</strong> Componenta forței paralelă cu viteza întâlnește o inerție uriașă (γ³<var>m</var><sub>0</sub>); componenta laterală, una mult mai mică (γ<var>m</var><sub>0</sub>). Cea laterală „câștigă”: accelerația se întoarce spre perpendiculara pe viteză, cu atât mai mult cu cât γ este mai mare.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c08Vectori">
+    <figcaption>Forța și accelerația nu sunt paralele</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> pune viteza pe 0 — săgețile se suprapun (mecanica clasică). Mărește viteza: accelerația se micșorează și se rotește spre perpendiculara pe viteză. La unghi 0° sau 90° săgețile redevin paralele.</p>
+  </figure>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="gamma3">
+  <h2>Împingerea în sensul mișcării: <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var></h2>
+  <p>Cel mai important caz este forța în sensul mișcării (<var>F</var> ∥ <var>v</var>). Mișcarea rămâne pe o dreaptă, iar formula de mai sus se simplifică mult.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Din curs — legea a II-a pentru mișcare rectilinie</span>
+    <p>Dacă <var>F</var> ∥ <var>v</var>, atunci <var>F</var> ∥ <var>v</var> ∥ <var>a</var> și mișcarea e rectilinie, iar <strong><var>F</var> = γ³·<var>m</var><sub>0</sub>·<var>a</var></strong> (= γ²·<var>m</var>·<var>a</var>).</p>
+  </aside>
+
+  <p>Citește-o invers: <var>a</var> = <var>F</var>/(γ³<var>m</var><sub>0</sub>). <span class="term">Inerția</span> efectivă nu mai e <var>m</var><sub>0</sub> și nici măcar γ<var>m</var><sub>0</sub>, ci <strong>γ³<var>m</var><sub>0</sub></strong>. Altfel spus: pentru fiecare mic spor de viteză, impulsul trebuie să crească de γ³ ori mai mult decât în m.c. — iar forța nu face decât să crească impulsul.</p>
+
+  <p>Tabelul e de privit, nu de calculat. Reține doar cum explodează inerția:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Viteza</th><th>γ</th><th>Inerția la împingere în sensul mișcării</th></tr></thead>
+    <tbody>
+      <tr><td>0,1 <var>c</var></td><td>≈ 1,005</td><td>≈ 1,02 × <var>m</var><sub>0</sub> (practic clasic)</td></tr>
+      <tr><td>0,5 <var>c</var></td><td>≈ 1,15</td><td>≈ 1,5 × <var>m</var><sub>0</sub></td></tr>
+      <tr><td>0,9 <var>c</var></td><td>≈ 2,3</td><td>≈ 12 × <var>m</var><sub>0</sub></td></tr>
+      <tr><td>0,99 <var>c</var></td><td>≈ 7,1</td><td>≈ 360 × <var>m</var><sub>0</sub></td></tr>
+      <tr><td>0,999 <var>c</var></td><td>≈ 22</td><td>≈ 11 000 × <var>m</var><sub>0</sub></td></tr>
+    </tbody>
+  </table></div>
+
+  <figure data-sim="c08Accel">
+    <figcaption>Cât de ușor accelerează</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> mută viteza spre <var>c</var> și urmărește curba: aceeași forță (săgeata violetă nu se schimbă) produce o accelerație care se apropie de zero. Comută pe „perpendicular”: curba coboară mult mai încet — lateral întâlnești o inerție mai mică.</p>
+  </figure>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcană</span>
+    <p><strong>Nu</strong> scrie <var>F</var> = <var>m</var><var>a</var> cu <var>m</var> = γ<var>m</var><sub>0</sub> pentru mișcarea rectilinie: ai omite încă un factor γ². Masa de mișcare apare în <var>p</var> = <var>m</var><var>v</var>; în legea forței, pentru <var>F</var> ∥ <var>v</var>, apare γ³<var>m</var><sub>0</sub>.</p>
+    <p>Pe scurt: <var>F</var> = Δ<var>p</var>/Δ<var>t</var> este <em>legea</em>; <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var> este o <em>consecință</em> a ei, valabilă doar pentru <var>F</var> ∥ <var>v</var>.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="limita">
+  <h2>Limita lui <var>c</var> și cazurile-limită</h2>
+  <p>Pune cap la cap tot ce ai văzut. Cu cât viteza se apropie de <var>c</var>:</p>
+  <ul>
+    <li>γ crește fără limită, deci și <strong>impulsul</strong>, și <strong>masa de mișcare</strong>;</li>
+    <li>inerția la împingere (γ³<var>m</var><sub>0</sub>) crește și mai repede, deci <strong>aceeași forță dă o accelerație tot mai mică</strong>, care tinde la zero;</li>
+    <li>pentru <var>v</var> = <var>c</var> ar trebui un impuls infinit, iar împingerile dau doar sporuri finite.</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ideea-cheie</span>
+    <p>Un corp cu masă de repaus <var>m</var><sub>0</sub> ≠ 0 poate fi adus <strong>oricât de aproape</strong> de <var>c</var>, dar <strong>niciodată la <var>c</var></strong>. Limita este <em>structurală</em>: nu vine din frecare, din motoare slabe sau din lipsa tehnologiei.</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">Dar lumina?</span>
+    <p>Lumina se mișcă tocmai cu <var>c</var>. Asta este posibil doar pentru ceva care nu are masă de repaus (<var>m</var><sub>0</sub> = 0) — capitolul 10 arată de ce.</p>
+  </aside>
+
+  <h3>Cele trei regimuri</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Viteza</th><th>Cât e γ</th><th>Ce folosești</th></tr></thead>
+    <tbody>
+      <tr><td><var>v</var> ≪ <var>c</var> (mașini, avioane, planete)</td><td>γ → 1</td><td><var>m</var> → <var>m</var><sub>0</sub>, <var>p</var> ≈ <var>m</var><sub>0</sub><var>v</var>, <var>F</var> ≈ <var>m</var><sub>0</sub><var>a</var>: mecanica clasică; transformările Lorentz → Galilei</td></tr>
+      <tr><td><var>v</var> comparabilă cu <var>c</var></td><td>γ vizibil mai mare ca 1</td><td>formulele relativiste: <var>p</var> = γ<var>m</var><sub>0</sub><var>v</var>, <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var></td></tr>
+      <tr><td><var>v</var> ≈ <var>c</var> — corp <span class="term">ultrarelativist</span></td><td>γ ≫ 1</td><td>impuls și inerție uriașe: accelerezi cu greu, iar viteza abia mai crește</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Mecanica clasică nu e „greșită”: este <strong>cazul-limită</strong> al TRR, la fel cum transformările lui Galilei sunt limita celor ale lui Lorentz. Pentru tot ce întâlnești în viața de zi cu zi, γ este 1 cu o precizie mai bună decât orice aparat.</p>
+
+  <aside class="callout light">
+    <span class="callout__title">Mai departe</span>
+    <p>Rămâne o întrebare: dacă forța mai împinge, dar viteza abia mai crește, <strong>unde se duce</strong> munca pe care o depui? Răspunsul este <strong>energia</strong> — iar aici apare cea mai cunoscută formulă din fizică, în capitolul 9.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Dacă masa crește, înseamnă că în corp apar mai mulți atomi, mai multă materie.</p>
+      <div class="myth__true"><p>Numărul de particule rămâne același. Crește <strong>inerția</strong>: impulsul pe care îl are corpul pentru o viteză dată. „Masa de mișcare” este doar numele lui γ<var>m</var><sub>0</sub>.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Legea a II-a rămâne <var>F</var> = <var>m</var><var>a</var>; doar că <var>m</var> devine γ<var>m</var><sub>0</sub>.</p>
+      <div class="myth__true"><p>Legea fundamentală este <var>F</var> = Δ<var>p</var>/Δ<var>t</var>. Pentru mișcarea rectilinie iese <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var> = γ²<var>m</var><var>a</var>, deci nu γ<var>m</var><sub>0</sub>. Iar accelerația nu mai are, în general, nici direcția forței.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Nu putem atinge viteza luminii din cauza frecării sau pentru că nu avem motoare destul de bune.</p>
+      <div class="myth__true"><p>Limita este structurală. Pentru <var>c</var> ar trebui un impuls infinit; chiar în vid perfect, cu o forță ideală, viteza se apropie de <var>c</var> fără să o atingă.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Masa de repaus a unui electron rapid crește cu viteza.</p>
+      <div class="myth__true"><p><var>m</var><sub>0</sub> nu se schimbă: este aceeași pentru toți observatorii. Crește <strong>masa de mișcare</strong> γ<var>m</var><sub>0</sub>, care depinde de viteza corpului față de observator.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lângă <var>c</var> forța nu mai are efect: impulsul se oprește din crescut.</p>
+      <div class="myth__true"><p>Forța are același efect asupra <em>impulsului</em> la orice viteză (<var>F</var> = Δ<var>p</var>/Δ<var>t</var>). „Efectul mic” se vede în <em>viteză</em>: un impuls uriaș abia mai adaugă viteză.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Relativitatea a răsturnat mecanica lui Newton; formulele ei sunt false.</p>
+      <div class="myth__true"><p>Sunt <strong>cazul-limită</strong> al TRR: pentru <var>v</var> ≪ <var>c</var>, γ ≈ 1 și diferențele sunt sub orice precizie de măsurare. Pentru mașini, avioane și planete, Newton merge perfect.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="8"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formulele, în cuvinte</h2>
+  <p>Nu trebuie să le știi pe de rost, dar merită să înțelegi ce spune fiecare. Sunt trei.</p>
+
+  <aside class="formula">
+    <span class="formula__label">Legea fundamentală a dinamicii</span>
+    <math display="block"><mi>F</mi><mo>=</mo><mfrac><mrow><mi>Δ</mi><mi>p</mi></mrow><mrow><mi>Δ</mi><mi>t</mi></mrow></mfrac></math>
+    <p class="formula__read">Citește-o așa: „forța este cât de repede se schimbă impulsul.” Nu se schimbă în relativitate; se schimbă doar felul în care se scrie impulsul.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Impulsul relativist</span>
+    <math display="block"><mi>p</mi><mo>=</mo><mi>γ</mi><msub><mi>m</mi><mn>0</mn></msub><mi>v</mi><mo>=</mo><mi>m</mi><mi>v</mi></math>
+    <p class="formula__read">Citește-o așa: „impulsul este viteza ori masa de mișcare, iar masa de mișcare este masa de repaus ori γ.” La viteze mici γ ≈ 1 și revii la <var>p</var> = <var>m</var><sub>0</sub><var>v</var>. Lângă <var>c</var>, γ crește fără limită — și odată cu el impulsul —, deși viteza nu depășește <var>c</var>.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Legea a II-a pentru mișcare rectilinie (<var>F</var> ∥ <var>v</var>)</span>
+    <math display="block"><mi>F</mi><mo>=</mo><msup><mi>γ</mi><mn>3</mn></msup><msub><mi>m</mi><mn>0</mn></msub><mi>a</mi></math>
+    <p class="formula__read">Citește-o așa: „forța este accelerația ori o inerție de γ³ ori mai mare decât masa de repaus.” Sau invers: <strong>aceeași forță dă o accelerație de γ³ ori mai mică</strong>. Când <var>v</var> → <var>c</var>, accelerația tinde la zero.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="8" data-n="7"></div>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap08.js"></script>
+<script src="../assets/js/sims/cap08-impinge.js"></script>
+<script src="../assets/js/sims/cap08-accel.js"></script>
+<script src="../assets/js/sims/cap08-poveste.js"></script>
+<script src="../assets/js/sims/cap08-vectori.js"></script>
+<script>RF.init();</script>
+</body>
+</html>
+

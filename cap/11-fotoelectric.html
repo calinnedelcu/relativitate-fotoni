@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 11 · Efectul fotoelectric extern — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Montajul, bilanțul energetic h·ν − L_ex = E_c, cele patru legi și de ce ele cer fotoni — cu un laborator virtual.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/cap11.css">
+</head>
+<body data-chapter="11">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea III · Lumina ca particulă</span><span class="pill">Capitolul 11</span></div>
+  <h1>Efectul fotoelectric extern</h1>
+  <p class="hero__idea">Lumina lovește un metal și <strong>smulge electroni din el</strong> — dar numai dacă fiecare foton, luat singur, are destulă energie. <em>Culoarea</em> (frecvența) decide dacă electronii pleacă și cât de repede; <em>intensitatea</em> decide doar <strong>câți</strong> pleacă. Aici fotonul din capitolul trecut își dovedește existența.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să descrii montajul și să explici bilanțul energetic <var>h</var>ν − <var>L</var><sub>ex</sub> = <var>E</var><sub>c</sub>;</li>
+    <li>să enunți cele patru legi și să spui ce schimbă intensitatea, ce schimbă frecvența și ce schimbă metalul;</li>
+    <li>să explici de ce aceste legi cer fotoni, iar „lumina ca undă continuă” nu le poate da.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 16 min</span><span class="pill">4 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="montaj">
+  <h2>Montajul: lumină pe metal, curent în circuit</h2>
+  <p>În capitolul 10 ai văzut că lumina vine în pachete — <strong>fotoni</strong> — fiecare cu energia <var>h</var>ν. Acum punem un foton să facă o treabă concretă: să smulgă un electron dintr-un metal.</p>
+  <p>Într-un tub cu vid stau față în față două plăci metalice: <span class="term">catod</span> (cea pe care cade lumina) și <span class="term">anod</span>. Ele sunt legate printr-un circuit cu ampermetru. Când lumina lovește catodul, din el pot ieși electroni — <span class="term">fotoelectron</span> li se spune. Cei care ajung la anod închid circuitul, iar ampermetrul arată un <span class="term">fotocurent</span>.</p>
+  <p>Fenomenul se numește <span class="term">efect fotoelectric extern</span>: „extern”, fiindcă electronii <strong>ies din metal</strong>.</p>
+
+  <p>De ce nu ies electronii singuri? Pentru că sunt <strong>legați</strong>: metalul este o rețea ale cărei noduri sunt nucleele atomilor, iar electronii sunt ținuți în ea. Ca să iasă, un electron trebuie să primească o energie minimă — „taxa de ieșire” din metal.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ideea-cheie</span>
+    <p>Energia minimă necesară ca un electron să părăsească metalul se numește <span class="term">lucru mecanic de extracție</span>, <var>L</var><sub>ex</sub>. Este o <strong>constantă de material</strong>: are alt număr pentru cesiu, alt număr pentru zinc — dar nu depinde de lumina care cade pe metal.</p>
+  </aside>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Pe o placă de zinc (care ține destul de tare electronii) trimiți pe rând două lumini: o lanternă roșie, foarte puternică, și o lampă ultravioletă, foarte slabă. Care scoate electroni?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Lanterna roșie: în total are mult mai multă energie.</li>
+      <li data-k="b">Lampa ultravioletă, deși e slabă; lanterna roșie nu scoate niciun electron.</li>
+      <li data-k="c">Amândouă, doar că lanterna roșie scoate mai mulți electroni.</li>
+      <li data-k="d">Niciuna: o lumină nu poate scoate electroni dintr-un metal.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Lampa ultravioletă.</strong> Contează cât de multă energie are <em>un singur foton</em>, nu cât de multă lumină sosește. Fotonul roșu e prea slab pentru zinc, iar fotonul ultraviolet reușește. Vei vedea chiar tu, în laborator, că lanterna roșie poate fi oricât de puternică.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="laborator">
+  <h2>Laboratorul virtual</h2>
+  <p>Joacă-te întâi, explicăm după. În tub vezi fotonii (puncte colorate) lovind catodul. Fiecare foton suficient de energic scoate câte un electron (puncte albastre). Cele două grafice de dedesubt se mișcă odată cu tubul.</p>
+
+  <ol class="c11-missions">
+    <li>Alege <strong>sodiu</strong> (Na) și mută frecvența de la roșu spre albastru. La ce culoare apar primii electroni? Acolo e <strong>pragul</strong>.</li>
+    <li>Rămâi peste prag și mărește intensitatea. Ce crește: <em>numărul</em> electronilor sau <em>viteza</em> lor?</li>
+    <li>Pune tensiunea pe <strong>negativ</strong> (frânare) și caută valoarea la care ampermetrul arată zero. Schimbă apoi intensitatea: se mută această valoare?</li>
+    <li>Schimbă metalul (de la Cs la Cu), păstrând lumina. Care metal ține electronii cel mai tare?</li>
+  </ol>
+
+  <figure data-sim="c11Laborator" class="wide">
+    <figcaption>Laborator virtual: tubul fotoelectric</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> apasă „Roșu, foarte intens” — nu iese niciun electron, oricât de puternică e lumina. Apoi „UV, foarte slab”: electronii ies, deși sunt puțini. Pe graficul din dreapta, punctul albastru stă pe dreapta metalului; pe cel din stânga, curba galbenă se anulează la −<var>U</var><sub>s</sub>.</p>
+  </figure>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos · Ce simplifică laboratorul</span>
+    <p><strong>Electronvoltul.</strong> Energiile din laborator sunt în eV: 1 eV este energia pe care o câștigă un electron străbătând o tensiune de 1 V. De aceea numărul care dă energia cinetică maximă în eV este chiar tensiunea de stopare în volți.</p>
+    <p><strong>Un foton, un electron — dar nu mereu.</strong> În realitate doar o mică parte din fotoni reușesc să scoată un electron. Simularea desenează fiecare foton reușit, iar concluzia rămâne aceeași: numărul de electroni este proporțional cu numărul de fotoni.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="bilant">
+  <h2>Un foton, un electron</h2>
+  <p>Hai să privim un singur electron din catod, de aproape. Desenul din poveste arată <em>energia</em> lui, nu locul: cu cât stă mai sus în desen, cu atât are mai multă energie. Răspunde la întrebări ca să continui.</p>
+
+  <div class="steps" data-title="Un foton, un electron">
+    <div class="steps__stage">
+      <figure data-sim="c11Poveste"><figcaption>Electronul din metal, ca într-o groapă</figcaption></figure>
+    </div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Electronul e legat</h3>
+      <p>Fundul albastru al gropii este locul electronului în metal. Marginea, nivelul <strong>E = 0</strong>, înseamnă „electron liber”, în afara metalului.</p>
+      <p>Adâncimea gropii este chiar <var>L</var><sub>ex</sub>: energia pe care electronul trebuie s-o primească ca să ajungă la margine. Fiecare metal are altă adâncime.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Un foton prea slab</h3>
+      <p>Un foton roșu, cu <var>h</var>ν ≈ 1,7 eV, lovește electronul. Fotonul este absorbit <strong>întreg</strong>: electronul primește toată energia lui și urcă. Groapa însă are 2,3 eV adâncime…</p>
+      <div class="predict" data-correct="b">
+        <p class="predict__q">Dacă trimiți de zece ori mai mulți fotoni roșii pe secundă (intensitate de zece ori mai mare), ce se întâmplă?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Unii electroni încep să iasă, pentru că fotonii se ajută între ei.</li>
+          <li data-k="b">Tot niciun electron: fiecare foton, singur, e prea slab, iar energiile nu se adună.</li>
+          <li data-k="c">Electronii ies după o așteptare, cât timp se strânge energia în metal.</li>
+          <li data-k="d">Ies electroni, dar foarte lenți.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Tot niciun electron.</strong> Fiecare foton urcă electronul puțin, acesta nu ajunge la margine și cade înapoi. Fotonul următor nu continuă de unde a rămas primul. „Mai mulți fotoni” înseamnă doar mai multe încercări eșuate — de aceea nici așteptarea nu ajută.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Un foton suficient: bilanțul</h3>
+      <p>Acum un foton cu <var>h</var>ν ≈ 3,1 eV. Electronul urcă până la margine (plătește <var>L</var><sub>ex</sub>) și mai rămâne energie, pe care o ia cu el sub formă de mișcare.</p>
+      <aside class="callout idea">
+        <span class="callout__title">Bilanțul energetic</span>
+        <p><var>E</var><sub>γ</sub> − <var>L</var><sub>ex</sub> = <var>E</var><sub>c</sub>(e⁻), adică <var>h</var>ν − <var>L</var><sub>ex</sub> = <var>E</var><sub>c</sub>.</p>
+      </aside>
+      <p>Bara de jos arată împărțirea. Aceasta este energia cinetică <strong>maximă</strong>: electronii legați mai adânc ies cu mai puțin.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · De două ori mai multă lumină</h3>
+      <p>Rămânem la fotonul de 3,1 eV, peste prag, și dublăm intensitatea: sosesc de două ori mai mulți fotoni pe secundă.</p>
+      <div class="predict" data-correct="a">
+        <p class="predict__q">Ce se schimbă la electronii care ies?</p>
+        <ul class="predict__opts">
+          <li data-k="a">De două ori mai mulți electroni pe secundă, fiecare cu aceeași energie cinetică.</li>
+          <li data-k="b">Același număr de electroni, dar fiecare de două ori mai energic.</li>
+          <li data-k="c">De două ori mai mulți electroni, fiecare de două ori mai energic.</li>
+          <li data-k="d">Nimic: o lumină mai intensă nu schimbă nimic măsurabil.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Mai mulți electroni, aceeași energie.</strong> Fiecare electron are de-a face cu un singur foton, iar fotonii sunt identici. Intensitatea numără fotonii: mai multă lumină ⟹ mai mulți electroni ⟹ <span class="term">fotocurent</span> mai mare.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · Altă culoare</h3>
+      <p>Acum păstrăm numărul de fotoni, dar trecem la ultraviolet: fotoni mai energici, cu <var>h</var>ν ≈ 4,5 eV.</p>
+      <div class="predict" data-correct="c">
+        <p class="predict__q">Ce se schimbă la electronii care ies?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Mai mulți electroni, la fel de energici.</li>
+          <li data-k="b">La fel de mulți, la fel de energici: culoarea nu contează peste prag.</li>
+          <li data-k="c">La fel de mulți electroni, dar fiecare pleacă cu mai multă energie cinetică.</li>
+          <li data-k="d">Mai puțini electroni, pentru că fotonii ultravioleți sunt „prea puternici”.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>La fel de mulți, dar mai energici.</strong> Taxa <var>L</var><sub>ex</sub> e aceeași, iar fotonul aduce mai mult: surplusul, adică energia cinetică, crește. <var>E</var><sub>c</sub> = <var>h</var>ν − <var>L</var><sub>ex</sub> depinde de <strong>frecvență</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="5">
+      <h3>6 · Frâna: tensiunea de stopare</h3>
+      <p>Cum afli cât de energici sunt electronii? Îi frânezi. Aplici între catod și anod o tensiune <strong>inversă</strong>: ea urcă un „deal” în fața electronilor, ca în desen.</p>
+      <p>Când înălțimea dealului este exact energia cinetică maximă, cei mai rapizi electroni abia ajung la anod și se opresc: curentul devine zero.</p>
+      <aside class="callout idea">
+        <span class="callout__title">Tensiunea de stopare</span>
+        <p><var>h</var>ν − <var>L</var><sub>ex</sub> = |<var>e</var>|·<var>U</var><sub>s</sub></p>
+      </aside>
+    </section>
+  </div>
+
+  <p>Pune cap la cap povestea. Fiecare lucru pe care îl poți schimba are un singur efect clar:</p>
+  <div class="tbl-wrap"><table class="tbl c11-tbl">
+    <thead><tr><th>Ce schimbi</th><th>Câți electroni (fotocurent)</th><th>Energia lor, <var>E</var><sub>c</sub> și <var>U</var><sub>s</sub></th><th>Efectul apare?</th></tr></thead>
+    <tbody>
+      <tr><td>Intensitatea ↑ (aceeași culoare)</td><td class="c11-yes">crește</td><td>la fel</td><td>la fel</td></tr>
+      <tr><td>Frecvența ↑ (același număr de fotoni)</td><td>la fel</td><td class="c11-yes">cresc</td><td>poate începe, dacă trece pragul</td></tr>
+      <tr><td>Metal cu <var>L</var><sub>ex</sub> mai mare (aceeași lumină)</td><td>—</td><td class="c11-no">scad</td><td>pragul urcă; poate dispărea</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="stopare">
+  <h2>Tensiunea de stopare</h2>
+  <p>Frâna din ultimul pas este o unealtă foarte utilă: îți dă energia electronilor sub forma unei <em>tensiuni</em> pe care o poți citi pe un aparat. Citește graficul curent–tensiune din laborator:</p>
+  <ul>
+    <li><strong>Tensiune zero sau pozitivă:</strong> toți electronii emiși ajung la anod. Curentul stă pe un <strong>palier</strong> (saturație), a cărui înălțime urmează numărul de fotoni, deci intensitatea.</li>
+    <li><strong>Tensiune inversă:</strong> întâi sunt întorși electronii lenți, apoi tot mai mulți. Curentul scade.</li>
+    <li><strong>La −<var>U</var><sub>s</sub>:</strong> nu mai ajunge niciun electron, nici cei mai rapizi. Valoarea <var>U</var><sub>s</sub> se numește <span class="term">tensiune de stopare</span>.</li>
+  </ul>
+
+  <div class="predict" data-correct="a">
+    <p class="predict__q">Dublezi intensitatea luminii (aceeași culoare, peste prag). Ce se schimbă pe graficul curent–tensiune?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Palierul urcă; punctul în care curentul se anulează rămâne la aceeași tensiune inversă.</li>
+      <li data-k="b">Palierul rămâne; punctul de anulare se deplasează spre tensiuni inverse mai mari.</li>
+      <li data-k="c">Palierul urcă, iar punctul de anulare se deplasează spre tensiuni inverse mai mari.</li>
+      <li data-k="d">Nu se schimbă nimic: graficul e același.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Palierul urcă, anularea rămâne.</strong> Mai mulți fotoni dau mai mulți electroni (palier mai înalt), dar cei mai rapizi au aceeași energie ca înainte și îi oprește aceeași tensiune. <var>U</var><sub>s</sub> măsoară <em>energia</em> unui electron, nu câți sunt. Verifică în laborator: mută intensitatea și urmărește linia roșie punctată.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="legi">
+  <h2>Cele patru legi</h2>
+  <p>Tot ce ai văzut se strânge în patru legi ale efectului fotoelectric extern. Sub fiecare vezi motivul ei, în cuvinte.</p>
+
+  <div class="c11-laws">
+    <article class="c11-law">
+      <span class="c11-law__n">1</span>
+      <p class="c11-law__t">Efectul fotoelectric se produce abia când energia fotonilor incidenți depășește lucrul mecanic de extracție.</p>
+      <p class="c11-law__why"><b>De ce:</b> sub această energie, fotonul nu poate plăti „taxa de ieșire”. Echivalent: există o <span class="term">frecvență de prag</span> ν<sub>0</sub> = <var>L</var><sub>ex</sub>/<var>h</var>; sub ea nu apare nimic, oricât de intensă ar fi lumina.</p>
+    </article>
+    <article class="c11-law">
+      <span class="c11-law__n">2</span>
+      <p class="c11-law__t">Un fotoelectron poate fi extras doar de un singur foton incident, doar dacă energia fotonului este mai mare decât <var>L</var><sub>ex</sub>: <var>E</var><sub>γ</sub> = <var>h</var>ν ≥ <var>L</var><sub>ex</sub>. Intensitatea luminii incidente nu modifică energia cinetică a unui fotoelectron.</p>
+      <p class="c11-law__why"><b>De ce:</b> energiile fotonilor nu se adună, iar un foton scoate un electron. Mai multă lumină înseamnă mai mulți fotoni și deci mai mulți electroni, nu electroni mai energici.</p>
+    </article>
+    <article class="c11-law">
+      <span class="c11-law__n">3</span>
+      <p class="c11-law__t">Energia cinetică a fotoelectronilor variază doar cu frecvența radiației electromagnetice incidente pe catod: <var>E</var><sub>c</sub> = <var>E</var><sub>γ</sub> − <var>L</var><sub>ex</sub> = <var>h</var>ν − <var>L</var><sub>ex</sub>.</p>
+      <p class="c11-law__why"><b>De ce:</b> în bilanț apar doar energia unui foton (frecvența) și <var>L</var><sub>ex</sub> (metalul). Intensitatea nu apare nicăieri.</p>
+    </article>
+    <article class="c11-law">
+      <span class="c11-law__n">4</span>
+      <p class="c11-law__t">Există o tensiune care, aplicată invers elementului tub catodic (celulei fotoelectrice), poate opri efectul fotoelectric: <var>h</var>ν − <var>L</var><sub>ex</sub> = |<var>e</var>|·<var>U</var><sub>s</sub>.</p>
+      <p class="c11-law__why"><b>De ce:</b> frâna oprește electronii cei mai rapizi dacă lucrul ei, |<var>e</var>|·<var>U</var><sub>s</sub>, egalează energia lor cinetică maximă.</p>
+    </article>
+  </div>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcane la test</span>
+    <p><strong>Nu energia totală a fasciculului</strong> decide dacă electronii ies, ci energia unui singur foton.</p>
+    <p><strong>Intensitatea nu apare</strong> în <var>E</var><sub>c</sub> = <var>h</var>ν − <var>L</var><sub>ex</sub>; ea se vede doar în numărul de electroni, adică în fotocurent.</p>
+    <p><var>L</var><sub>ex</sub> aparține <strong>metalului</strong>, nu luminii, iar <var>E</var><sub>c</sub> este energia cinetică <strong>maximă</strong>, nu a tuturor electronilor.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="dreapta">
+  <h2>Dreapta care îl arată pe h</h2>
+  <p>De unde știm că energia unui foton este tocmai <var>h</var>ν? Din măsurători. Pentru un metal crești frecvența pas cu pas și notezi energia cinetică maximă a electronilor (o afli din tensiunea de stopare). Punctele cad pe o <strong>dreaptă</strong>: <var>E</var><sub>c</sub> = <em>a</em>·ν + <em>b</em>.</p>
+  <p>Compară cu bilanțul, <var>E</var><sub>c</sub> = <var>E</var><sub>γ</sub> − <var>L</var><sub>ex</sub>. Dacă energia fotonului este <var>E</var><sub>γ</sub> = <var>h</var>ν (legea lui Planck), dreapta trebuie să aibă panta <em>a</em> = <var>h</var> și ordonata la origine <em>b</em> = −<var>L</var><sub>ex</sub>.</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Treci de la potasiu la zinc, care are un <var>L</var><sub>ex</sub> mai mare, și repeți aceleași măsurători. Ce se întâmplă cu dreapta <var>E</var><sub>c</sub>(ν)?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Rămâne aceeași: metalul nu contează.</li>
+      <li data-k="b">Se deplasează spre dreapta, paralel cu ea însăși (aceeași pantă).</li>
+      <li data-k="c">Se înclină mai tare: panta devine mai mare.</li>
+      <li data-k="d">Se înclină mai puțin: panta devine mai mică.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Se deplasează paralel.</strong> Panta este <var>h</var>, aceeași pentru toate metalele. Metalul schimbă doar ordonata la origine (−<var>L</var><sub>ex</sub> mai jos) și, odată cu ea, pragul ν<sub>0</sub>, care se mută spre frecvențe mai mari.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c11Dreapta">
+    <figcaption>Punctele experimentale și dreapta lor</figcaption>
+    <p class="sim__hint"><b>Observă:</b> schimbă metalul — dreapta se mută, dar triunghiul verde al pantei rămâne la fel de mare. Punctul verde de pe axa orizontală este pragul ν<sub>0</sub>; punctul galben de pe axa verticală este −<var>L</var><sub>ex</sub>.</p>
+  </figure>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ce arată experimentul</span>
+    <p><var>E</var><sub>c</sub> crește <strong>liniar</strong> cu frecvența. Panta este <strong>aceeași pentru toate metalele</strong> și egală cu <span class="term">constanta lui Planck</span>, <var>h</var> ≈ 6,62·10<sup>−34</sup> J·s; ordonata la origine, −<var>L</var><sub>ex</sub>, depinde de metal. Așa se recunoaște că energia fotonului este <var>E</var><sub>γ</sub> = <var>h</var>ν.</p>
+    <p>Din <var>E</var><sub>γ</sub> = <var>mc</var><sup>2</sup> = <var>h</var>ν și <var>p</var><sub>γ</sub> = <var>mc</var> rezultă <var>E</var><sub>γ</sub>/<var>p</var><sub>γ</sub> = <var>c</var>, deci impulsul fotonului este <var>p</var><sub>γ</sub> = <var>h</var>ν/<var>c</var>.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="clasic">
+  <h2>De ce nu ajunge lumina ca undă</h2>
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p>Această secțiune nu apare în notițe. O punem aici ca să vezi de ce fotonii nu sunt un moft: ce ar da imaginea mai veche, în care lumina este o undă continuă, care își cedează energia electronilor treptat?</p>
+  </aside>
+  <p>Într-o undă continuă, mai multă intensitate înseamnă un câmp mai puternic și mai multă energie pe secundă pentru fiecare electron. De aici, trei așteptări. Experimentul le contrazice pe toate trei:</p>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Întrebarea</th><th>Unda continuă ar prevedea</th><th>Se observă</th></tr></thead>
+    <tbody>
+      <tr><td>Cât de rapizi sunt electronii?</td><td>mai rapizi la lumină mai intensă; culoarea nu contează</td><td>independenți de intensitate; cresc cu frecvența</td></tr>
+      <tr><td>La ce culoare apar?</td><td>la orice culoare, dacă lumina e destul de puternică</td><td>doar peste frecvența de prag</td></tr>
+      <tr><td>Cât durează până apar?</td><td>o întârziere, cât timp se strânge energia (mai lungă la lumină slabă)</td><td>practic instantaneu, chiar la lumină foarte slabă</td></tr>
+    </tbody>
+  </table></div>
+
+  <figure data-sim="c11Clasic">
+    <figcaption>Adaos · Ce prevede unda și ce arată experimentul (sodiu)</figcaption>
+    <p class="sim__hint"><b>Observă:</b> în starea de pornire (roșu intens) unda clasică ar scoate electroni, iar experimentul nu scoate niciunul. Mută frecvența peste prag, apoi schimbă intensitatea: bara „experiment” urmează frecvența, iar bara „undă clasică” urmează intensitatea.</p>
+  </figure>
+
+  <aside class="callout good">
+    <span class="callout__title">Ce rezolvă fotonul</span>
+    <p>Un pachet de energie <var>h</var>ν, absorbit <strong>întreg</strong> de un electron, explică toate trei: pragul (<var>h</var>ν ≥ <var>L</var><sub>ex</sub>), lipsa întârzierii (nu se strânge nimic) și independența lui <var>E</var><sub>c</sub> de intensitate (intensitatea numără pachetele, nu le schimbă).</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">O lumină roșie destul de intensă va scoate până la urmă electroni din orice metal.</p>
+      <div class="myth__true"><p>Sub frecvența de prag fiecare foton are prea puțină energie, iar energiile nu se adună. Mai mulți fotoni sau mai mult timp înseamnă doar mai multe încercări eșuate.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lumina mai intensă produce electroni mai rapizi.</p>
+      <div class="myth__true"><p>Intensitatea schimbă <strong>numărul</strong> electronilor (fotocurentul), nu energia lor. Energia cinetică depinde de frecvență: <var>E</var><sub>c</sub> = <var>h</var>ν − <var>L</var><sub>ex</sub>.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lucrul mecanic de extracție depinde de lumina folosită.</p>
+      <div class="myth__true"><p><var>L</var><sub>ex</sub> este o constantă a <strong>metalului</strong>. Lumina decide doar dacă fotonii ei îl depășesc sau nu.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Tensiunea de stopare crește dacă mărim intensitatea luminii.</p>
+      <div class="myth__true"><p><var>U</var><sub>s</sub> măsoară energia cinetică maximă, deci depinde de frecvență și de metal. Intensitatea ridică doar palierul curentului.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Toți fotoelectronii pleacă cu energia <var>h</var>ν − <var>L</var><sub>ex</sub>.</p>
+      <div class="myth__true"><p>Aceasta este energia <strong>maximă</strong>. <var>L</var><sub>ex</sub> e minimul plătit la ieșire: electronii legați mai adânc pleacă cu mai puțin. Tensiunea de stopare îi oprește pe cei mai rapizi.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Doi fotoni slabi pot lucra împreună și scot un electron.</p>
+      <div class="myth__true"><p>Un fotoelectron este extras de un <strong>singur</strong> foton, cu toată energia lui. Sub prag, doi, zece sau un milion de fotoni nu schimbă nimic.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="11"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formulele, în cuvinte</h2>
+  <p>Nu trebuie să știi formule pe de rost, dar merită să înțelegi cele trei de mai jos. Toate sunt aceeași poveste: un foton, un electron.</p>
+
+  <aside class="formula">
+    <span class="formula__label">Bilanțul energetic</span>
+    <math display="block"><mi>h</mi><mi>ν</mi><mo>−</mo><msub><mi>L</mi><mtext>ex</mtext></msub><mo>=</mo><msub><mi>E</mi><mtext>c</mtext></msub></math>
+    <p class="formula__read">Citește-o așa: „energia unui foton, minus taxa de ieșire din metal, este energia cinetică maximă a electronului smuls”. Fotonul își împarte energia între ieșire și mișcare; nimic nu se adună din alți fotoni.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Frecvența de prag</span>
+    <math display="block"><msub><mi>ν</mi><mn>0</mn></msub><mo>=</mo><mfrac><msub><mi>L</mi><mtext>ex</mtext></msub><mi>h</mi></mfrac></math>
+    <p class="formula__read">Citește-o așa: „pragul este taxa de ieșire împărțită la <var>h</var>”. Cu cât metalul ține electronii mai tare, cu atât pragul e mai sus, spre ultraviolet; sub el nu apare nimic.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Tensiunea de stopare</span>
+    <math display="block"><mi>h</mi><mi>ν</mi><mo>−</mo><msub><mi>L</mi><mtext>ex</mtext></msub><mo>=</mo><mo>|</mo><mi>e</mi><mo>|</mo><mo>·</mo><msub><mi>U</mi><mtext>s</mtext></msub></math>
+    <p class="formula__read">Citește-o așa: „energia cinetică maximă a electronilor este egală cu sarcina electronului înmulțită cu tensiunea care îi oprește”. Frâna „cântărește” energia electronilor, nu numărul lor.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="11" data-n="7"></div>
+  <aside class="callout light">
+    <span class="callout__title">Ai ajuns la capăt</span>
+    <p>De la două postulate ai ajuns la fotoni: spațiul și timpul au devenit relative, energia și masa s-au legat între ele, iar lumina s-a dovedit a veni în pachete. Ultimul pas este <a href="../test-final.html">testul final amestecat</a>, cu întrebări din toate capitolele.</p>
+  </aside>
+</section>
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap11.js"></script>
+<script src="../assets/js/sims/cap11-lab.js"></script>
+<script src="../assets/js/sims/cap11-poveste.js"></script>
+<script src="../assets/js/sims/cap11-extra.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

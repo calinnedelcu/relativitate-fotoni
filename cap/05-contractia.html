@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 5 · Contracția lungimilor — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Lungime proprie și lungime măsurată, marcarea simultană a capetelor, L′ = γ·L și reciprocitatea contracției lungimilor, explicate vizual.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-chapter="5">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul 5</span></div>
+  <h1>Contracția lungimilor</h1>
+  <p class="hero__idea">O bară care zboară pe lângă tine are, <strong>măsurată de tine</strong>, o lungime mai mică decât atunci când stă pe loc — dar numai în direcția mișcării. Nimic nu o strivește: rezultatul vine din felul în care <strong>se măsoară</strong> lungimea și din faptul că „în același moment” <strong>depinde de observator</strong>.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici cum se măsoară lungimea unui corp în mișcare și de ce capetele se marchează <strong>în același moment</strong>;</li>
+    <li>să deosebești lungimea proprie (<var>L</var>′) de cea măsurată (<var>L</var>) și să enunți <var>L</var>′ = γ·<var>L</var>, adică <var>L</var> &lt; <var>L</var>′;</li>
+    <li>să explici de ce efectul este reciproc, apare numai în lungul mișcării și nu e nici strivire, nici iluzie optică.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 13 min</span><span class="pill">3 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="masurare">
+  <h2>Cum măsori o bară care zboară pe lângă tine?</h2>
+  <p>Până aici ai văzut că spațiul și timpul sunt relative (cap. 1), că transformările Lorentz leagă coordonatele a doi observatori (cap. 3) și că „în același moment” depinde de observator (cap. 4). Acum le punem la treabă într-un caz foarte concret: <strong>lungimea unui corp în mișcare</strong>.</p>
+  <p>Imaginează-ți o bară (o navă, un tren — ce vrei) care trece în viteză prin dreptul stației tale. Dacă ar sta pe loc, ai pune o riglă lângă ea și ai citi capetele. Dar bara se mișcă: până citești un capăt, celălalt a plecat din loc.</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Care procedură dă într-adevăr „lungimea barei în sistemul stației”?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Notezi poziția capătului din față acum, iar pe a celui din spate peste o secundă; distanța dintre cele două semne este lungimea.</li>
+      <li data-k="b">Marchezi pozițiile ambelor capete în același moment, după ceasurile stației, apoi măsori distanța dintre semne.</li>
+      <li data-k="c">Nu se poate: lungimea există doar pentru corpurile aflate în repaus, un corp în mișcare nu are o lungime bine definită.</li>
+      <li data-k="d">Întrebi pe cineva de pe bară cât măsoară: valoarea lui este lungimea barei pentru oricare observator.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Varianta b.</strong> Ca să existe „lungimea în sistemul stației”, ambele capete trebuie localizate <em>în același moment</em> al stației. Altfel bara se mută între cele două citiri, iar rezultatul depinde de cât timp a trecut (vei vedea asta în simulare).</p>
+      <p>Un corp în mișcare are o lungime la fel de bine definită ca unul în repaus. Ce spune cel de pe bară este însă altă mărime: lungimea proprie, pe care o definim imediat.</p>
+    </div>
+  </div>
+
+  <aside class="callout idea">
+    <span class="callout__title">Regula de măsurare</span>
+    <p>Lungimea unui corp care se mișcă față de tine este distanța dintre pozițiile celor două capete, <strong>determinate în același moment al sistemului tău</strong>: faci o <span class="term">marcare simultană</span>, apoi măsori distanța dintre semne cu toată calmitatea.</p>
+  </aside>
+
+  <p>Pentru un corp care stă pe loc, momentul nu contează — capetele nu se mută. Pentru unul care se mișcă, <strong>contează enorm</strong>. Asta e cheia întregului capitol.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Măsurare, nu fotografie</span>
+    <p>O poză a barei în trecere nu înseamnă același lucru: lumina de la cele două capete pleacă la momente diferite ca să ajungă deodată în aparat. Lungimea de care vorbim se obține cu ceasuri sincronizate ale stației, ținând cont de timpul de propagare a luminii.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="bara">
+  <h2>Lungime proprie și lungime măsurată</h2>
+  <p>Cursul lucrează cu două sisteme: <strong>S</strong> („fix”, stația) și <strong>S′</strong> („mobil”, care se mișcă cu viteza <var>v</var> față de S). Bara AB stă <strong>în repaus în S′</strong>: cei din S′ o țin în mână.</p>
+  <ul>
+    <li><var>L</var>′ — <span class="term">lungime proprie</span>: lungimea barei în sistemul în care ea stă pe loc (S′).</li>
+    <li><var>L</var> — <span class="term">lungime măsurată</span> în S, unde bara zboară cu viteza <var>v</var>: se obține cu <var>t</var><sub>A</sub> = <var>t</var><sub>B</sub>.</li>
+  </ul>
+
+  <div class="predict" data-correct="c">
+    <p class="predict__q">O bară are 10 m cât stă pe loc. Trece cu 0,8 <var>c</var> pe lângă stație, iar stația îi determină lungimea prin marcare simultană. Față de 10 m, stația găsește:</p>
+    <ul class="predict__opts">
+      <li data-k="a">Exact 10 m: lungimea este o însușire a barei și nu depinde de cine o măsoară.</li>
+      <li data-k="b">Mai mult de 10 m: în mișcare, bara se „întinde” în sensul vitezei.</li>
+      <li data-k="c">Mai puțin de 10 m.</li>
+      <li data-k="d">Nu se poate spune: o bară în mișcare nu are o lungime precisă.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Mai puțin.</strong> Cât de mult depinde de viteză — joacă-te cu simularea de mai jos. Observă și ce <em>nu</em> se schimbă: înălțimea barei.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c05Bara">
+    <figcaption>Bara în mișcare</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> crește viteza și urmărește cum lungimea măsurată <var>L</var> se îndepărtează de <var>L</var>′ (bara de referință de sus), în timp ce înălțimea <var>h</var> rămâne aceeași. Apoi bifează „momente diferite” și mișcă întârzierea: distanța dintre semne iese oricât — de aceea contează „în același moment”. Comută pe S′ ca să vezi marcajele din bară.</p>
+  </figure>
+
+  <p>Ce ai putut vedea:</p>
+  <ul>
+    <li>la viteze mici, <var>L</var> ≈ <var>L</var>′; la viteze mari, <var>L</var> scade tot mai mult;</li>
+    <li>lungimea proprie <var>L</var>′ nu se schimbă niciodată — bara e la fel de lungă pentru cine o ține;</li>
+    <li>numai cu marcare simultană distanța dintre semne este lungimea barei.</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Contracția lungimilor</span>
+    <p>Bara AB, în repaus în S′, are lungimea <var>L</var>′ = <var>x</var>′<sub>A</sub> − <var>x</var>′<sub>B</sub>. În S, lungimea ei <var>L</var> = <var>x</var><sub>A</sub> − <var>x</var><sub>B</sub> se măsoară cu <strong><var>t</var><sub>A</sub> = <var>t</var><sub>B</sub></strong> (capetele se marchează simultan în S). Rezultă <strong><var>L</var>′ = γ·<var>L</var></strong> și, cum γ &gt; 1 pentru orice <var>v</var>, <strong><var>L</var> &lt; <var>L</var>′</strong>.</p>
+    <p>Mai precis: <var>L</var>′ este lungimea proprie (măsurată în sistemul în care bara stă pe loc), iar <var>L</var> este lungimea măsurată în S, unde bara se mișcă. Un corp în mișcare este deci <strong>mai scurt</strong>, pe direcția mișcării, decât același corp în repaus.</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">De ce contează <var>t</var><sub>A</sub> = <var>t</var><sub>B</sub> — în cuvinte</span>
+    <p>Din transformările Lorentz, poziția unui capăt în S′ este γ ori <em>(poziția lui în S minus <var>v</var> ori momentul)</em>. Scazi pozițiile celor două capete: dacă ele au fost notate <strong>la același moment</strong>, termenii cu <var>v</var> și cu momentul sunt identici și se anulează. Rămâne diferența pozițiilor din S, înmulțită cu γ — adică <var>L</var>′ = γ·<var>L</var>.</p>
+    <p>Dacă momentele ar fi diferite, termenii nu s-ar mai anula, iar diferența ar amesteca lungimea barei cu drumul făcut de ea între cele două marcaje. Simultaneitatea nu e un detaliu: e <strong>condiția</strong> ca diferența de poziții să fie o lungime.</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Nu încurca <var>L</var> cu <var>L</var>′</span>
+    <p>În curs, <strong><var>L</var>′ este lungimea proprie</strong> (bara stă în S′), iar <strong><var>L</var> este lungimea măsurată în S</strong> — de aceea formula e <var>L</var>′ = γ·<var>L</var>, nu invers. Lungimea proprie este mereu cea <strong>mai mare</strong>: o are cel care ține bara în mână.</p>
+  </aside>
+
+  <h3 id="cat-de-mult">Cât de mult se scurtează?</h3>
+  <p>Raportul dintre cele două lungimi depinde numai de viteză, prin <span class="term" data-def="γ = 1/√(1 − v²/c²). Are mereu γ ≥ 1, iar γ ≈ 1 când v ≪ c.">factorul Lorentz</span> γ — nu de material și nici de cât de lungă este bara.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Viteza barei față de observator</th><th>Ce rămâne din lungimea proprie</th><th>Cum arată</th></tr></thead>
+    <tbody>
+      <tr><td>un avion de linie (≈ 0,000001 <var>c</var>)</td><td>practic tot</td><td>diferența e mult sub orice instrument</td></tr>
+      <tr><td>0,1 <var>c</var></td><td>≈ 99,5%</td><td>cu o jumătate de procent mai scurtă</td></tr>
+      <tr><td>0,6 <var>c</var></td><td>80%</td><td>cu o cincime mai scurtă</td></tr>
+      <tr><td>0,9 <var>c</var></td><td>≈ 44%</td><td>mai puțin de jumătate</td></tr>
+      <tr><td>0,99 <var>c</var></td><td>≈ 14%</td><td>de aproape șapte ori mai scurtă</td></tr>
+      <tr><td>tot mai aproape de <var>c</var></td><td>tinde spre zero</td><td>nu ajunge la zero la nicio viteză posibilă</td></tr>
+    </tbody>
+  </table></div>
+  <p>La viteze de zi cu zi, γ ≈ 1 (<var>v</var> ≪ <var>c</var>) și efectul dispare: lungimile par ale obiectului, nu ale observatorului — exact ca în fizica clasică.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="poveste">
+  <h2>De ce iese mai scurtă? O poveste pe pași</h2>
+  <p>Urmărește, pas cu pas, o bară de 10 m care trece cu 0,8 <var>c</var>. Răspunde la întrebări ca să continui — la sfârșit vei vedea aceeași scenă și din bară.</p>
+
+  <div class="steps" data-title="Cum se măsoară o bară care zboară">
+    <div class="steps__stage"><figure data-sim="c05Poveste"><figcaption>Scena poveștii</figcaption></figure></div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · O bară trece pe lângă stație</h3>
+      <p>Bara are <strong>10 m</strong> cât stă pe loc — lungimea ei proprie, <var>L</var>′. Acum trece prin dreptul stației cu <strong>0,8 <var>c</var></strong> (în scenă, timpul e încetinit ca să urmărești marcajele).</p>
+      <p>Stația vrea să afle cât de lungă este. Nu poate lipi o riglă de ea: bara fuge. Ce poate face?</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Prima idee: capetele, pe rând</h3>
+      <p>Un tehnician marchează pe sol poziția capătului din față. O clipă mai târziu, altul marchează poziția capătului din spate.</p>
+      <div class="predict" data-correct="d">
+        <p class="predict__q">Ce reprezintă distanța dintre cele două semne?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Lungimea barei în sistemul stației.</li>
+          <li data-k="b">Lungimea proprie a barei, de 10 m.</li>
+          <li data-k="c">Tot lungimea barei în sistemul stației, doar măsurată mai puțin precis.</li>
+          <li data-k="d">Un număr care depinde de cât a durat clipa dintre marcaje — deci nu e o lungime a barei.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Un număr care depinde de întârziere.</strong> Între cele două marcaje bara a mai înaintat, iar drumul ei se amestecă în rezultat. Cu altă întârziere ar fi ieșit alt număr — chiar unul absurd, ca în scenă.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Regula: același moment</h3>
+      <p>Corect este să marchezi <strong>ambele capete în același moment</strong> al ceasurilor stației. Acum semnele „îngheață” bara: distanța dintre ele chiar spune ceva despre ea.</p>
+      <p>Banda punctată din scenă leagă cele două flash-uri: pentru S, ele sunt simultane.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · Rezultatul</h3>
+      <div class="predict" data-correct="a">
+        <p class="predict__q">Față de cei 10 m ai barei în repaus, distanța dintre semnele puse simultan în S este:</p>
+        <ul class="predict__opts">
+          <li data-k="a">mai mică de 10 m</li>
+          <li data-k="b">exact 10 m, pentru că semnele „prind” chiar capetele barei</li>
+          <li data-k="c">mai mare de 10 m</li>
+          <li data-k="d">depinde de cât de repede apasă tehnicienii butonul</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Mai mică.</strong> La 0,8 <var>c</var> iese 6 m, adică 60% din lungimea proprie. Asta este contracția lungimilor: <var>L</var> &lt; <var>L</var>′.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · Același lucru, din bară</h3>
+      <p>Trecem în S′, sistemul barei. Bara stă pe loc și are 10 m; solul fuge spre stânga, iar riglele lui sunt și ele scurtate.</p>
+      <p>Cele două marcaje ale solului nu mai sunt simultane: <strong>întâi</strong> se face semnul de la capătul din față, <strong>apoi</strong> cel de la capătul din spate (ca în trenul lui Einstein, din capitolul 4). Între ele solul a alunecat înapoi, deci semnele ies <strong>mai apropiate</strong> decât capetele barei.</p>
+    </section>
+
+    <section class="step" data-stage="5">
+      <h3>6 · Amândoi au dreptate</h3>
+      <p>Aceleași două evenimente, două descrieri. Pentru S sunt simultane, iar bara iese de 6 m. Pentru S′ nu sunt simultane, iar bara are 10 m.</p>
+      <aside class="callout idea">
+        <span class="callout__title">De reținut</span>
+        <p>Contracția nu este o schimbare a barei, ci rezultatul măsurării cu momente „simultane” diferite în cele două sisteme: <var>L</var>′ = γ·<var>L</var>, adică <var>L</var> &lt; <var>L</var>′.</p>
+      </aside>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="reciproc">
+  <h2>Reciprocitatea: fiecare vede bara celuilalt mai scurtă</h2>
+  <p>Până acum bara era a lui S′. Dar S′ poate spune același lucru despre orice bară de pe sol. Fie Ana, în S, și Bogdan, în S′, care se depărtează unul de altul uniform. Fiecare ține în mână o bară de exact 1 m (în repaus față de el).</p>
+
+  <div class="predict" data-correct="c">
+    <p class="predict__q">Fiecare măsoară, prin marcare simultană în sistemul propriu, bara celuilalt. Ce găsesc?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Doar Ana găsește bara lui Bogdan mai scurtă: ea „stă pe loc”, el se mișcă.</li>
+      <li data-k="b">Doar Bogdan găsește bara Anei mai scurtă, fiindcă el este cel care se mișcă.</li>
+      <li data-k="c">Fiecare găsește bara celuilalt mai scurtă de 1 m.</li>
+      <li data-k="d">Niciunul: barele sunt identice, deci rămân identice pentru oricine.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Fiecare o găsește pe a celuilalt mai scurtă.</strong> Nu există „cel care se mișcă de-adevăratelea”: mișcarea uniformă e relativă (cap. 1), iar situația este perfect simetrică.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c05Reciproc">
+    <figcaption>Două bare, doi observatori</figcaption>
+    <p class="sim__hint"><b>Observă:</b> comută între „S — Ana” și „S′ — Bogdan”. Scena se oglindește: de fiecare dată bara care zboară (a celuilalt) iese mai scurtă decât bara din mâna observatorului. La viteza 0, cele două bare sunt identice.</p>
+  </figure>
+
+  <h3>De ce nu e o contradicție?</h3>
+  <p>Pare imposibil ca fiecare bară să fie mai scurtă decât cealaltă. Doar dacă uiți ce înseamnă „mai scurtă”:</p>
+  <ul>
+    <li>Ana compară ce a marcat <strong>în același moment al ei</strong> cu bara ei. Bogdan compară ce a marcat <strong>în același moment al lui</strong> cu bara lui.</li>
+    <li>Cele două „același moment” nu coincid: ce e simultan pentru Ana nu e simultan pentru Bogdan (capitolul 4).</li>
+    <li>Nu există o a treia lungime „adevărată” care să dea dreptate unuia. O bară are o <span class="term">lungime proprie</span> (în repaus față de ea) și lungimi măsurate de observatorii față de care se mișcă.</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Reciprocitate</span>
+    <p>Efectul este <strong>același pentru ambii observatori</strong>: fiecare măsoară mai scurtă bara celuilalt, pentru că niciun S.R.I. nu e privilegiat (Postulatul al II-lea). Același lucru e valabil pentru <em>orice</em> corp aflat în mișcare relativă: bare, rigle, nave, solul însuși.</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcana „dar cine e de fapt mai scurt?”</span>
+    <p>Întrebarea nu are sens. Dacă cele două bare ar sta pe loc una față de alta, ar fi identice (au aceeași lungime proprie). Cât timp se mișcă una față de alta, <strong>fiecare observator are dreptate pentru sistemul lui</strong>, și nu există un arbitru în afara sistemelor.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="directie">
+  <h2>Doar în lungul mișcării — și fără turtire reală</h2>
+
+  <h3>Pe perpendiculară nu se schimbă nimic</h3>
+  <p>Transformările Lorentz lasă neschimbate coordonatele transversale: <var>y</var> = <var>y</var>′ și <var>z</var> = <var>z</var>′. Înălțimea și grosimea unei bare (<span class="term">dimensiune transversală</span>) sunt aceleași pentru S și S′. O placă pătrată care zboară cu o latură în lungul mișcării este măsurată ca un <strong>dreptunghi</strong>, scurtat numai pe direcția mișcării.</p>
+  <p>Se vede și din felul în care am măsurat: simultaneitatea relativă apare între puncte aflate la poziții diferite <em>pe direcția mișcării</em>. Două puncte aflate la aceeași poziție în lungul mișcării (capetele unei înălțimi) au aceleași momente în ambele sisteme — nu are ce să strice măsurătoarea.</p>
+
+  <h3>Nu e o strivire</h3>
+  <p>Dacă bara ar fi strivită de forțe, cei de pe ea ar vedea tensiuni, deformări, rupturi. Ei nu văd nimic: pentru ei bara are în continuare lungimea proprie, relaxată, exact ca în repaus — și, conform Postulatului al II-lea, nici nu pot afla din interior că se mișcă uniform.</p>
+  <p>Scurtarea nu este o proprietate a barei singure, ci o <strong>relație între bară și un observator față de care ea se mișcă</strong>. Un băț cu umbra mai scurtă nu e un băț strivit.</p>
+
+  <h3>Nu e o iluzie optică</h3>
+  <p>Nu vorbim despre ce „se vede” cu ochiul sau într-o fotografie. Lungimea corect măsurată ține cont de timpul de propagare a luminii și <strong>tot iese mai mică</strong>: efectul vine din transformările Lorentz, nu din faptul că lumina are viteză finită.</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Trei lucruri pe care contracția NU este</span>
+    <ul>
+      <li><strong>nu e o strivire</strong> produsă de forțe sau de accelerație;</li>
+      <li><strong>nu e o iluzie optică</strong> sau o eroare de măsurare;</li>
+      <li><strong>nu e o proprietate „absolută”</strong> a barei: pentru cei din sistemul ei, bara rămâne la fel.</li>
+    </ul>
+  </aside>
+
+  <h3>Ce se schimbă și ce nu</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Depinde de observator (se schimbă)</th><th>La fel pentru toți</th></tr></thead>
+    <tbody>
+      <tr><td>lungimea unui corp în mișcare, în lungul mișcării</td><td>lungimea proprie a corpului (cea din repaus)</td></tr>
+      <tr><td>distanța dintre două semne fixe de pe sol</td><td>dimensiunile transversale: înălțimea, grosimea</td></tr>
+      <tr><td>care dintre două marcaje depărtate are loc primul</td><td>viteza luminii în vid și forma legilor fizicii</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="scara">
+  <h2>Scara și hambarul <span class="badge bonus">Adaos</span></h2>
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p>Nu apare în notițe, dar este testul clasic al înțelegerii: dacă ai priceput simultaneitatea, poți descrie aceeași întâmplare din două sisteme.</p>
+  </aside>
+  <p>Un hambar are 10 m în repaus și câte o ușă la fiecare capăt. O scară de 12 m în repaus se apropie de el atât de repede încât, văzută din hambar, are doar 8 m. Cei din hambar o văd mai scurtă decât hambarul și închid scurt ambele uși <strong>în același moment</strong>, cu scara înăuntru.</p>
+  <p>Cum descrie aceeași situație cineva aflat pe scară?</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th></th><th>Din hambar</th><th>De pe scară</th></tr></thead>
+    <tbody>
+      <tr><td>Scara</td><td>8 m — mai scurtă decât hambarul</td><td>12 m (lungimea ei proprie)</td></tr>
+      <tr><td>Hambarul</td><td>10 m (lungimea lui proprie)</td><td>≈ 6,7 m — mai scurt decât scara</td></tr>
+      <tr><td>Scara încape?</td><td>Da: ambele uși pot fi închise cu scara înăuntru</td><td>Nu: scara e mai lungă decât hambarul</td></tr>
+      <tr><td>Cele două uși</td><td>se închid în același moment</td><td>nu în același moment: ușa spre care se îndreaptă scara se închide prima</td></tr>
+    </tbody>
+  </table></div>
+  <p>Nu e o contradicție. „Scara încape” înseamnă „ambele uși sunt închise în același moment, cu scara înăuntru”, iar <strong>„în același moment” depinde de observator</strong>. Întrebarea „încape sau nu?” ascunde o presupunere despre simultaneitate; fiecare sistem are o descriere coerentă a ceea ce se întâmplă la fiecare ușă.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Bara în mișcare este strivită fizic: forțele o comprimă și atomii ei se apropie.</p>
+      <div class="myth__true"><p>Cei de pe bară nu observă nicio deformare: pentru ei bara are lungimea proprie, relaxată. Scurtarea este o relație între bară și un observator față de care ea se mișcă, nu o stare mecanică a barei.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Contracția e o iluzie optică: lumina de la cele două capete ajunge la momente diferite.</p>
+      <div class="myth__true"><p>Lungimea se determină cu ceasuri sincronizate și ține cont de timpul de propagare a luminii. Corect măsurată, bara <strong>tot</strong> iese mai scurtă: efectul vine din relativitatea simultaneității, nu din viteza finită a luminii.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Se contractă doar bara care se mișcă „de-adevăratelea”; cea din stație rămâne neschimbată.</p>
+      <div class="myth__true"><p>Efectul e reciproc: fiecare observator o măsoară mai scurtă pe bara celuilalt. Mișcarea uniformă are sens numai față de ceva, deci „cine se mișcă de-adevăratelea” nu se poate stabili.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Un corp în mișcare se micșorează în toate direcțiile.</p>
+      <div class="myth__true"><p>Doar în lungul mișcării. Pe perpendiculară coordonatele sunt aceleași (<var>y</var> = <var>y</var>′, <var>z</var> = <var>z</var>′), deci înălțimea și grosimea nu se schimbă: o placă pătrată devine dreptunghi, nu pătrat mai mic.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Dacă marchezi capetele la momente diferite, obții tot lungimea barei, doar mai puțin precis.</p>
+      <div class="myth__true"><p>Rezultatul depinde de întârziere: poate ieși mai mic sau chiar mai mare decât lungimea proprie. Doar marcarea <em>simultană</em> (<var>t</var><sub>A</sub> = <var>t</var><sub>B</sub>) dă lungimea barei în acel sistem.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lungimea proprie este cea mai scurtă dintre lungimile unei bare.</p>
+      <div class="myth__true"><p>Este cea mai <strong>mare</strong>: <var>L</var>′ = γ·<var>L</var> cu γ &gt; 1, deci orice observator față de care bara se mișcă măsoară <var>L</var> &lt; <var>L</var>′. Lungimea proprie e cea din sistemul în care bara stă pe loc.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="5"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formula, în cuvinte</h2>
+  <p>Nu trebuie să știi formule pe de rost, dar merită să înțelegi propoziția din spatele lor.</p>
+  <aside class="formula">
+    <span class="formula__label">Contracția lungimilor</span>
+    <math display="block"><msup><mi>L</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>·</mo><mi>L</mi></math>
+    <p class="formula__read">Citește-o așa: „<strong>Lungimea proprie</strong> a barei (cea din sistemul în care ea stă pe loc) este de γ ori mai mare decât <strong>lungimea măsurată în S</strong>, unde bara zboară, cu capetele marcate în același moment.” Cum γ este mai mare decât 1, <var>L</var> iese mai mică decât <var>L</var>′. Invers: lungimea măsurată este lungimea proprie împărțită la γ.</p>
+  </aside>
+  <aside class="formula">
+    <span class="formula__label">Factorul Lorentz (din capitolul 3)</span>
+    <math display="block"><mi>γ</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mfrac></math>
+    <p class="formula__read">Citește-o așa: „γ este 1 împărțit la rădăcina din (1 minus pătratul raportului dintre viteză și viteza luminii).” La viteze de zi cu zi, raportul <var>v</var>/<var>c</var> este minuscul, γ ≈ 1 și <var>L</var> ≈ <var>L</var>′. Aproape de <var>c</var>, γ devine uriaș, iar <var>L</var> tinde spre zero.</p>
+  </aside>
+
+  <aside class="callout light">
+    <span class="callout__title">Mai departe</span>
+    <p>Dacă lungimile depind de observator, ce se întâmplă cu <strong>duratele</strong>? Aceeași idee — „în același moment” nu e același pentru toți —, aplicată la ceasuri, dă dilatarea timpului și paradoxul gemenilor. Le vezi în capitolul 6.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="5" data-n="7"></div>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap05.js"></script>
+<script src="../assets/js/sims/cap05-bara.js"></script>
+<script src="../assets/js/sims/cap05-reciproc.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 10 · Fotonul — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Fotonul, cuanta de lumină: de ce are masa de repaus zero și viteza c, ce spun E = hν și p = hν/c și cum deosebești culoarea (energia unui foton) de intensitate (numărul de fotoni).">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-chapter="10">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea III · Lumina ca particulă</span><span class="pill">Capitolul 10</span></div>
+  <h1>Fotonul</h1>
+  <p class="hero__idea">Lumina nu curge ca un lichid, ci vine în <strong>porții de energie</strong> numite <strong>fotoni</strong>. Un foton merge în vid mereu cu <var>c</var>, deci nu poate avea <strong>masă de repaus</strong> — și totuși are <strong>energie</strong> și <strong>impuls</strong>. Culoarea hotărăște cât de energic e fiecare foton; intensitatea hotărăște <em>câți</em> fotoni sosesc.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici de ce un foton are <var>m</var><sub>0</sub> = 0, de ce merge mereu cu <var>c</var> și de ce nu poate sta pe loc;</li>
+    <li>să enunți <var>E</var> = <var>h</var>ν și <var>p</var> = <var>h</var>ν/<var>c</var> și să spui în cuvinte ce înseamnă;</li>
+    <li>să deosebești <strong>culoarea</strong> (energia unui foton) de <strong>intensitate</strong> (numărul de fotoni) — capcana cea mai frecventă.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 12 min</span><span class="pill">3 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="intro">
+  <h2>Ce este un foton?</h2>
+  <p>Din capitolele trecute știi că un corp are <strong>energie de repaus</strong> <var>E</var><sub>0</sub> = <var>m</var><sub>0</sub><var>c</var><sup>2</sup> și <strong>energie totală</strong> <var>E</var> = <var>mc</var><sup>2</sup>, legate de <span class="term">impuls</span> printr-un triunghi dreptunghic. Știi și că un corp cu <span class="term">masa de repaus</span> nenulă rămâne sub <var>c</var>: cu cât te apropii de <var>c</var>, cu atât costă mai multă energie.</p>
+  <p>Lumina e altfel. Ea merge cu <var>c</var> — mereu, pentru orice observator (Postulatul I). Ce fel de „obiect” poate face asta?</p>
+  <p>Lumina se propagă ca o undă, cu frecvență ν și lungime de undă λ. Dar când schimbă energie cu materia, o face <strong>în porții</strong>. O astfel de porție se numește <span class="term">foton</span> și este o <span class="term">cuantă</span> — cea mai mică porție posibilă — de radiație electromagnetică de o anumită frecvență. „Jumătate de foton” nu există.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Fotonul nu e o bilă</span>
+    <p>Desenele din acest capitol arată fotonii ca punctulețe sau pachete ondulate: e doar o imagine comodă. Fotonul se propagă ca o undă, dar dă sau primește energia și impulsul <em>întregi, dintr-o dată</em>, ca o particulă.</p>
+  </aside>
+
+  <div class="predict" data-correct="c">
+    <p class="predict__q">Un foton roșu și unul albastru pornesc în același moment, din același loc, prin vid, spre o țintă foarte îndepărtată. Care ajunge primul?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Cel albastru — are mai multă energie.</li>
+      <li data-k="b">Cel roșu — are lungimea de undă mai mare, deci „face pași mai lungi”.</li>
+      <li data-k="c">Ajung în același moment.</li>
+      <li data-k="d">Depinde de cât de intensă e lumina din care fac parte.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>În același moment.</strong> În vid, orice foton — roșu, albastru, de raze X — se mișcă cu viteza <var>c</var>, în orice S.R.I. (Postulatul I). Culoarea nu schimbă viteza; schimbă <em>energia</em>.</p>
+      <p>La un corp obișnuit, mai multă energie înseamnă mai multă viteză. La foton, mai multă energie înseamnă mai multă <em>frecvență</em>. Hai să vedem de ce fotonul e atât de diferit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="masa">
+  <h2>De ce fotonul nu are masă de repaus</h2>
+  <p>Un corp cu masă de repaus nu poate ajunge la <var>c</var>, iar fotonul merge cu <var>c</var> tot timpul. Cum se împacă? Parcurge raționamentul pe pași — la pasul 2 te așteaptă o întrebare.</p>
+
+  <div class="steps" data-title="De ce m₀ = 0?">
+    <div class="steps__stage">
+      <figure data-sim="c10Poveste">
+        <figcaption>Energia și viteza</figcaption>
+        <p class="sim__hint"><b>Observă:</b> desenul se schimbă odată cu pasul — întâi energia în funcție de viteză, apoi triunghiul energie–impuls.</p>
+      </figure>
+    </div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Ce costă apropierea de <var>c</var></h3>
+      <p>Ia un corp cu <var>m</var><sub>0</sub> ≠ 0 — un electron, o minge. Energia lui totală este <var>E</var> = γ<var>m</var><sub>0</sub><var>c</var><sup>2</sup>, unde γ este factorul Lorentz.</p>
+      <p>Când <var>v</var> se apropie de <var>c</var>, γ <strong>crește fără limită</strong>, deci și energia necesară: curba din grafic urcă tot mai abrupt. Pentru <var>v</var> = <var>c</var> ar fi nevoie de energie infinită. De aceea un corp cu masă de repaus nu ajunge la <var>c</var>.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Fotonul: <var>v</var> = <var>c</var>, energie finită</h3>
+      <p>Fotonul merge cu <var>c</var> (Postulatul I) și totuși transportă o energie <strong>finită</strong> — o lanternă nu consumă energie infinită ca să lumineze. Punctul lui stă pe linia <var>v</var> = <var>c</var>, la o înălțime finită; curba corpurilor cu masă urcă la infinit înainte să-l atingă.</p>
+      <div class="predict" data-correct="b">
+        <p class="predict__q">Cât trebuie să fie <var>m</var><sub>0</sub> ca produsul γ<var>m</var><sub>0</sub><var>c</var><sup>2</sup> să rămână o energie finită, când γ devine infinit?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Foarte mică, dar nenulă — destul cât să „tempereze” γ-ul infinit.</li>
+          <li data-k="b">Exact zero.</li>
+          <li data-k="c">Depinde de culoare: fotonii albaștri au <var>m</var><sub>0</sub> mai mare decât cei roșii.</li>
+          <li data-k="d">Negativă, ca să compenseze γ-ul infinit.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Exact zero.</strong> Orice valoare nenulă, oricât de mică, înmulțită cu un γ infinit dă o energie infinită. Altfel spus: masa de mișcare a fotonului, <var>m</var> = <var>E</var>/<var>c</var><sup>2</sup>, este finită, iar <var>m</var><sub>0</sub> = <var>m</var>/γ, cu γ infinit, dă zero.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Triunghiul spune același lucru</h3>
+      <p>Energia, impulsul și masa de repaus ale oricărui corp sunt laturile unui triunghi dreptunghic: ipotenuza este <var>E</var>, catetele sunt <var>pc</var> și <var>m</var><sub>0</sub><var>c</var><sup>2</sup>.</p>
+      <p>Impulsul este <var>p</var> = <var>m</var>·<var>v</var> (cu masa de mișcare <var>m</var> = <var>E</var>/<var>c</var><sup>2</sup>). La foton, <var>v</var> = <var>c</var>, deci <var>pc</var> = <var>E</var>: o catetă cât ipotenuza. Cealaltă catetă, <var>m</var><sub>0</sub><var>c</var><sup>2</sup>, rămâne <strong>zero</strong>. Triunghiul s-a „turtit” într-un segment.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · De aici, fotonul nu poate sta pe loc</h3>
+      <p>Un corp în repaus își păstrează energia de repaus <var>m</var><sub>0</sub><var>c</var><sup>2</sup>. La foton, aceasta e zero: toată energia lui este legată de mișcare, <var>E</var> = <var>pc</var>.</p>
+      <p>Dacă i-ai lua tot impulsul, ar dispărea și energia: <var>p</var> = 0 ⟹ <var>E</var> = 0. Nu ar mai rămâne nimic. „Foton în repaus” nu există — fotonul există doar mișcându-se cu <var>c</var>.</p>
+    </section>
+  </div>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț</span>
+    <p><strong>Fotonul se deplasează cu <var>c</var>.</strong> Atunci γ = ∞, dar <span class="term">masa de mișcare</span> <var>m</var> = γ<var>m</var><sub>0</sub> și energia <var>E</var> = <var>mc</var><sup>2</sup> sunt finite. Rezultă <strong><var>m</var><sub>0</sub> = 0</strong>: fotonul nu are masă de repaus.</p>
+    <p>Din triunghiul energie–impuls, <var>m</var><sub>0</sub><var>c</var><sup>2</sup> = √(<var>E</var><sup>2</sup> − (<var>pc</var>)<sup>2</sup>) = 0, deci <strong><var>E</var> = <var>pc</var></strong>.</p>
+  </aside>
+
+  <p>Acum vezi triunghiul „în direct”. Toate corpurile de mai jos au <strong>aceeași energie totală <var>E</var></strong> (ipotenuza are mereu aceeași lungime); diferă doar masa lor de repaus.</p>
+
+  <figure data-sim="c10Triunghi">
+    <figcaption>Triunghiul se turtește</figcaption>
+    <p class="sim__hint"><b>Observă:</b> trage cursorul spre 0. Cateta verticală (<var>m</var><sub>0</sub><var>c</var><sup>2</sup>) se micșorează, cea orizontală (<var>pc</var>) se lungește până se suprapune peste ipotenuză. La <var>m</var><sub>0</sub> = 0 triunghiul e un segment: <var>E</var> = <var>pc</var>, iar viteza e exact <var>c</var>. Pentru orice <var>m</var><sub>0</sub> ≠ 0, oricât de mic, mai rămâne o fărâmă de catetă verticală — și <var>v</var> &lt; <var>c</var>.</p>
+  </figure>
+
+  <p>Cu cât masa de repaus e mai mică (la aceeași energie), cu atât corpul merge mai aproape de <var>c</var> și cu atât <var>E</var> seamănă mai mult cu <var>pc</var>: acesta e regimul <span class="term">ultrarelativist</span>. Fotonul este cazul-limită, în care asemănarea devine egalitate.</p>
+  <p><span class="badge bonus">Adaos</span> Cât de „culcat” e triunghiul arată cât de aproape de <var>c</var> merge corpul: raportul dintre cateta <var>pc</var> și ipotenuza <var>E</var> este chiar <var>v</var>/<var>c</var>.</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Nu „masă foarte mică”</span>
+    <p>Cursul spune <var>m</var><sub>0</sub> = 0, <strong>exact</strong>. O masă de repaus mică, dar nenulă, ar lăsa o catetă verticală în triunghi: corpul ar merge sub <var>c</var>, iar dacă ar ajunge la <var>c</var> ar avea energie infinită. Fotonul nu e un corp foarte ușor — e un obiect fără masă de repaus.</p>
+  </aside>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p><strong>De ce nu există „punctul de vedere al fotonului”?</strong> Un S.R.I. „călare pe foton” l-ar vedea în repaus. Dar în orice S.R.I. fotonul are viteza <var>c</var>, iar în repaus nu poate fi. Deci niciun S.R.I. nu se poate mișca cu <var>c</var> față de altul (γ ar fi infinit) — întrebarea „cum arată lumea pentru un foton?” nu are sens în teorie.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="energia">
+  <h2>Energia unui foton: E = hν</h2>
+  <p>Fotonul nu are energie de repaus, dar are energie. Câtă? Răspunsul îl dă <span class="term">legea lui Planck</span>: depinde de un singur lucru — <strong>frecvența</strong> radiației de care ține fotonul.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Legea lui Planck</span>
+    <p>Energia unui foton este proporțională cu frecvența radiației: <strong><var>E</var><sub>γ</sub> = <var>h</var>ν</strong>, unde <var>h</var> ≈ 6,62·10<sup>−34</sup> J·s este <span class="term">constanta lui Planck</span> — aceeași pentru toate culorile.</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">Două sensuri ale literei γ</span>
+    <p>Fără indice, γ este factorul Lorentz. Ca indice, în <var>E</var><sub>γ</sub> și <var>p</var><sub>γ</sub>, înseamnă „foton”. Nu le amesteca.</p>
+  </aside>
+
+  <p>Ce spune formula, în cuvinte:</p>
+  <ul>
+    <li>dublezi frecvența ⟹ dublezi energia <strong>fiecărui</strong> foton;</li>
+    <li>culoarea luminii este frecvența ei (o λ mai mică înseamnă o ν mai mare, fiindcă λν = <var>c</var>), deci ca energie pe foton: infraroșu &lt; roșu &lt; verde &lt; albastru &lt; violet &lt; ultraviolet;</li>
+    <li>viteza nu apare în formulă: toți fotonii au aceeași, <var>c</var>.</li>
+  </ul>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p><strong>Același foton, doi observatori.</strong> Frecvența ν se măsoară în sistemul fiecărui observator. Dacă fugi spre o lampă, o vezi mai albastră: pentru tine fiecare foton are ν mai mare, deci <strong>energie mai mare</strong> — iar viteza lui rămâne <var>c</var>. Ce nu se schimbă: viteza <var>c</var> și <var>m</var><sub>0</sub> = 0. Ce se schimbă: ν, <var>E</var> și <var>p</var>.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="intensitate">
+  <h2>Culoare și intensitate</h2>
+  <p>Un fascicul de lumină are două „butoane” care nu se încurcă între ele:</p>
+  <ul>
+    <li><strong>culoarea</strong> (frecvența) hotărăște cât de mare e <em>fiecare</em> foton — energia lui;</li>
+    <li><strong><span class="term">intensitate</span>a</strong> hotărăște <em>câți</em> fotoni sosesc pe secundă, la o culoare dată.</li>
+  </ul>
+
+  <aside class="callout light">
+    <span class="callout__title">O imagine care ajută</span>
+    <p>Gândește-te la monede. <strong>Culoarea</strong> e valoarea unei monede: una „albastră” valorează mai mult decât una „roșie”. <strong>Intensitatea</strong> e câte monede cad pe secundă. <strong>Puterea</strong> e câți bani primești pe secundă: număr × valoare. Și nu poți plăti cu o jumătate de monedă — nici lumina nu dă „jumătate de foton”.</p>
+  </aside>
+
+  <div class="predict" data-correct="d">
+    <p class="predict__q">Un laser roșu și unul albastru transportă exact aceeași putere (aceeași energie pe secundă). Care trimite mai mulți fotoni pe secundă?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Cel albastru — fotonii lui sunt mai energetici, deci și mai mulți.</li>
+      <li data-k="b">Niciunul — aceeași putere înseamnă același număr de fotoni.</li>
+      <li data-k="c">Nu se poate spune fără frecvențele exacte.</li>
+      <li data-k="d">Cel roșu — fiecare foton roșu are mai puțină energie, deci îți trebuie mai mulți.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Cel roșu.</strong> Puterea = (fotoni pe secundă) × (energia unui foton). Ca la monede: ca să aduni aceiași bani pe secundă, îți trebuie mai multe monede mici decât mari. Verifică în simulare.</p>
+    </div>
+  </div>
+
+  <p><span class="badge bonus">Adaos</span> Energia unui foton se măsoară aici în <span class="term">electronvolt</span> (eV); un foton de lumină vizibilă are între 1,6 și 3,3 eV. Numerele din simulare sunt la scară redusă — în realitate, numărul de fotoni pe secundă e uriaș — dar proporțiile sunt cele reale.</p>
+
+  <figure data-sim="c10Fotoni">
+    <figcaption>Fotoni: culoare, intensitate, putere</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> (1) mută culoarea fasciculului A spre albastru — ondulațiile fotonilor se îndesesc și bara de energie crește, dar fotonii nu merg mai repede; (2) mută intensitatea — se schimbă doar <em>câți</em> fotoni sosesc; (3) apasă „A = aceeași putere ca B”: albastrul are nevoie de mai puțini fotoni pentru aceeași putere.</p>
+  </figure>
+
+  <p>Rezumat, ca tabel „ce se schimbă și ce nu”:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Ce măsori</th><th>Mută culoarea spre albastru (restul rămâne la fel)</th><th>Crești intensitatea (culoarea rămâne la fel)</th></tr></thead>
+    <tbody>
+      <tr><td>Energia unui foton</td><td>crește</td><td>nu se schimbă</td></tr>
+      <tr><td>Impulsul unui foton</td><td>crește</td><td>nu se schimbă</td></tr>
+      <tr><td>Viteza fotonilor în vid</td><td>nu se schimbă (<var>c</var>)</td><td>nu se schimbă (<var>c</var>)</td></tr>
+      <tr><td>Fotoni pe secundă</td><td>nu se schimbă</td><td>crește</td></tr>
+      <tr><td>Puterea fasciculului</td><td>crește (fotoni mai energici)</td><td>crește (mai mulți fotoni)</td></tr>
+    </tbody>
+  </table></div>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcana frecventă</span>
+    <p>„Lumină mai puternică” <strong>nu</strong> înseamnă „fotoni mai energici”. Un fascicul slab și unul puternic, de aceeași culoare, au fotoni identici — doar că unul are mai mulți. Invers, un fascicul albastru slab are fotoni <em>mai energici</em> decât unul roșu puternic.</p>
+  </aside>
+
+  <p>Strict vorbind, intensitatea este puterea pe unitatea de suprafață. La o culoare dată, ea crește doar prin numărul de fotoni; între culori diferite, trebuie ținut cont și de energia fiecărui foton.</p>
+
+  <p><span class="badge bonus">Adaos</span> Ca să-ți faci o idee despre numere: un fascicul de 1 W de lumină verde înseamnă aproape 3·10<sup>18</sup> fotoni pe secundă. De aceea lumina obișnuită pare continuă, nu „granulată”.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="impulsul">
+  <h2>Impulsul fotonului: p = hν/c</h2>
+  <p>Fotonul nu are masă de repaus, dar are <strong>impuls</strong>. Cum e posibil? În relativitate, impulsul este <var>p</var> = <var>m</var>·<var>v</var> cu <strong>masa de mișcare</strong> <var>m</var>, nu cu masa de repaus. Fotonul are masă de mișcare: din <var>E</var> = <var>mc</var><sup>2</sup> și <var>E</var> = <var>h</var>ν rezultă <var>m</var> = <var>h</var>ν/<var>c</var><sup>2</sup>.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț</span>
+    <p>Pentru foton: <var>E</var><sub>γ</sub> = <var>mc</var><sup>2</sup> = <var>h</var>ν și <var>p</var><sub>γ</sub> = <var>mc</var>. Împărțind: <var>E</var><sub>γ</sub>/<var>p</var><sub>γ</sub> = <var>c</var>, deci <strong><var>p</var><sub>γ</sub> = <var>h</var>ν/<var>c</var></strong>.</p>
+  </aside>
+
+  <p>În cuvinte: energia unui foton este de <var>c</var> ori mai mare decât impulsul lui — pentru orice culoare. Un foton mai albastru are și energie, și impuls mai mari.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Masa de mișcare nu e masa de repaus</span>
+    <p><var>m</var> = <var>h</var>ν/<var>c</var><sup>2</sup> este doar energia fotonului împărțită la <var>c</var><sup>2</sup>. Nu e masa a ceva „din care e făcut” fotonul și nu rămâne nimic din ea dacă ai opri fotonul (nu poți). Masa de repaus rămâne <strong>0</strong>.</p>
+  </aside>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Un foton roșu și unul albastru sunt absorbiți, pe rând, de același panou negru. Care îi transmite panoului mai mult impuls?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Cel roșu — lungimea de undă mai mare „lovește mai larg”.</li>
+      <li data-k="b">Cel albastru — impulsul crește cu frecvența.</li>
+      <li data-k="c">La fel — niciunul nu are masă de repaus.</li>
+      <li data-k="d">Niciunul — fotonii nu au impuls.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Cel albastru.</strong> <var>p</var> = <var>h</var>ν/<var>c</var>: cu cât fotonul e mai energic, cu atât impulsul e mai mare. „Fără masă de repaus” nu înseamnă „fără impuls”.</p>
+    </div>
+  </div>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p><strong>Lumina chiar împinge.</strong> Un foton absorbit sau reflectat de o suprafață îi transmite impulsul lui, deci o împinge. Coada de praf a unei comete e împinsă de lumina Soarelui, iar „velele solare” ale unor nave spațiale funcționează pe același principiu. Forța e minusculă — de aceea nu simți lumina unei lanterne —, dar nu e zero.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Fotonul are o masă de repaus extrem de mică, dar nu zero.</p>
+      <div class="myth__true"><p>Cursul spune <var>m</var><sub>0</sub> = 0, exact. Cu <var>m</var><sub>0</sub> ≠ 0, oricât de mic, fotonul ar merge sub <var>c</var> sau ar avea energie infinită la <var>c</var>. Ce are fotonul nenul este <strong>masa de mișcare</strong> <var>m</var> = <var>h</var>ν/<var>c</var><sup>2</sup> — energia lui împărțită la <var>c</var><sup>2</sup>, nu o masă de repaus.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">O lumină mai intensă are fotoni mai energici.</p>
+      <div class="myth__true"><p>Intensitatea mai mare înseamnă <strong>mai mulți fotoni</strong> pe secundă. Energia fiecăruia o hotărăște doar frecvența. Un fascicul slab și unul puternic, de aceeași culoare, au fotoni identici.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Fotonii albaștri merg mai repede decât cei roșii, pentru că au mai multă energie.</p>
+      <div class="myth__true"><p>În vid, toți fotonii merg cu <var>c</var>. Energia unui foton vine din <strong>frecvență</strong>, nu din viteză. (În sticlă sau apă, culorile se propagă cu viteze ușor diferite — de aceea o prismă desparte lumina albă —, dar acolo nu mai e vid.)</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lumina albastră transportă mereu mai multă energie decât cea roșie.</p>
+      <div class="myth__true"><p>Fiecare foton albastru are mai multă energie decât unul roșu, dar un fascicul transportă <strong>(fotoni pe secundă) × (energia unui foton)</strong>. Un fascicul roșu cu mulți fotoni poate avea o putere mai mare decât unul albastru cu puțini.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Fără masă de repaus, fotonul nu poate avea impuls.</p>
+      <div class="myth__true"><p>Poate: <var>p</var> = <var>h</var>ν/<var>c</var>. Impulsul vine din masa de mișcare și din viteza <var>c</var>, nu din masa de repaus. De aceea lumina poate împinge o suprafață.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Un foton poate fi încetinit sau oprit, ca o minge.</p>
+      <div class="myth__true"><p>Nu: în vid are mereu <var>c</var>. Dacă i-ai lua tot impulsul, din <var>E</var> = <var>pc</var> ar rămâne <var>E</var> = 0 — nu ar mai rămâne nimic. Un foton fie se mișcă cu <var>c</var>, fie este absorbit (energia lui trece la materie).</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="10"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formulele, în cuvinte</h2>
+  <p>Nu trebuie să le știi doar pe de rost, ci să poți spune ce înseamnă fiecare. Sunt trei, și toate spun aceeași poveste.</p>
+
+  <aside class="formula">
+    <span class="formula__label">Energia unui foton (legea lui Planck)</span>
+    <math display="block"><msub><mi>E</mi><mi>γ</mi></msub><mo>=</mo><mi>h</mi><mi>ν</mi></math>
+    <p class="formula__read">„Energia unui foton = constanta lui Planck × frecvența.” Dublezi frecvența (treci spre albastru sau ultraviolet), dublezi energia <strong>fiecărui</strong> foton. Intensitatea nu apare în formulă: ea spune doar câți fotoni sunt.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Impulsul unui foton</span>
+    <math display="block"><msub><mi>p</mi><mi>γ</mi></msub><mo>=</mo><mfrac><mrow><mi>h</mi><mi>ν</mi></mrow><mi>c</mi></mfrac><mo>=</mo><mfrac><msub><mi>E</mi><mi>γ</mi></msub><mi>c</mi></mfrac></math>
+    <p class="formula__read">„Impulsul unui foton = energia lui împărțită la <var>c</var>.” Raportul dintre energie și impuls este exact <var>c</var>, pentru orice culoare; un foton mai albastru are și energie, și impuls mai mari.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Fotonul în triunghiul energie–impuls (<var>m</var><sub>0</sub> = 0)</span>
+    <math display="block"><mi>E</mi><mo>=</mo><mi>p</mi><mi>c</mi></math>
+    <p class="formula__read">„Ipotenuza și o catetă sunt egale, iar a doua catetă (<var>m</var><sub>0</sub><var>c</var><sup>2</sup>) este zero.” Triunghiul s-a turtit într-un segment: de aici <var>m</var><sub>0</sub> = 0, <var>v</var> = <var>c</var> și faptul că fotonul nu poate sta pe loc.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="10" data-n="7"></div>
+
+  <aside class="callout light">
+    <span class="callout__title">Mai departe</span>
+    <p>Ai văzut ce <em>este</em> un foton. În capitolul 11 vezi ce <em>face</em>: lumina lovește un metal și smulge din el electroni, un foton pentru un electron. Felul în care o face este cea mai bună dovadă că lumina vine în fotoni.</p>
+  </aside>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap10.js"></script>
+<script src="../assets/js/sims/cap10-sims.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

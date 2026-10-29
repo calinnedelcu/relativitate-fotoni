@@ -1,0 +1,119 @@
+<!doctype html>
+<!--
+  ȘABLON DE CAPITOL — copiază fișierul ca cap/NN-slug.html (slug-ul din assets/js/core.js, RF.chapters),
+  înlocuiește NN / titlul / conținutul și șterge comentariile. Referință completă: cap/01-postulate.html.
+  Secțiunile au <section class="sec" id="..."><h2>…</h2>…; cuprinsul lateral se face singur din h2.
+-->
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. NN · Titlu — Relativitate &amp; Fotoni</title>
+<meta name="description" content="O propoziție despre capitol.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<!-- opțional, doar dacă ai nevoie de stiluri proprii (scoped cu body[data-chapter="NN"]):
+<link rel="stylesheet" href="../assets/css/capNN.css"> -->
+</head>
+<body data-chapter="NN">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul NN</span><!-- doar cap. 4: <span class="badge bonus">Adaos</span> --></div>
+  <h1>Titlul capitolului</h1>
+  <p class="hero__idea">Ideea capitolului într-o frază sau două, cu <strong>cuvintele-cheie</strong>.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici …</li>
+    <li>să enunți …</li>
+    <li>să recunoști capcana …</li>
+  </ul>
+  <div class="hero__meta"><span class="pill">≈ 14 min</span><span class="pill">2 simulări</span><span class="pill">o poveste pe pași</span></div>
+</header>
+
+<section class="sec" id="intro">
+  <h2>Titlu secțiune</h2>
+  <p>Text. Variabile: <var>v</var>, <var>c</var>, <var>m</var><sub>0</sub>. Termeni cu explicație la hover: <span class="term">S.R.I.</span> (definiția vine din glosarul capitolului).</p>
+
+  <aside class="callout idea"><span class="callout__title">Ideea-cheie</span><p>…</p></aside>
+  <!-- variante: callout warn (capcană), note (nuanță), bonus (în plus față de notițe), good, light -->
+
+  <!-- „Ghicește întâi” — răspuns înainte să vezi simularea -->
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Întrebarea?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Varianta A</li>
+      <li data-k="b">Varianta B (corectă)</li>
+      <li data-k="c">Varianta C</li>
+    </ul>
+    <div class="predict__reveal"><p><strong>Explicația</strong> care apare după răspuns.</p></div>
+  </div>
+
+  <!-- simulare liberă; logica e în assets/js/sims/capNN-….js (RF.sims.numeSim = function (host, api) {…}) -->
+  <figure data-sim="numeSim">
+    <figcaption>Titlul simulării</figcaption>
+    <p class="sim__hint"><b>Observă:</b> ce trebuie urmărit în simulare.</p>
+  </figure>
+</section>
+
+<section class="sec" id="poveste">
+  <h2>O poveste pe pași</h2>
+  <!-- „pe pași”: stage-ul (simularea) se schimbă după data-stage; un pas cu .predict blochează „Continuă” până răspunzi -->
+  <div class="steps" data-title="Titlul poveștii">
+    <div class="steps__stage"><figure data-sim="numePovesteSim"><figcaption>…</figcaption></figure></div>
+    <section class="step" data-stage="0"><h3>1 · Început</h3><p>…</p></section>
+    <section class="step" data-stage="1"><h3>2 · Mai departe</h3><p>…</p></section>
+    <section class="step" data-stage="2"><h3>3 · Concluzia</h3><p>…</p></section>
+  </div>
+</section>
+
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Afirmația greșită, spusă cum o crede lumea.</p>
+      <div class="myth__true"><p>Ce e de fapt adevărat, pe scurt.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="NN"></aside><!-- se umple din summary din assets/js/data/capNN.js -->
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formula, în cuvinte</h2>
+  <aside class="formula">
+    <span class="formula__label">Numele formulei</span>
+    <math display="block"><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></math>
+    <p class="formula__read">Cum se citește în cuvinte și ce înseamnă.</p>
+  </aside>
+</section>
+
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="NN" data-n="7"></div>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/capNN.js"></script>
+<script src="../assets/js/sims/capNN-sims.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

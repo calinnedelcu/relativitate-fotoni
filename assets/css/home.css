@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Relativitate & Fotoni — home.css
+   Pagina de start, harta conceptelor, testul final, fișa și glosarul.
+   ========================================================================== */
+
+.home-main { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 1.2rem 4rem; }
+
+/* ---------- hero ---------- */
+.home-hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center; padding: 3.6rem 0 1.6rem; }
+@media (max-width: 860px) { .home-hero { grid-template-columns: 1fr; padding-top: 2rem; } .home-art { order: -1; max-width: 330px; margin: 0 auto; } }
+.home-hero h1 {
+  font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.02; letter-spacing: -.03em; margin-bottom: .35em;
+  background: linear-gradient(120deg, var(--tx) 20%, var(--acc) 62%, var(--acc2));
+  -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: .06em;
+}
+.home-hero h1 em { font-style: normal; color: var(--light); -webkit-text-fill-color: var(--light); }
+.home-hero__lead { font-size: 1.2rem; color: var(--tx2); max-width: 36ch; margin-bottom: 1.4rem; }
+.home-hero__cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.4rem; }
+.home-hero__cta .btn { padding: .7rem 1.4rem; font-size: 1rem; }
+.home-stats { display: flex; flex-wrap: wrap; gap: .5rem; }
+.home-art svg { width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 0 26px rgba(92, 200, 255, .22)); }
+
+/* ---------- secțiuni ---------- */
+.hsec { margin: 3rem 0; }
+.hsec > h2 { display: flex; align-items: center; gap: .7rem; }
+.hsec > h2::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 14px var(--acc); }
+.hsec__sub { color: var(--tx2); margin-top: -.2rem; }
+
+/* ---------- continuă / de repetat ---------- */
+.nextrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.nextcard {
+  display: block; padding: 1.1rem 1.3rem; border-radius: 18px; border: 1px solid var(--line2);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--acc) 10%, var(--card-solid)), var(--card-solid));
+  color: var(--tx); transition: .2s;
+}
+.nextcard:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--acc); }
+.nextcard small { display: block; color: var(--tx3); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .25rem; }
+.nextcard strong { font-size: 1.1rem; display: block; }
+.nextcard span { color: var(--tx2); font-size: .9rem; }
+.nextcard.is-warn { background: linear-gradient(160deg, color-mix(in srgb, var(--warn) 10%, var(--card-solid)), var(--card-solid)); }
+
+/* ---------- harta ---------- */
+.map { border: 1px solid var(--line2); border-radius: 22px; background: linear-gradient(180deg, var(--card-solid), var(--bg2)); overflow: hidden; box-shadow: var(--shadow); }
+.map svg { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) { .map { display: none; } }
+.map .m-line { fill: none; stroke: var(--line2); stroke-width: 2; stroke-dasharray: 3 7; stroke-linecap: round; }
+.map .m-part { fill: var(--tx3); font: 700 11px var(--font); letter-spacing: .14em; text-transform: uppercase; }
+.map .m-part2 { fill: var(--tx2); font: 600 12px var(--font); letter-spacing: 0; text-transform: none; }
+.map .m-sep { stroke: var(--line); stroke-dasharray: 2 6; }
+.map .m-node circle.bg { fill: var(--card-solid); stroke: var(--line2); stroke-width: 2; }
+.map .m-node circle.arc { fill: none; stroke: var(--acc); stroke-width: 4; stroke-linecap: round; transform: rotate(-90deg); transform-box: fill-box; transform-origin: center; }
+.map .m-node text.n { fill: var(--tx); font: 700 15px var(--font); text-anchor: middle; dominant-baseline: central; }
+.map .m-node text.t { fill: var(--tx2); font: 600 12px var(--font); text-anchor: middle; }
+.map .m-node .halo { fill: var(--acc); opacity: 0; transition: opacity .2s; }
+.map .m-node:hover .halo, .map .m-node:focus .halo { opacity: .16; }
+.map .m-node:hover text.t { fill: var(--tx); }
+.map .m-node.is-read circle.bg { stroke: var(--acc2); }
+.map .m-node.is-bonus circle.bg { stroke: var(--s3); stroke-dasharray: 4 3; }
+.map a { cursor: pointer; }
+.map a:hover { text-decoration: none; }
+
+/* ---------- părți și carduri de capitol ---------- */
+.part { margin: 2rem 0 1.4rem; }
+.part__head { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.part__head h3 { margin: 0; font-size: 1.1rem; }
+.part__head small { color: var(--tx3); }
+.cgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .9rem; }
+.ccard {
+  position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: .9rem; align-items: center;
+  padding: .95rem 1.1rem; border-radius: 18px; border: 1px solid var(--line); background: var(--card-solid);
+  color: var(--tx); transition: .2s; overflow: hidden;
+}
+.ccard:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--acc); box-shadow: 0 12px 30px -16px var(--acc); }
+.ccard__num { font: 800 1.5rem var(--mono); color: var(--acc); opacity: .85; min-width: 2ch; }
+.ccard__body { min-width: 0; display: grid; gap: .1rem; }
+.ccard__body strong { line-height: 1.25; }
+.ccard__body small { color: var(--tx2); line-height: 1.35; }
+.ccard__meta { font-size: .72rem; color: var(--tx3); margin-top: .2rem; }
+.ccard__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: transparent; }
+.ccard__bar b { display: block; height: 100%; background: linear-gradient(90deg, var(--acc), var(--acc2)); }
+.ring {
+  --p: 0; position: relative; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  background: conic-gradient(var(--acc) calc(var(--p) * 1%), var(--line) 0);
+}
+.ring b { width: 38px; height: 38px; border-radius: 50%; background: var(--card-solid); display: grid; place-items: center; font: 700 .72rem var(--mono); color: var(--tx2); }
+
+/* ---------- cum înveți / unelte ---------- */
+.trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.trio > div { padding: 1.1rem 1.2rem; border: 1px solid var(--line); border-radius: 18px; background: var(--card-solid); }
+.trio b.n { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--acc); color: var(--acc-ink); font-weight: 800; margin-bottom: .5rem; }
+.trio h4 { margin-bottom: .2rem; }
+.trio p { margin: 0; color: var(--tx2); font-size: .93rem; }
+.toolrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.toolcard { display: block; padding: 1.1rem 1.3rem; border-radius: 18px; border: 1px solid var(--line2); background: var(--card-solid); color: var(--tx); transition: .2s; }
+.toolcard:hover { text-decoration: none; border-color: var(--light); transform: translateY(-2px); }
+.toolcard strong { display: block; font-size: 1.05rem; margin-bottom: .15rem; }
+.toolcard span { color: var(--tx2); font-size: .9rem; }
+
+/* ---------- pagini simple (test final, fișă, glosar) ---------- */
+.page-hero { padding: 3rem 0 1rem; }
+.page-hero h1 { background: linear-gradient(120deg, var(--tx) 25%, var(--acc) 70%, var(--acc2)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: .06em; }
+.page-hero p { color: var(--tx2); font-size: 1.1rem; max-width: 60ch; }
+.mastery { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .55rem; }
+.mastery li { display: grid; grid-template-columns: 2.2ch minmax(0, 1.6fr) minmax(90px, 1fr) auto; gap: .8rem; align-items: center; margin: 0; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 14px; background: var(--card-solid); font-size: .92rem; }
+@media (max-width: 640px) { .mastery li { grid-template-columns: 2.2ch 1fr auto; } .mastery .mbar { grid-column: 1 / -1; order: 5; } }
+.mastery .mn { font: 800 .95rem var(--mono); color: var(--acc); }
+.mbar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.mbar i { display: block; height: 100%; border-radius: 99px; background: var(--acc); }
+.mbar i.lo { background: var(--bad); }
+.mbar i.mid { background: var(--warn); }
+.mbar i.hi { background: var(--good); }
+.mastery .mt { color: var(--tx3); font-size: .78rem; white-space: nowrap; }
+
+.fisa-chap { margin: 1.6rem 0; padding: 1.1rem 1.3rem; border: 1px solid var(--line); border-radius: 18px; background: var(--card-solid); break-inside: avoid; }
+.fisa-chap h3 { display: flex; gap: .7rem; align-items: baseline; margin-bottom: .6rem; }
+.fisa-chap h3 small { font: 700 .8rem var(--mono); color: var(--acc); }
+.fisa-chap dl { margin: 0; }
+.fisa-chap dt { font-weight: 650; margin-top: .7rem; }
+.fisa-chap dd { margin: .15rem 0 0; color: var(--tx2); font-size: .95rem; }
+.fisa-chap .none { color: var(--tx3); font-style: italic; }
+
+.gl-search { width: 100%; max-width: 420px; padding: .7rem 1rem; border-radius: 999px; border: 1px solid var(--line2); background: var(--card-solid); color: var(--tx); font: inherit; margin: .6rem 0 1.2rem; }
+.gl-search:focus { outline: 2px solid var(--acc); outline-offset: 2px; }
+.gl-list { display: grid; gap: .6rem; }
+.gl-item { padding: .8rem 1.1rem; border: 1px solid var(--line); border-radius: 14px; background: var(--card-solid); }
+.gl-item dt { font-weight: 700; display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap; }
+.gl-item dt a { font: 600 .7rem var(--mono); color: var(--acc); border: 1px solid var(--line2); border-radius: 999px; padding: .05rem .5rem; }
+.gl-item dd { margin: .2rem 0 0; color: var(--tx2); font-size: .95rem; }
+.gl-empty { color: var(--tx3); }
+
+/* ---------- tipărire (fișa) ---------- */
+@media print {
+  #rf-stars, .topbar, .sitefoot, .no-print, .menu { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .home-main { max-width: none; padding: 0; }
+  .fisa-chap { border: 1px solid #999; background: #fff; color: #000; page-break-inside: avoid; margin: .6rem 0; padding: .6rem .8rem; }
+  .fisa-chap dd, .fisa-chap dt, .fisa-chap h3, .page-hero p { color: #000 !important; }
+  .page-hero h1 { -webkit-text-fill-color: #000; color: #000; background: none; }
+  #fisa-body { columns: 2; column-gap: 1rem; }
+  a { color: #000; }
+}

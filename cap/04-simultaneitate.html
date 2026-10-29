@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 4 · Simultaneitatea — Relativitate &amp; Fotoni</title>
+<meta name="description" content="De ce „în același timp” nu înseamnă același lucru pentru doi observatori în mișcare: trenul lui Einstein, simultaneitatea relativă și ce rămâne la fel pentru toți.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-chapter="4">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul 4</span><span class="badge bonus">Adaos</span></div>
+  <h1>Simultaneitatea</h1>
+  <p class="hero__idea">Două fulgere lovesc în același moment — dar <em>pentru cine</em>? Doi observatori care se mișcă unul față de altul pot ajunge, amândoi corect, la răspunsuri diferite. Nu e o iluzie și nu e vina întârzierii luminii: <strong>„în același timp” nu înseamnă același lucru pentru toți</strong>.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici cum verifici, în practică, dacă două evenimente îndepărtate sunt <strong>simultane</strong>;</li>
+    <li>să povestești <strong>trenul lui Einstein</strong> și să spui ce concluzie trage fiecare observator — și de ce amândoi au dreptate;</li>
+    <li>să arăți ce <strong>nu se schimbă</strong> între observatori: coincidențele și ordinea cauză–efect.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 12 min</span><span class="pill">3 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<aside class="callout note">
+  <span class="callout__title">Capitol-adaos</span>
+  <p>Simultaneitatea <strong>nu apare ca titlu în notițe</strong>, dar fără ea contracția lungimilor (<var>t</var><sub>A</sub> = <var>t</var><sub>B</sub>) și paradoxul gemenilor nu se înțeleg. De aceea o tratăm aici, înaintea lor.</p>
+</aside>
+
+<!-- ============================================================ -->
+<section class="sec" id="intro">
+  <h2>Ce înseamnă „în același moment”?</h2>
+  <p>În capitolul 3 ai văzut un detaliu care părea mărunt: momentul <var>t</var>′ al unui eveniment depinde nu doar de <var>t</var>, ci și de <var>x</var> — de <strong>locul</strong> în care se produce. Aici vedem ce înseamnă asta pentru o expresie de zi cu zi: „în același timp”.</p>
+  <p>Când două lucruri se întâmplă în <strong>același loc</strong>, e simplu: le vezi în aceeași clipă. Dar două lucruri depărtate? Nu poți fi în ambele locuri deodată, iar lumina — cel mai rapid mesager — are nevoie de timp ca să ajungă la tine. Ca să spui „sunt simultane”, îți trebuie o <strong>procedură</strong>.</p>
+  <p>Procedura e simplă: pui un observator <strong>exact la mijlocul</strong> distanței dintre cele două evenimente. Dacă lumina lor îi ajunge în același moment și lumina merge la fel de repede în ambele sensuri, atunci cele două drumuri au durat la fel — deci evenimentele s-au produs în același moment.</p>
+  <p><span class="term">Sincronizarea ceasurilor</span> cu un semnal de lumină pornit din mijloc folosește aceeași idee: lumina face drumuri egale, deci ceasurile pornesc în același moment.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ce înseamnă „simultan”</span>
+    <p>Două evenimente din locuri diferite sunt <strong>simultane într-un <span class="term">S.R.I.</span></strong> dacă lumina lor ajunge în același moment la un observator aflat la mijlocul distanței dintre ele și <strong>în repaus în acel S.R.I.</strong> Verificarea se face separat în fiecare S.R.I.</p>
+  </aside>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Fulgerele din punctele A și B trimit lumină spre punctul M, aflat exact la mijlocul distanței AB. Un observator din M primește cele două lumini <strong>în același moment</strong>. A, B și M stau toate pe loc, în același sistem. Ce poți spune despre fulgere?</p>
+    <ul class="predict__opts">
+      <li data-k="a">S-au produs în momentul în care observatorul a văzut lumina.</li>
+      <li data-k="b">Au fost simultane în acest sistem.</li>
+      <li data-k="c">Au fost simultane pentru absolut orice observator, oricum s-ar mișca el.</li>
+      <li data-k="d">Nu se poate spune nimic: lumina ar fi putut porni la momente diferite și să sosească totuși deodată.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Au fost simultane în acest sistem.</strong> M e la distanțe egale de A și de B, iar lumina merge la fel de repede în ambele sensuri; deci cele două călătorii au durat la fel. Dacă lumina a sosit deodată, ea a și plecat deodată.</p>
+      <p>Observă două capcane. Prima variantă amestecă momentul în care <em>vezi</em> cu momentul în care <em>s-a întâmplat</em>. A treia ignoră cuvintele „în acest sistem”: verificarea s-a făcut într-un sistem anume, iar restul capitolului arată ce se întâmplă în altul.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c04Mijloc">
+    <figcaption>Unde se întâlnesc luminile?</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> mută cursorul și urmărește care lumină ajunge prima la observatorul din mijloc. Când fulgerele sunt simultane, luminile sosesc deodată; altfel, <strong>lumina care sosește prima a plecat prima</strong>, fiindcă drumurile sunt egale.</p>
+  </figure>
+
+  <p>Reține condiția: observatorul din mijloc trebuie să fie <strong>în repaus împreună cu cele două locuri</strong>. Dacă s-ar mișca față de ele, verificarea lui ar da alt rezultat — exact ce arată povestea următoare.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="tren">
+  <h2>Trenul lui Einstein</h2>
+  <p>Einstein a imaginat un tren foarte lung și două fulgere. Parcurge povestea: ea se oprește la întrebările din drum, iar imaginea se schimbă odată cu pașii.</p>
+
+  <div class="steps" data-title="Trenul lui Einstein: două fulgere, doi observatori">
+    <div class="steps__stage">
+      <figure data-sim="c04Tren">
+        <figcaption>Trenul lui Einstein</figcaption>
+        <p class="sim__hint"><b>Încearcă:</b> de la pasul 3 poți comuta între cele două priveliști și schimba viteza trenului. Cu cât merge mai repede, cu atât decalajul pe care îl găsește Bogdan între fulgere crește.</p>
+      </figure>
+    </div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Scena</h3>
+      <p>Un tren foarte lung trece cu viteză mare pe lângă un peron. <strong>Ana</strong> stă pe peron. <strong>Bogdan</strong> stă în tren, exact la mijlocul lui.</p>
+      <p>În clipa în care Bogdan trece prin dreptul Anei, două fulgere lovesc <strong>capetele trenului</strong> — cel din față și cel din spate — și lasă câte o urmă pe peron.</p>
+      <p>Scenariul e făcut astfel încât Ana, la mijlocul distanței dintre urme, primește cele două lumini <strong>în același moment</strong>. După procedura de mai sus, pentru ea fulgerele sunt <strong>simultane</strong>. Întrebarea: sunt simultane și pentru Bogdan?</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Lumina pornește</h3>
+      <p>Fulgerele au lovit. Din fiecare capăt al trenului pornește lumina, în toate direcțiile, cu viteza <var>c</var>. Imaginea e oprită chiar după lovituri, iar mișcarea din animație este foarte încetinită.</p>
+      <div class="predict" data-correct="c">
+        <p class="predict__q">Bogdan merge cu trenul spre față. Care dintre cele două lumini ajunge prima la el?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Cea din spate.</li>
+          <li data-k="b">Amândouă în același moment, pentru că Bogdan e la mijlocul trenului.</li>
+          <li data-k="c">Cea din față.</li>
+          <li data-k="d">Nu se poate ști fără viteza exactă a trenului.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Cea din față.</strong> Bogdan merge în întâmpinarea ei și se depărtează de cea din spate. Ana, care stă pe loc la mijlocul distanței dintre urme, le primește pe amândouă deodată. Până aici nimic ciudat: la fel ar fi și în fizica clasică.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Ce spune Ana</h3>
+      <p>Din peron povestea e simplă: lumina pornește în același moment din ambele capete și ajunge <strong>deodată</strong> la Ana, care e la mijloc. Concluzia ei: <strong>fulgerele au fost simultane</strong>.</p>
+      <p>Bogdan le primește pe rând doar pentru că <strong>se mișcă</strong>: aleargă în întâmpinarea luminii din față și fuge de cea din spate. În sistemul Anei, explicația e completă.</p>
+      <p>Concluzia ei apare în partea de jos a imaginii.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · Ce spune Bogdan</h3>
+      <p>Acum stai în scaunul lui Bogdan. Pentru el, trenul stă pe loc, iar peronul fuge înapoi. El primește întâi lumina din față, apoi pe cea din spate.</p>
+      <p>Dar Bogdan e <strong>la mijloc</strong>: capetele trenului sunt la distanțe egale de el. Iar lumina are viteza <var>c</var> în ambele sensuri și față de el (Postulatul I). Drumurile durează la fel — deci lumina sosită prima a și <strong>plecat</strong> prima.</p>
+      <div class="predict" data-correct="d">
+        <p class="predict__q">Bogdan își corectează observația pentru timpul de drum al luminii. Ce concluzie trage despre fulgere?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Au fost simultane, ca pentru Ana.</li>
+          <li data-k="b">Cel din spate s-a produs primul.</li>
+          <li data-k="c">Nu poate trage nicio concluzie, fiindcă trenul se mișcă.</li>
+          <li data-k="d">Cel din față s-a produs primul.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Cel din față s-a produs primul.</strong> Drumuri egale, aceeași viteză a luminii ⟹ ordinea sosirii este ordinea producerii.</p>
+          <p>Ana primește totuși ambele lumini deodată. Pentru Bogdan e firesc: peronul fuge spre spate, adică în întâmpinarea luminii din spate (pornită mai târziu) și departe de cea din față (pornită mai devreme).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · Amândoi au dreptate</h3>
+      <p>Aceleași două fulgere. <strong>Ana:</strong> simultane. <strong>Bogdan:</strong> cel din față s-a produs primul.</p>
+      <p>Cine greșește? <strong>Nimeni.</strong> Fiecare a aplicat aceeași procedură în propriul S.R.I., cu lumina mergând cu <var>c</var> în ambele sensuri față de el. Iar Postulatul al II-lea spune că niciun S.R.I. nu e privilegiat: nu există un „moment adevărat” care să decidă între ei.</p>
+      <p>Comută între cele două priveliști și compară. Evenimentele sunt aceleași; <strong>doar momentele atribuite lor diferă</strong>.</p>
+    </section>
+  </div>
+
+  <aside class="callout note">
+    <span class="callout__title">Observație</span>
+    <p>Dacă ai privit atent, trenul are lungimi diferite în cele două priveliști. Nu e o greșeală de desen: e contracția lungimilor din capitolul 5, care iese din chiar această relativitate a simultaneității.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="intarziere">
+  <h2>Nu e vorba de întârzierea luminii</h2>
+  <p>Probabil ți-a venit deja o obiecție: „Bogdan vede lumina din spate mai târziu pentru că ea are de străbătut un drum mai lung.” Hai s-o verificăm.</p>
+  <p>În sistemul trenului, Bogdan e la mijloc: drumurile sunt <strong>egale</strong>. Iar orice observator face oricum o corecție: <strong>scade din momentul în care primește lumina timpul pe care ea l-a petrecut în drum</strong>. După corecție, Ana obține „simultane”, iar Bogdan obține „întâi cel din față”. Diferența nu a dispărut.</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcana</span>
+    <p><strong>Momentul în care vezi</strong> nu este <strong>momentul în care s-a întâmplat</strong>. Dezacordul despre care vorbim e cel rămas <em>după</em> ce ai ținut cont de drumul luminii.</p>
+  </aside>
+
+  <p>Atunci de unde vine dezacordul? Încearcă o lume imaginară, în care lumina s-ar comporta ca mingea din capitolul 1.</p>
+
+  <div class="predict" data-correct="a">
+    <p class="predict__q">Presupune, absurd, că lumina s-ar aduna cu viteza trenului: față de Bogdan ea ar veni cu <var>c</var> + <var>v</var> din față și cu <var>c</var> − <var>v</var> din spate. Bogdan știe asta și își corectează timpii de drum cu aceste viteze. Ce ar concluziona el despre fulgere?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Au fost simultane — la fel ca pentru Ana.</li>
+      <li data-k="b">Cel din față s-a produs primul — la fel ca în realitate.</li>
+      <li data-k="c">Cel din spate s-a produs primul.</li>
+      <li data-k="d">Nu ar putea concluziona nimic, fiindcă lumina nu mai are viteză constantă.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Simultane.</strong> Cu viteze diferite, dar cunoscute, Bogdan ar scădea din fiecare sosire timpul de drum potrivit și ar obține același moment pentru ambele fulgere, ca Ana.</p>
+      <p>Deci dezacordul real nu vine din „lumina întârzie”. Vine din faptul că, în lumea reală, lumina are <strong>aceeași viteză <var>c</var> față de amândoi</strong> (Postulatul I) — iar Bogdan nu poate corecta cu alte viteze, pentru că experimentele îi dau mereu <var>c</var>.</p>
+    </div>
+  </div>
+
+  <aside class="callout idea">
+    <span class="callout__title">Rădăcina: Postulatul I</span>
+    <p>Simultaneitatea relativă este o <strong>consecință a Postulatului I</strong>. Lumina are viteza <var>c</var> în ambele sensuri față de fiecare S.R.I.; fiecare observator își stabilește simultaneitatea cu aceeași regulă — iar regula, aplicată în sisteme care se mișcă unul față de altul, dă rezultate diferite.</p>
+  </aside>
+
+  <p>Amintește-ți cele trei afirmații din capitolul 1, dintre care una trebuia să cedeze: aici vezi cum cedează a treia. Duratele — și chiar ce e „în același moment” — nu mai sunt ale tuturor.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="relativ">
+  <h2>Simultaneitatea este relativă</h2>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț</span>
+    <p>Două evenimente produse în locuri diferite, <strong>simultane într-un S.R.I.</strong>, nu sunt în general simultane într-un alt S.R.I., care se mișcă față de primul pe direcția dintre ele. Niciun S.R.I. nu e privilegiat — nu există un „moment adevărat” care să le departajeze.</p>
+  </aside>
+
+  <p>Nu doar <em>cât durează</em> un fenomen depinde de observator (vezi capitolul 6), ci chiar <em>ce e simultan cu ce</em>. Dar nu totul se schimbă:</p>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Depinde de S.R.I.</th><th>Este la fel în orice S.R.I.</th></tr></thead>
+    <tbody>
+      <tr><td>dacă două evenimente îndepărtate sunt simultane</td><td>dacă două evenimente coincid (același loc, același moment)</td></tr>
+      <tr><td>care dintre două evenimente fără legătură între ele are loc primul</td><td>ordinea a două evenimente legate cauzal (cauza, apoi efectul)</td></tr>
+      <tr><td>cât timp trece între două evenimente</td><td>viteza luminii în vid, <var>c</var>, și intervalul Δ<var>s</var> (capitolul 2)</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>O <span class="term">coincidență</span> — de pildă o ciocnire — e un singur eveniment: același loc, același moment. Orice observator e de acord că ea a avut loc; diferă doar numerele <var>x</var> și <var>t</var> pe care i le atribuie. Dacă două mașini se ciocnesc pentru un observator, se ciocnesc pentru toți.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Pe diagrama spațiu-timp</span>
+    <p>Aceeași idee apare în diagramele din capitolele 2–3 ca axa <var>x</var>′ înclinată: toate evenimentele de pe ea sunt simultane pentru S′, dar nu pentru S.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="cat">
+  <h2>Cât de mare e dezacordul?</h2>
+  <p>Răspunsul stă în formula timpului din capitolul 3 (o regăsești la sfârșitul capitolului). Pentru două evenimente simultane într-un S.R.I., celălalt S.R.I. găsește un decalaj care:</p>
+  <ul>
+    <li><strong>crește cu distanța</strong> dintre evenimente, măsurată <em>pe direcția mișcării</em>;</li>
+    <li><strong>crește cu viteza</strong> relativă a celor doi observatori;</li>
+    <li><strong>dispare</strong> dacă evenimentele sunt în același loc, dacă sunt depărtate doar perpendicular pe mișcare sau dacă observatorii stau pe loc unul față de altul.</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Regula de reținut</span>
+    <p>Cel care se mișcă găsește <strong>primul evenimentul către care se îndreaptă</strong>. Bogdan merge spre față, deci găsește primul fulgerul din față. Regula e simetrică: dacă fulgerele ar fi simultane pentru Bogdan, Ana ar găsi primul fulgerul din spatele trenului — spre el se mișcă peronul, văzut din tren.</p>
+  </aside>
+
+  <figure data-sim="c04Nesimultane" class="wide">
+    <figcaption>Cât de nesimultane?</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> pune distanța pe 0 sau comută pe „perpendicular pe mișcare”: decalajul dispare. Apoi mărește viteza sau distanța și urmărește cum se depărtează cele două momente de pe rigla navei. (1 ls = o lumină-secundă, distanța parcursă de lumină într-o secundă, ≈ 300 000 km.)</p>
+  </figure>
+
+  <div class="predict" data-correct="d">
+    <p class="predict__q">Două becuri, unul deasupra celuilalt pe același stâlp, se aprind în același moment pentru Ana. Bogdan trece prin dreptul stâlpului, într-un tren care merge pe orizontală, cu viteză mare. Ce găsește el?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Becul de sus s-a aprins primul.</li>
+      <li data-k="b">Nesimultan: cu cât trenul merge mai repede, cu atât diferența e mai mare.</li>
+      <li data-k="c">Nu se poate ști fără înălțimea stâlpului.</li>
+      <li data-k="d">Simultan și pentru el.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Simultan.</strong> Contează numai distanța dintre evenimente <strong>pe direcția mișcării</strong>, iar aici ea este zero: becurile sunt în același loc pe direcția trenului. Perpendicular pe mișcare, simultaneitatea rămâne aceeași pentru toți.</p>
+    </div>
+  </div>
+
+  <aside class="callout note">
+    <span class="callout__title">Și în viața de zi cu zi?</span>
+    <p>Pentru un tren real (100 km/h, câteva sute de metri) decalajul e de ordinul <strong>10<sup>−14</sup> s</strong> — cu mult sub ce poate observa orice ceas obișnuit. Efectul există, dar <var>v</var> e minuscul față de <var>c</var>: de aceea simultaneitatea ni se pare absolută.</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Nu amesteca cu dilatarea timpului</span>
+    <p>Aici nu spunem că ceasul cuiva merge mai încet. Spunem că cele două priveliști nu pun aceleași evenimente „în același moment”. Cele două efecte au aceeași rădăcină, dar le vei separa în capitolul 6.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="cauza">
+  <h2>Cauza rămâne înaintea efectului</h2>
+  <p>Dacă ordinea evenimentelor depinde de observator, nu cumva un efect poate apărea înaintea cauzei lui? <strong>Nu.</strong></p>
+  <p>Ordinea se poate schimba doar pentru evenimente care <strong>nu se pot influența</strong>: sunt atât de depărtate, încât nici lumina n-ar apuca să ajungă de la unul la celălalt în intervalul de timp dintre ele. Așa sunt cele două fulgere de la capetele trenului.</p>
+  <p>Dacă însă lumina (sau orice semnal) poate merge de la un eveniment la celălalt — dacă între ele există o <span class="term">legătură cauzală</span> —, atunci <strong>toți</strong> observatorii găsesc cauza înaintea efectului. Un laser pornit în A și o țintă lovită în B: nicio navă, oricât de rapidă, nu poate constata că ținta a fost lovită înainte de pornirea laserului.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ce se păstrează</span>
+    <p>Pentru <strong>orice două evenimente legate cauzal</strong>, ordinea cauză → efect este aceeași în orice S.R.I. Relativă este doar ordinea evenimentelor care nu se pot influența.</p>
+  </aside>
+
+  <p>De aceea contează atât de mult că nimic nu depășește lumina (vezi capitolele 7–8): un semnal mai rapid decât lumina ar putea sosi, pentru unii observatori, înainte să fi plecat.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="legatura">
+  <h2>De ce contează mai departe</h2>
+  <p>Simultaneitatea relativă este rădăcina a două rezultate celebre, pe care le întâlnești imediat:</p>
+  <ul>
+    <li><strong>Contracția lungimilor (capitolul 5).</strong> Ca să măsori lungimea unei bare în mișcare, îi marchezi capetele <em>în același moment al tău</em>. Dar un alt observator găsește că cele două marcaje nu au fost simultane — și de aici diferența dintre lungimile găsite.</li>
+    <li><strong>Paradoxul gemenilor (capitolul 6).</strong> Ce înseamnă „acum” pentru un ceas îndepărtat depinde de S.R.I. Când gemenul călător se întoarce și își schimbă S.R.I., se schimbă și ce consideră el „acum” pe Pământ.</li>
+  </ul>
+
+  <aside class="callout light">
+    <span class="callout__title">Fir roșu</span>
+    <p>Ceasurile pe care Bogdan le-a sincronizat în tren, cu lumină din mijloc, <strong>nu sunt sincronizate pentru Ana</strong>: ea constată că ceasul din spatele trenului este în avans față de cel din față. Aceeași relativitate a simultaneității, privită prin ceasuri.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Bogdan găsește fulgerele nesimultane doar pentru că lumina din spate are de făcut un drum mai lung până la el.</p>
+      <div class="myth__true"><p>În sistemul trenului, Bogdan e la mijloc: drumurile sunt egale. În plus, orice observator scade din moment timpul de drum al luminii — și după această corecție Ana și Bogdan tot nu cad de acord. Dezacordul vine din faptul că lumina are aceeași viteză <var>c</var> față de amândoi, nu din întârzierea ei.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Unul dintre ei greșește — probabil Bogdan, pentru că el se mișcă, iar Ana stă pe loc.</p>
+      <div class="myth__true"><p>Mișcarea uniformă e relativă: față de tren, peronul se mișcă. Niciun S.R.I. nu e privilegiat (Postulatul al II-lea), deci nu există un „moment adevărat” al fulgerelor. Fiecare are dreptate în sistemul lui.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Dacă simultaneitatea e relativă, un observator suficient de rapid poate constata că efectul s-a produs înaintea cauzei.</p>
+      <div class="myth__true"><p>Nu. Ordinea se poate inversa doar pentru evenimente pe care nu le poate lega niciun semnal, nici măcar lumina. Dacă unul poate fi cauza celuilalt, toți observatorii îl găsesc primul pe cel cauzal.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Două mașini se pot ciocni pentru un observator și să nu se ciocnească pentru altul.</p>
+      <div class="myth__true"><p>Ciocnirea e un singur eveniment: același loc și același moment. Toți observatorii sunt de acord că a avut loc; diferă doar numerele <var>x</var> și <var>t</var> pe care i le atribuie. Coincidențele sunt absolute.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Bogdan găsește fulgerele nesimultane pentru că ceasul lui nu merge bine sau nu e sincronizat cu al Anei.</p>
+      <div class="myth__true"><p>Ceasurile lui Bogdan sunt perfecte și sincronizate corect — în sistemul trenului. Tocmai asta e ideea: ceasuri sincronizate într-un S.R.I. nu sunt sincronizate în altul. Dezacordul nu e o defecțiune, ci felul în care funcționează simultaneitatea.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">La viteze obișnuite simultaneitatea e absolută; relativitatea ei apare doar în situații extreme.</p>
+      <div class="myth__true"><p>Efectul există la orice viteză și crește cu viteza și cu distanța dintre evenimente. Pentru un tren real decalajul e de ordinul 10<sup>−14</sup> s — imposibil de observat, dar nu zero. Devine neglijabil doar când <var>v</var> ≪ <var>c</var>.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="4"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formula, în cuvinte</h2>
+  <p>Nu trebuie să știi formule pe de rost, dar merită să recunoști mecanismul: aceeași transformare a timpului din capitolul 3, privită cu ochii simultaneității.</p>
+  <aside class="formula">
+    <span class="formula__label">Momentul în S′, în funcție de momentul și locul din S</span>
+    <math display="block"><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>(</mo><mi>t</mi><mo>−</mo><mfrac><mrow><mi>v</mi><mi>x</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></math>
+    <p class="formula__read">Citește-o așa: „Ora <var>t</var>′ pe care o notează S′ pentru un eveniment este γ ori (ora <var>t</var> din S, minus un termen care depinde de <strong>unde</strong> are loc evenimentul, <var>x</var>).” Termenul <var>vx</var>/<var>c</var><sup>2</sup> este cauza nesimultaneității: pentru două evenimente cu același <var>t</var> și <var>x</var> diferit, ora <var>t</var>′ iese diferită — cu atât mai mult cu cât <var>x</var> diferă mai mult și cu cât <var>v</var> e mai mare. Pentru <var>v</var> ≪ <var>c</var> termenul dispare și revine timpul comun al fizicii clasice. Factorul γ este <span class="term" data-def="Factorul Lorentz, γ = 1/√(1 − v²/c²) ≥ 1; pentru v ≪ c, γ ≈ 1.">factorul Lorentz</span>.</p>
+  </aside>
+  <aside class="formula">
+    <span class="formula__label">Decalajul dintre două evenimente</span>
+    <math display="block"><mrow><mi>Δ</mi><msup><mi>t</mi><mo>′</mo></msup></mrow><mo>=</mo><mi>γ</mi><mo>(</mo><mrow><mi>Δ</mi><mi>t</mi></mrow><mo>−</mo><mfrac><mrow><mi>v</mi><mrow><mi>Δ</mi><mi>x</mi></mrow></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></math>
+    <p class="formula__read">Citește-o așa: „Decalajul de timp dintre două evenimente, văzut din S′, este γ ori (decalajul văzut din S, minus un termen proporțional cu distanța dintre evenimente pe direcția mișcării).” Dacă evenimentele sunt simultane în S (Δ<var>t</var> = 0), rămâne doar termenul cu minus: S′ găsește mai devreme evenimentul situat mai departe în sensul în care se mișcă. Dacă în plus sunt în același loc (Δ<var>x</var> = 0), decalajul este zero.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="4" data-n="7"></div>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap04.js"></script>
+<script src="../assets/js/sims/cap04-tren.js"></script>
+<script src="../assets/js/sims/cap04-simple.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

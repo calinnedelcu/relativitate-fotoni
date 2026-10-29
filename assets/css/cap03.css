@@ -1,0 +1,12 @@
+/* Capitolul 3 — stiluri proprii (toate selectoarele sunt limitate la capitolul 3) */
+
+/* tabelul-dicționar al transformărilor: formulele (MathML) centrate, fără rupere de rând */
+body[data-chapter="3"] .tbl--dict td { text-align: center; white-space: nowrap; }
+body[data-chapter="3"] .tbl--dict th:first-child { white-space: nowrap; }
+body[data-chapter="3"] .tbl--dict math { font-size: 1.12em; }
+
+/* formula factorului γ din caseta „idee”, pe un rând propriu */
+body[data-chapter="3"] .callout > math[display="block"] { margin: .7em 0 .3em; }
+
+/* listele din pașii poveștii: aer puțin mai mic */
+body[data-chapter="3"] .step ul { margin-bottom: .8em; }

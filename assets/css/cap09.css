@@ -1,0 +1,35 @@
+/* Capitolul 9 — culori și „bilanțul energiei” (toate selectoarele sunt limitate la capitolul 9) */
+
+/* aceleași culori ca în simulări: E₀ verde, E_c roz, E (totală) cyan, p·c violet */
+body[data-chapter="9"] .k-e0 { color: var(--good); font-weight: 650; }
+body[data-chapter="9"] .k-ec { color: var(--s2); font-weight: 650; }
+body[data-chapter="9"] .k-et { color: var(--s1); font-weight: 650; }
+body[data-chapter="9"] .k-pc { color: var(--acc2); font-weight: 650; }
+
+/* bilanțul: E₀ + E_c = E */
+body[data-chapter="9"] .c9-bilant {
+  display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center;
+  gap: .55rem; margin: 1.4rem 0;
+}
+body[data-chapter="9"] .c9-box {
+  --c: var(--acc);
+  flex: 1 1 150px; max-width: 230px; text-align: center;
+  padding: .7rem .8rem; border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+  background: color-mix(in srgb, var(--c) 11%, var(--card-solid));
+}
+body[data-chapter="9"] .c9-box small {
+  display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--c); font-weight: 800; margin-bottom: .2rem;
+}
+body[data-chapter="9"] .c9-box b { display: block; font-size: 1.02rem; color: var(--tx); font-weight: 600; line-height: 1.35; }
+body[data-chapter="9"] .c9-box.e0 { --c: var(--good); }
+body[data-chapter="9"] .c9-box.ec { --c: var(--s2); }
+body[data-chapter="9"] .c9-box.et { --c: var(--s1); }
+body[data-chapter="9"] .c9-op {
+  align-self: center; font-size: 1.6rem; color: var(--tx3); line-height: 1; padding: 0 .1rem;
+}
+@media (max-width: 560px) {
+  body[data-chapter="9"] .c9-box { flex: 1 1 100%; max-width: none; }
+  body[data-chapter="9"] .c9-op { flex: 1 1 100%; text-align: center; }
+}

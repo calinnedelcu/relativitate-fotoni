@@ -1,0 +1,15 @@
+/* Capitolul 7 — stiluri proprii (toate selectoarele sunt limitate la acest capitol) */
+
+/* glisor violet (nava B din simularea „Două nave care se apropie”) */
+body[data-chapter="7"] .ui-slider.is-violet input[type=range] { background: linear-gradient(to right, var(--acc2) var(--p, 50%), var(--line2) var(--p, 50%)); }
+body[data-chapter="7"] .ui-slider.is-violet input[type=range]::-webkit-slider-thumb { background: var(--acc2); box-shadow: 0 0 0 1px var(--acc2), 0 0 14px var(--acc2); }
+body[data-chapter="7"] .ui-slider.is-violet input[type=range]::-moz-range-thumb { background: var(--acc2); box-shadow: 0 0 0 1px var(--acc2), 0 0 14px var(--acc2); }
+body[data-chapter="7"] .ui-slider.is-violet .ui-slider__val { color: var(--acc2); }
+
+/* afișajele de valori ocupă tot rândul și stau pe mai multe coloane, ca textul să nu se rupă */
+body[data-chapter="7"] .ui-readouts.c7-wide { grid-column: 1 / -1; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+
+body[data-chapter="7"] .ui-readouts.c7-wide .ui-readout { flex-direction: column; align-items: flex-start; gap: 2px; }
+
+/* valoarea dintr-un afișaj nu se rupe pe două rânduri (✓, %) — eticheta se rupe în schimb */
+body[data-chapter="7"] .ui-readout b { white-space: nowrap; }

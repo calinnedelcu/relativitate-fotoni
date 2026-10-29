@@ -1,0 +1,50 @@
+/* Capitolul 11 — Efectul fotoelectric extern: stiluri proprii (toate selectoarele sunt limitate la capitolul 11) */
+
+/* laboratorul virtual: aparatul sus, două grafice dedesubt */
+body[data-chapter="11"] .c11-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: var(--stage);
+}
+body[data-chapter="11"] .c11-cell { min-width: 0; line-height: 0; }
+body[data-chapter="11"] .c11-cell--wide { grid-column: 1 / -1; }
+body[data-chapter="11"] .c11-cell--g { border-top: 1px solid var(--line); }
+body[data-chapter="11"] .c11-cell--g + .c11-cell--g { border-left: 1px solid var(--line); }
+@media (max-width: 640px) {
+  body[data-chapter="11"] .c11-grid { grid-template-columns: minmax(0, 1fr); }
+  body[data-chapter="11"] .c11-cell--g + .c11-cell--g { border-left: 0; }
+}
+
+/* cele patru legi */
+body[data-chapter="11"] .c11-laws { display: grid; gap: .9rem; margin: 1.4rem 0; }
+body[data-chapter="11"] .c11-law {
+  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .3rem 1rem; align-items: start;
+  padding: 1rem 1.15rem; border-radius: 14px; background: var(--card-solid);
+  border: 1px solid color-mix(in srgb, var(--acc) 35%, transparent);
+  border-left: 4px solid var(--acc);
+}
+body[data-chapter="11"] .c11-law__n {
+  grid-row: 1 / span 2; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 800; color: var(--acc-ink); background: var(--acc); box-shadow: 0 0 14px color-mix(in srgb, var(--acc) 55%, transparent);
+}
+body[data-chapter="11"] .c11-law__t { margin: 0; font-weight: 560; }
+body[data-chapter="11"] .c11-law__why { margin: 0; font-size: .9rem; color: var(--tx2); }
+body[data-chapter="11"] .c11-law__why b { color: var(--light); }
+@media (max-width: 480px) {
+  body[data-chapter="11"] .c11-law { grid-template-columns: minmax(0, 1fr); }
+  body[data-chapter="11"] .c11-law__n { grid-row: auto; }
+}
+
+/* mici „misiuni” sub laborator */
+body[data-chapter="11"] .c11-missions { list-style: none; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .5rem; counter-reset: ms; }
+body[data-chapter="11"] .c11-missions li {
+  counter-increment: ms; position: relative; margin: 0; padding: .55rem .9rem .55rem 2.7rem; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--card-solid); font-size: .95rem;
+}
+body[data-chapter="11"] .c11-missions li::before {
+  content: counter(ms); position: absolute; left: .8rem; top: .55rem; width: 1.4rem; height: 1.4rem; border-radius: 50%;
+  display: grid; place-items: center; font-size: .78rem; font-weight: 800; color: #3a2600; background: var(--light);
+}
+
+/* tabel „ce schimbi → ce se schimbă” */
+body[data-chapter="11"] .c11-tbl td:first-child { font-weight: 600; white-space: nowrap; }
+body[data-chapter="11"] .c11-yes { color: var(--good); font-weight: 700; }
+body[data-chapter="11"] .c11-no { color: var(--bad); font-weight: 700; }

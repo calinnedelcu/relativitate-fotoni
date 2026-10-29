@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 3 · Transformările Lorentz — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Dicționarul dintre coordonatele aceluiași eveniment în doi S.R.I.: transformările Lorentz, factorul γ, limita Galilei și ce rămâne la fel pentru toți observatorii.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/cap03.css">
+</head>
+<body data-chapter="3">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul 3</span></div>
+  <h1>Transformările Lorentz</h1>
+  <p class="hero__idea">Doi observatori în mișcare relativă notează <strong>numere diferite</strong> pentru același eveniment. Transformările Lorentz sunt <strong>dicționarul</strong> care traduce numerele unuia în numerele celuilalt — și, spre deosebire de dicționarul clasic, ele <strong>amestecă timpul cu spațiul</strong>.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici ce face o transformare Lorentz: leagă coordonatele <var>x</var>, <var>y</var>, <var>z</var>, <var>t</var> ale aceluiași eveniment în doi <span class="term" data-def="Sistem de referință inerțial: un sistem în care un corp liber își păstrează viteza. Orice sistem în mișcare rectilinie uniformă față de un S.R.I. este tot S.R.I.">S.R.I.</span>;</li>
+    <li>să arăți ce e nou față de Galilei — ora <var>t</var>′ depinde și de poziția <var>x</var> — și ce măsoară factorul γ;</li>
+    <li>să spui de ce <var>v</var> &lt; <var>c</var>, ce devin formulele pentru <var>v</var> ≪ <var>c</var> și ce rămâne la fel pentru toți observatorii.</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 13 min</span><span class="pill">3 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="legatura">
+  <h2>Un eveniment, două seturi de numere</h2>
+  <p>În capitolul 2 ai văzut că un <span class="term" data-def="Ceva care se întâmplă într-un loc precis și la un moment precis; se descrie prin patru numere: E(x, y, z, t).">eveniment</span> se descrie prin patru numere — <em>unde</em> și <em>când</em>: <var>E</var>(<var>x</var>, <var>y</var>, <var>z</var>, <var>t</var>). Ai văzut și că doi observatori nu se pun de acord asupra lui Δ<var>x</var> și Δ<var>t</var> luate separat, dar se pun de acord asupra <span class="term" data-def="Intervalul spațio-temporal Δs: (Δs)² = (Δx)² + (Δy)² + (Δz)² − (cΔt)². Are aceeași valoare în orice S.R.I. (invariant relativist).">intervalului</span> Δ<var>s</var>.</p>
+  <p>Rămâne o întrebare practică: dacă <strong>știi</strong> numerele unui eveniment într-un S.R.I., cum afli numerele pe care i le dă <em>alt</em> S.R.I.? Regula de „traducere” se numește <span class="term">transformările Lorentz</span>. Aici vezi <strong>ce fac</strong> ele, nu cum se deduc.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Scena de lucru (o folosim în tot capitolul)</span>
+    <ul>
+      <li><span class="term">S și S′</span>: <strong>S</strong> e sistemul „fix” — peronul, cu <strong>Ana</strong>; <strong>S′</strong> e sistemul „mobil” — trenul, cu <strong>Bogdan</strong>.</li>
+      <li>S′ se mișcă față de S cu viteza constantă <var>v</var>, pe direcția axei <var>x</var>; axele <var>y</var> și <var>z</var> rămân paralele.</li>
+      <li>Ceasurile sunt reglate astfel încât, în clipa în care originile celor două sisteme se întâlnesc, amândouă arată <var>t</var> = <var>t</var>′ = 0.</li>
+    </ul>
+  </aside>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Un eveniment are în S coordonatele (<var>x</var>, <var>y</var>, <var>z</var>, <var>t</var>). Bogdan (S′) se mișcă față de Ana pe direcția <var>x</var>. În mecanica clasică, care dintre cele patru numere ale evenimentului diferă între Ana și Bogdan?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Toate patru.</li>
+      <li data-k="b">Doar <var>x</var>: trenul a înaintat, iar <var>y</var>, <var>z</var> și <var>t</var> rămân la fel.</li>
+      <li data-k="c"><var>x</var> și <var>t</var>: și ceasurile trenului merg altfel.</li>
+      <li data-k="d">Niciunul: un eveniment are aceleași coordonate pentru toți.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Doar <var>x</var>.</strong> În timpul <var>t</var>, trenul a înaintat, deci față de el evenimentul e în alt loc. Pe <var>y</var> și <var>z</var> nu există nicio deplasare, iar ceasurile — în mecanica clasică — merg la fel pentru toți. Relativitatea schimbă <strong>exact această ultimă regulă</strong>: diferă și ora, și diferă în funcție de loc. Mai jos vezi cum.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="poveste">
+  <h2>De la Galilei la Lorentz, pe pași</h2>
+  <p>Construim dicționarul împreună. Urmărești <strong>un singur eveniment</strong> și vezi cum îl „traduce” fiecare variantă. Desenul e diagrama spațiu-timp din capitolul 2: orizontal — poziția <var>x</var>, vertical — timpul înmulțit cu <var>c</var> (<var>ct</var>), așa că <strong>lumina e mereu la 45°</strong>. Fiecare observator are axele lui: ale Anei sunt albastre, ale lui Bogdan roz.</p>
+
+  <div class="steps" data-title="Un eveniment, două adrese">
+    <div class="steps__stage">
+      <figure data-sim="c03Poveste"><figcaption>Un eveniment, două adrese</figcaption></figure>
+    </div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Același eveniment, două seturi de numere</h3>
+      <p>Un fulger lovește un stâlp, undeva în fața trenului. Ana, de pe peron, îi notează locul și ora: <var>x</var> și <var>t</var>. Pe desen, evenimentul e un punct, iar <var>x</var> și <var>ct</var> se citesc pe axele ei.</p>
+      <p>Bogdan, din tren, notează și el locul și ora aceluiași fulger: <var>x</var>′ și <var>t</var>′. <strong>Punctul e același; numerele sunt altele.</strong> Cum afli <var>x</var>′ și <var>t</var>′ din <var>x</var> și <var>t</var>?</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Dicționarul clasic (Galilei)</h3>
+      <p>Cât a durat <var>t</var>, trenul a înaintat cu <var>v</var><var>t</var>. Față de tren, fulgerul e deci „mai în urmă” cu <var>v</var><var>t</var>: <strong><var>x</var>′ = <var>x</var> − <var>v</var><var>t</var></strong>.</p>
+      <p>Iar ceasurile? Mecanica clasică spune că merg la fel pentru toți: <strong><var>t</var>′ = <var>t</var></strong>. Pe desen, axa lui Bogdan <var>ct</var>′ s-a înclinat (trenul se mișcă), dar axa <var>x</var>′ — „acum”-ul lui Bogdan — a rămas <strong>orizontală</strong>: toți au același „acum”.</p>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Testul luminii</h3>
+      <p>Trimitem un impuls de lumină din originea comună, în sensul mișcării trenului. Postulatul I: <strong>amândoi</strong> trebuie să-i măsoare viteza <var>c</var>. Trenul merge cu 0,5 <var>c</var>.</p>
+      <div class="predict" data-correct="c">
+        <p class="predict__q">Ce viteză ar măsura Bogdan pentru impuls, dacă dicționarul lui Galilei ar fi corect?</p>
+        <ul class="predict__opts">
+          <li data-k="a"><var>c</var> — la fel ca Ana</li>
+          <li data-k="b">1,5 <var>c</var></li>
+          <li data-k="c">0,5 <var>c</var></li>
+          <li data-k="d">Mai puțin de 0,5 <var>c</var>, pentru că ceasul lui Bogdan merge mai încet</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>0,5 <var>c</var>.</strong> Cu <var>t</var>′ = <var>t</var>, impulsul parcurge în S′ doar <var>c</var> − <var>v</var>. Dar experimentul dă <var>c</var>. Deci dicționarul lui Galilei <strong>nu poate fi exact</strong> — și nu ajunge să-i „reparăm” poziția: dacă ora rămâne neatinsă, nu iese <var>c</var> pentru amândoi (capitolul 1: distanțele și duratele nu pot fi ambele absolute).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · Dicționarul corect (Lorentz)</h3>
+      <p>Ca lumina să iasă <var>c</var> pentru amândoi, dicționarul se schimbă în <strong>două locuri</strong>:</p>
+      <ul>
+        <li>poziția primește un factor γ: <strong><var>x</var>′ = γ(<var>x</var> − <var>v</var><var>t</var>)</strong>;</li>
+        <li>ora <strong>nu mai e lăsată neatinsă</strong>: <strong><var>t</var>′ = γ(<var>t</var> − <var>v</var><var>x</var>/<var>c</var>²)</strong> — ora lui Bogdan depinde acum și de <em>locul</em> evenimentului.</li>
+      </ul>
+      <p>Pe desen, axa <var>x</var>′ s-a înclinat și ea, simetric cu <var>ct</var>′, față de linia luminii. Lumina e „bisectoarea” axelor lui Bogdan, exact cum e și pentru Ana.</p>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · Ora depinde de loc</h3>
+      <p>Două fulgere lovesc, <strong>simultan pentru Ana</strong> (același <var>t</var>), doi stâlpi aflați la distanță unul de altul, pe linia căii ferate.</p>
+      <div class="predict" data-correct="b">
+        <p class="predict__q">Sunt cele două fulgere simultane și pentru Bogdan?</p>
+        <ul class="predict__opts">
+          <li data-k="a">Da — dacă au același <var>t</var>, au același <var>t</var>′</li>
+          <li data-k="b">Nu — <var>t</var>′ depinde și de poziție, iar stâlpii sunt în locuri diferite</li>
+          <li data-k="c">Nu — dar numai fiindcă lumina unuia ajunge la Bogdan mai târziu decât lumina celuilalt</li>
+          <li data-k="d">Depinde doar de viteza trenului, nu și de distanța dintre stâlpi</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Nu.</strong> În <var>t</var>′ = γ(<var>t</var> − <var>v</var><var>x</var>/<var>c</var>²) apare poziția: la <var>x</var> diferit, termenul <var>v</var><var>x</var>/<var>c</var>² diferă, deci și <var>t</var>′ diferă. Nu e vorba de întârzierea luminii: vorbim de momentele <em>atribuite</em> evenimentelor. De ce e așa, și cine are dreptate — capitolul 4.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="5">
+      <h3>6 · Înapoi, și la viteze mici</h3>
+      <p>Văzut din tren, peronul se îndepărtează cu <strong>−<var>v</var></strong>. Dicționarul invers arată la fel, cu <var>v</var> → −<var>v</var>: <var>x</var> = γ(<var>x</var>′ + <var>v</var><var>t</var>′) și <var>t</var> = γ(<var>t</var>′ + <var>v</var><var>x</var>′/<var>c</var>²). Niciun sistem nu e privilegiat.</p>
+      <p>Iar la viteze din viața de zi cu zi, <var>v</var> ≪ <var>c</var>, γ e practic 1, iar termenul <var>v</var><var>x</var>/<var>c</var>² e neglijabil. Rămâne exact Galilei: <var>x</var>′ = <var>x</var> − <var>v</var><var>t</var>, <var>t</var>′ = <var>t</var>. De aceea a funcționat Galilei atâta vreme.</p>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="lorentz">
+  <h2>Dicționarul Lorentz, pe larg</h2>
+  <p>Iată dicționarul complet. Citește-l ca pe un tabel de traducere: în stânga — de la Ana la Bogdan, în dreapta — de la Bogdan la Ana.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Transformările Lorentz speciale</span>
+    <p>S′ se mișcă față de S cu viteza <var>v</var>, pe axa <var>x</var>. Pentru același eveniment:</p>
+    <div class="tbl-wrap"><table class="tbl tbl--dict">
+      <thead><tr><th></th><th>De la S la S′</th><th>De la S′ la S</th></tr></thead>
+      <tbody>
+        <tr>
+          <th scope="row">Poziția</th>
+          <td><math><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>(</mo><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi><mo>)</mo></math></td>
+          <td><math><mi>x</mi><mo>=</mo><mi>γ</mi><mo>(</mo><msup><mi>x</mi><mo>′</mo></msup><mo>+</mo><mi>v</mi><msup><mi>t</mi><mo>′</mo></msup><mo>)</mo></math></td>
+        </tr>
+        <tr>
+          <th scope="row">Ora</th>
+          <td><math><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>(</mo><mi>t</mi><mo>−</mo><mfrac><mrow><mi>v</mi><mi>x</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></math></td>
+          <td><math><mi>t</mi><mo>=</mo><mi>γ</mi><mo>(</mo><msup><mi>t</mi><mo>′</mo></msup><mo>+</mo><mfrac><mrow><mi>v</mi><msup><mi>x</mi><mo>′</mo></msup></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></math></td>
+        </tr>
+        <tr>
+          <th scope="row">Perpendicular</th>
+          <td><math><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mi>y</mi><mo>,</mo><mspace width="0.8em"></mspace><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mi>z</mi></math></td>
+          <td><math><mi>y</mi><mo>=</mo><msup><mi>y</mi><mo>′</mo></msup><mo>,</mo><mspace width="0.8em"></mspace><mi>z</mi><mo>=</mo><msup><mi>z</mi><mo>′</mo></msup></math></td>
+        </tr>
+      </tbody>
+    </table></div>
+    <p>Aici γ este <strong>factorul Lorentz</strong>, cu β = <var>v</var>/<var>c</var>:</p>
+    <math display="block"><mi>γ</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></msqrt></mfrac><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>1</mn><mo>−</mo><msup><mi>β</mi><mn>2</mn></msup></msqrt></mfrac><mo>≥</mo><mn>1</mn></math>
+  </aside>
+
+  <p>Fiecare rând răspunde la o întrebare simplă:</p>
+  <ul>
+    <li><strong>Unde e evenimentul pentru Bogdan?</strong> Poziția Anei, minus cât a înaintat trenul (<var>v</var><var>t</var>), totul înmulțit cu γ. Deci <var>x</var>′ depinde de <var>x</var> <em>și de</em> <var>t</var>.</li>
+    <li><strong>Ce oră e pentru Bogdan?</strong> Ora Anei, minus o corecție care depinde de <em>loc</em> (<var>v</var><var>x</var>/<var>c</var>²), totul înmulțit cu γ. Deci <var>t</var>′ depinde de <var>t</var> <em>și de</em> <var>x</var>. <strong>Asta e noutatea:</strong> timpul se amestecă cu spațiul.</li>
+    <li><strong>Și pe direcțiile perpendiculare pe mișcare?</strong> Nimic: <var>y</var>′ = <var>y</var>, <var>z</var>′ = <var>z</var>. Se amestecă doar <var>x</var> și <var>t</var>.</li>
+    <li><strong>Și înapoi, de la Bogdan la Ana?</strong> Aceleași formule, cu <var>v</var> → −<var>v</var>: pentru Bogdan, Ana se mișcă cu −<var>v</var>. Factorul γ rămâne la fel (depinde de <var>v</var>², nu de sens).</li>
+  </ul>
+
+  <aside class="callout warn">
+    <span class="callout__title">Atenție la semn și la roluri</span>
+    <p><var>v</var> e viteza lui S′ față de S, în sensul +<var>x</var>. Un test rapid de semn: originea trenului (<var>x</var>′ = 0) trebuie să fie în <var>x</var> = <var>v</var><var>t</var>, adică să înainteze cu <var>v</var>. Și nu schimba rolurile: S e sistemul „fix”, S′ cel „mobil”.</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Nu doar pentru lumină</span>
+    <p>Transformările se aplică <strong>oricărui eveniment</strong>: un fulger, o ciocnire, bătaia unui ceas. Lumina a fost doar cheia prin care le-am găsit (<var>c</var> trebuie să iasă la fel în S și în S′); regula de traducere e valabilă peste tot.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="amestec">
+  <h2>Timpul se amestecă cu spațiul</h2>
+  <p>Ca să vezi ce înseamnă „amestecul”, privește tot spațiu-timpul odată. În stânga e desenul Anei (S); în dreapta, <strong>aceleași evenimente</strong> desenate de Bogdan (S′). Punctele nu se mută de la sine: se schimbă doar axele față de care le citești. Cele patru evenimente: <strong>A și B</strong> sunt simultane pentru Ana (același nivel), iar <strong>C și D</strong> se petrec în același loc pentru ea (aceeași verticală).</p>
+
+  <div class="predict" data-correct="c">
+    <p class="predict__q">Treci de la desenul lui S la desenul lui S′, cu transformarea Lorentz. Ce se păstrează?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Distanța dintre două evenimente, Δ<var>x</var>.</li>
+      <li data-k="b">Durata dintre două evenimente, Δ<var>t</var>.</li>
+      <li data-k="c">Viteza luminii și intervalul Δ<var>s</var> dintre evenimente.</li>
+      <li data-k="d">Nimic: totul depinde de observator.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Viteza luminii și intervalul Δ<var>s</var>.</strong> Δ<var>x</var> și Δ<var>t</var> se schimbă, fiecare în parte, dar combinația lor din capitolul 2 — (Δ<var>s</var>)² = (Δ<var>x</var>)² − (<var>c</var>Δ<var>t</var>)² — rămâne la fel. Transformarea Lorentz e „rotația” axelor în spațiu-timp: schimbă numerele, păstrează intervalul.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c03Diagrame">
+    <figcaption>Galilei vs. Lorentz — același spațiu-timp, două desene</figcaption>
+    <p class="sim__hint"><b>Observă:</b> la <b>Lorentz</b>, lumina rămâne la 45° în <em>ambele</em> desene, iar A și B (la același nivel în S) ajung la niveluri diferite în S′. La <b>Galilei</b>, A și B rămân la același nivel (timp absolut), dar lumina se „strâmbă” în desenul lui S′ — adică Bogdan ar măsura altă viteză. Micșorează viteza spre 0: cele două dicționare devin la fel.</p>
+  </figure>
+
+  <p>Ce ai de văzut, pe scurt:</p>
+  <ul>
+    <li><strong>Galilei:</strong> axa <var>x</var>′ rămâne orizontală — Ana și Bogdan au același „acum” (timp absolut) —, dar în desenul lui Bogdan lumina nu mai e la 45°: ar măsura <var>c</var> − <var>v</var> într-un sens și <var>c</var> + <var>v</var> în celălalt. ✗ Postulatul I.</li>
+    <li><strong>Lorentz:</strong> ambele axe ale lui Bogdan se înclină simetric față de lumină, deci lumina rămâne la 45° în <em>ambele</em> desene: <var>c</var> pentru amândoi. ✓</li>
+    <li><strong>Prețul:</strong> A și B, simultane pentru Ana, ajung la niveluri diferite pentru Bogdan: „acum”-ul lui nu mai e al ei. Iar C și D, din același loc pentru Ana, sunt în locuri diferite pentru Bogdan (asta se întâmplă și la Galilei).</li>
+  </ul>
+
+  <aside class="callout idea">
+    <span class="callout__title">Ce păstrează transformările Lorentz</span>
+    <p>Viteza luminii <var>c</var> și <strong>intervalul spațio-temporal</strong> Δ<var>s</var> — același în orice S.R.I. (invariant relativist). A trece de la S la S′ e ca și cum ai <strong>roti axele</strong> în spațiu-timp: numerele (<var>x</var>, <var>t</var>) se schimbă, combinația (Δ<var>s</var>)² nu. Citește în simulare: la Lorentz, (Δ<var>s</var>)² dintre C și D e la fel în S și în S′; la Galilei, nu.</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">Cum citești desenul</span>
+    <p>Axa <var>ct</var>′ = punctele cu <var>x</var>′ = 0: drumul lui Bogdan prin spațiu-timp. Axa <var>x</var>′ = evenimentele cu <var>t</var>′ = 0: „acum”-ul lui Bogdan. Orice dreaptă paralelă cu <var>x</var>′ adună evenimente <strong>simultane pentru Bogdan</strong>.</p>
+  </aside>
+
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p>Desenul pentru Galilei e doar un termen de comparație: arată cum ar arăta spațiu-timpul dacă timpul ar fi absolut. Așa vezi ce s-ar păstra (același „acum” pentru toți) și ce nu se poate (aceeași viteză a luminii pentru toți).</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Coordonate, nu aspect vizual</span>
+    <p>Formulele și diagrama lucrează cu coordonate <strong>atribuite</strong> evenimentelor de observatori cu rigle și ceasuri sincronizate în tot sistemul lor, după ce au corectat întârzierea luminii. Ele nu arată cum „arată” lucrurile într-o fotografie sau pentru ochi: acolo mai contează și cât durează lumina până la tine.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="gamma">
+  <h2>Factorul γ: cât de departe de Galilei suntem</h2>
+  <p>În toate formulele apare același număr, <span class="term">factorul Lorentz</span> γ. El spune cât de „relativist” e momentul: dacă γ = 1 ești în lumea lui Galilei; cu cât γ crește, cu atât transformările se abat mai mult de ea.</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Cum crește γ când viteza lui S′ crește de la 0 spre <var>c</var>?</p>
+    <ul class="predict__opts">
+      <li data-k="a">Liniar: de două ori mai repede → γ de două ori mai mare.</li>
+      <li data-k="b">Aproape deloc mult timp, apoi tot mai abrupt, și tinde la infinit lângă <var>c</var>.</li>
+      <li data-k="c">Scade: la viteze mari γ e foarte mic.</li>
+      <li data-k="d">Rămâne 1 până la <var>c</var>, apoi sare brusc la infinit.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Aproape plat, apoi un „perete” lângă <var>c</var>.</strong> Probează singur în γ-metrul de mai jos: pornește cu viteza unei mașini sau a unui satelit și vezi cât de aproape de 1 rămâne γ.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c03Gamma">
+    <figcaption>γ-metru</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> apasă „Mașină” și „Satelit”: γ e 1 cu zeci de zecimale — Galilei e de-ajuns. Apoi urcă spre <var>c</var> și vezi unde „explodează” γ. Granițele dintre zone sunt orientative.</p>
+  </figure>
+
+  <aside class="callout idea">
+    <span class="callout__title">Factorul Lorentz</span>
+    <p>γ = 1/√(1 − <var>v</var>²/<var>c</var>²) = 1/√(1 − β²), cu β = <var>v</var>/<var>c</var>. Mereu <strong>γ ≥ 1</strong>; γ = 1 doar la <var>v</var> = 0, iar γ → ∞ când <var>v</var> → <var>c</var>.</p>
+  </aside>
+
+  <h3>Cele trei regimuri</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Regim</th><th>Viteza</th><th>Factorul Lorentz</th><th>Ce faci</th></tr></thead>
+    <tbody>
+      <tr><td>clasic</td><td><var>v</var> ≪ <var>c</var></td><td>≈ 1</td><td>Galilei e de-ajuns</td></tr>
+      <tr><td>relativist</td><td><var>v</var> comparabilă cu <var>c</var></td><td>se vede că e &gt; 1</td><td>folosești Lorentz</td></tr>
+      <tr><td><span class="term">ultrarelativist</span></td><td><var>v</var> ≈ <var>c</var></td><td>≫ 1</td><td>Lorentz; mecanica clasică nu mai are nicio valoare</td></tr>
+    </tbody>
+  </table></div>
+
+  <aside class="callout idea">
+    <span class="callout__title">Limitele</span>
+    <p>Pentru <var>v</var> ≪ <var>c</var>: γ → 1 și termenul <var>v</var><var>x</var>/<var>c</var>² e neglijabil, deci transformările Lorentz → <strong>transformările Galilei</strong> (mecanica clasică). Dacă <var>v</var> ≈ <var>c</var>, mișcarea se numește <strong>ultrarelativistă</strong>.</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">Nuanță de vocabular</span>
+    <p>În sens strict, „ultrarelativist” se spune când <var>v</var> e <em>atât</em> de aproape de <var>c</var> încât γ ≫ 1 (de exemplu 0,99 <var>c</var> sau mai mult). Pentru viteze doar comparabile cu <var>c</var> (să zicem 0,3–0,8 <var>c</var>) se spune de obicei „relativist”. Ideea e aceeași: cu cât γ e mai mare, cu atât Galilei greșește mai mult.</p>
+  </aside>
+
+  <h3>De ce trebuie <var>v</var> &lt; <var>c</var></h3>
+  <p>γ trebuie să fie un număr real. Sub radical, 1 − <var>v</var>²/<var>c</var>² trebuie să fie pozitiv, deci <var>v</var> &lt; <var>c</var>. La <var>v</var> = <var>c</var> ar ieși γ infinit; peste <var>c</var>, γ ar fi imaginar. Prin urmare, <strong>transformările leagă între ele doar S.R.I. cu <var>v</var> &lt; <var>c</var></strong>: nu există un S.R.I. care să se miște cu <var>c</var> față de altul (nici unul „legat de un foton” — vezi capitolul 10).</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Mereu cel puțin 1</span>
+    <p>γ = 1 la viteză zero și crește de acolo: un γ &lt; 1 nu există. Ce se micșorează în capitolele următoare (lungimi măsurate, ritmul unui ceas în mișcare) se obține <em>împărțind</em> la γ, nu având un γ mai mic decât 1.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="schimba">
+  <h2>Ce se schimbă și ce rămâne la fel</h2>
+  <p>Pune față în față ce spune dicționarul Lorentz despre cei doi observatori:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Se schimbă de la un S.R.I. la altul</th><th>Rămâne la fel în orice S.R.I.</th></tr></thead>
+    <tbody>
+      <tr><td>poziția <var>x</var> și ora <var>t</var> ale unui eveniment</td><td>viteza luminii în vid, <var>c</var></td></tr>
+      <tr><td>Δ<var>x</var> și Δ<var>t</var> dintre două evenimente, luate separat</td><td>intervalul spațio-temporal Δ<var>s</var></td></tr>
+      <tr><td>care evenimente sunt „simultane” (în general)</td><td><var>y</var> și <var>z</var> (când mișcarea e pe <var>x</var>)</td></tr>
+      <tr><td>viteza unui corp, lungimea unei bare în mișcare, durata unui fenomen (capitolele 5–7)</td><td>forma legilor fizicii și forma transformărilor (aceeași, cu <var>v</var> → −<var>v</var>)</td></tr>
+    </tbody>
+  </table></div>
+  <p>E aceeași idee ca în capitolul 1, acum cu formule: teoria nu spune că „totul e relativ”, ci <strong>exact</strong> ce se schimbă și ce nu.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Transformările Lorentz se aplică doar luminii; pentru restul rămâne Galilei.</p>
+      <div class="myth__true"><p>Se aplică <strong>oricărui eveniment</strong> — o ciocnire, o bătaie de ceas, un fulger. Lumina a fost doar cheia: fiindcă <var>c</var> trebuie să iasă la fel în ambele sisteme, dicționarul nu putea rămâne cel al lui Galilei.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Formulele spun cum „arată” lucrurile într-o fotografie sau pentru ochi.</p>
+      <div class="myth__true"><p>Ele dau <strong>coordonatele atribuite</strong> evenimentelor de observatori cu rigle și ceasuri sincronizate în tot sistemul lor. O fotografie mai conține și timpul în care lumina ajunge la aparat — altă poveste.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Ora e aceeași pentru toți; între S și S′ se schimbă doar poziția.</p>
+      <div class="myth__true"><p>Asta e ipoteza lui Galilei. La Lorentz, <var>t</var>′ conține și poziția: <var>t</var>′ = γ(<var>t</var> − <var>v</var><var>x</var>/<var>c</var>²). Timpul se amestecă cu spațiul.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Transformarea inversă se obține înlocuind γ cu 1/γ.</p>
+      <div class="myth__true"><p>γ rămâne la fel (depinde de <var>v</var>², nu de sens). Ce se schimbă e semnul lui <var>v</var>: pentru Bogdan, Ana se mișcă cu −<var>v</var>.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">La viteze mici relativitatea nu mai funcționează; atunci se aplică Galilei.</p>
+      <div class="myth__true"><p>Lorentz funcționează <em>mereu</em>. La <var>v</var> ≪ <var>c</var> el dă practic ce dă Galilei: γ ≈ 1 și termenul <var>v</var><var>x</var>/<var>c</var>² e neglijabil. Galilei e <em>limita</em> lui Lorentz, nu o teorie rivală.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Dacă <var>v</var> ar depăși <var>c</var>, formulele ar merge în continuare, doar că γ ar ieși negativ.</p>
+      <div class="myth__true"><p>La <var>v</var> &gt; <var>c</var>, sub radical ar fi un număr negativ, deci γ ar fi imaginar — nu negativ. Iar γ ≥ 1 mereu. De aceea transformările leagă doar sisteme cu <var>v</var> &lt; <var>c</var>.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="3"></aside>
+</section>
+
+<section class="sec" id="formula">
+  <h2>Formulele, în cuvinte</h2>
+  <p>Nu trebuie să știi formulele pe de rost, dar merită să înțelegi propoziția din spatele a trei dintre ele.</p>
+
+  <aside class="formula">
+    <span class="formula__label">Poziția în S′</span>
+    <math display="block"><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>(</mo><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi><mo>)</mo></math>
+    <p class="formula__read">„Poziția pentru Bogdan = (poziția pentru Ana − cât a înaintat trenul) × γ.” La viteze mici, γ ≈ 1 și rămâne regula lui Galilei: <var>x</var>′ = <var>x</var> − <var>v</var><var>t</var>.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Ora în S′</span>
+    <math display="block"><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>γ</mi><mo>(</mo><mi>t</mi><mo>−</mo><mfrac><mrow><mi>v</mi><mi>x</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></math>
+    <p class="formula__read">„Ora pentru Bogdan = (ora pentru Ana − o corecție care depinde de <strong>loc</strong>) × γ.” Corecția <var>v</var><var>x</var>/<var>c</var>² e minusculă la viteze obișnuite (<var>c</var>² e uriaș), dar e cheia: evenimente din locuri diferite capătă ore diferite.</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Factorul Lorentz</span>
+    <math display="block"><mi>γ</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></msqrt></mfrac></math>
+    <p class="formula__read">„γ e 1 când stai pe loc, rămâne foarte aproape de 1 mult timp, apoi crește tot mai repede și devine infinit când <var>v</var> se apropie de <var>c</var>.” Cu cât γ e mai mare, cu atât Galilei greșește mai mult.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="3" data-n="7"></div>
+
+  <aside class="callout light">
+    <span class="callout__title">Mai departe</span>
+    <p>Termenul −<var>v</var><var>x</var>/<var>c</var>² din ora lui Bogdan ascunde o surpriză: două evenimente <strong>simultane pentru Ana</strong> nu sunt simultane pentru Bogdan. Capitolul 4 arată de ce — cu trenul lui Einstein — și de ce amândoi au dreptate.</p>
+  </aside>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap03.js"></script>
+<script src="../assets/js/sims/cap03-sims.js"></script>
+<script>RF.init();</script>
+</body>
+</html>

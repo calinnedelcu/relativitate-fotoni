@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap. 7 · Compunerea vitezelor — Relativitate &amp; Fotoni</title>
+<meta name="description" content="De ce vitezele nu se adună simplu aproape de viteza luminii: regula relativistă de compunere, rezultatul mereu sub c și lumina care rămâne c pentru toți observatorii.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/cap07.css">
+</head>
+<body data-chapter="7">
+<div class="layout">
+<main class="chapter" id="main">
+
+<header class="hero">
+  <div class="hero__kicker"><span>Partea I · Spațiu și timp</span><span class="pill">Capitolul 7</span></div>
+  <h1>Compunerea vitezelor</h1>
+  <p class="hero__idea">Viteza este o distanță împărțită la o durată — iar distanțele și duratele depind de observator. De aceea <strong>nici vitezele nu se mai adună simplu</strong>: la viteze de zi cu zi nu vezi nicio diferență, dar aproape de <var>c</var> rezultatul se „strânge” și <strong>nu depășește niciodată <var>c</var></strong>. Iar pentru lumină, rezultatul este mereu exact <var>c</var>.</p>
+  <span class="goals__label">După acest capitol poți…</span>
+  <ul class="goals">
+    <li>să explici de ce „viteza ta + viteza mingii” este doar o aproximație, valabilă când <var>v</var>, <var>u</var>′ ≪ <var>c</var>;</li>
+    <li>să spui ce dă regula corectă: un rezultat mereu sub <var>c</var>, iar pentru lumină exact <var>c</var> — în ambele sensuri;</li>
+    <li>să deosebești viteza măsurată într-un S.R.I. de simplul ritm cu care se apropie sau se depărtează două corpuri (<var>c</var> − <var>v</var>, 1,8 <var>c</var>).</li>
+  </ul>
+  <div class="hero__meta">
+    <span class="pill">≈ 12 min</span><span class="pill">4 simulări</span><span class="pill">o poveste pe pași</span><span class="pill">test cu întrebări grele</span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section class="sec" id="intro">
+  <h2>De la lungimi și durate, la viteze</h2>
+  <p>În capitolele 5 și 6 ai văzut că riglele și ceasurile unui observator în mișcare nu dau aceleași rezultate ca ale tale: lungimile se scurtează, duratele se întind. Dar <strong>o viteză este chiar o distanță împărțită la o durată</strong>. Dacă ambele depind de observator, <strong>și vitezele trebuie „traduse” altfel</strong> decât ai învățat la mecanică.</p>
+  <p>Scena rămâne cea din tot capitolul. <strong>Ana</strong> stă pe o stație: ea este sistemul <strong>S</strong>, cel „fix”. <strong>Bogdan</strong> pilotează o navă: el este sistemul <strong>S′</strong>, cel „mobil”, care se îndepărtează de stație cu viteza <var>v</var>, pe axa <var>x</var>. Bogdan trage înainte un proiectil.</p>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Viteza</th><th>Ce reprezintă</th><th>O măsoară</th></tr></thead>
+    <tbody>
+      <tr><td><var>v</var></td><td>nava față de stație</td><td>Ana, cu rigla și ceasul stației</td></tr>
+      <tr><td><var>u</var>′</td><td>proiectilul față de navă</td><td>Bogdan, cu rigla și ceasul navei</td></tr>
+      <tr><td><var>u</var></td><td>același proiectil, față de stație</td><td>Ana, cu rigla și ceasul stației</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Întrebarea capitolului: <strong>cum se leagă <var>u</var> de <var>u</var>′ și de <var>v</var>?</strong> În viața de zi cu zi răspunsul este o simplă adunare, <var>u</var> = <var>u</var>′ + <var>v</var> — regula lui <span class="term" data-def="Regula clasică de compunere a vitezelor, u = u′ + v; decurge din transformările lui Galilei (x = x′ + vt, t = t′), care sunt cazul-limită al transformărilor Lorentz pentru v ≪ c.">Galilei</span>, cu trenul și mingea din capitolul 1. Hai să vedem ce se întâmplă când vitezele cresc: ce face <span class="term">compunerea vitezelor</span> corectă.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Notație</span>
+    <p>Pe direcția mișcării (axa <var>x</var>) scriem simplu <var>u</var> și <var>u</var>′; în formule apar ca <var>u</var><sub>x</sub> și <var>u</var>′<sub>x</sub>. Vitezele sunt adesea date în fracții din <var>c</var>: 0,6 <var>c</var> înseamnă 60% din viteza luminii.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="poveste">
+  <h2>Pe pași: de la 0,1 <var>c</var> până la lumină</h2>
+  <p>Urmărește povestea. Bara are scara de la 0 la 2 <var>c</var>; „zidul” galben este <var>c</var>, iar tot ce e dincolo de el e zonă interzisă. Doi pași îți cer să ghicești înainte să continui.</p>
+
+  <div class="steps" data-title="Același proiectil, nave tot mai rapide">
+    <div class="steps__stage">
+      <figure data-sim="c07Poveste"><figcaption>Bara vitezelor</figcaption></figure>
+    </div>
+
+    <section class="step" data-stage="0">
+      <h3>1 · Viteze mici: adunarea merge</h3>
+      <p>Nava lui Bogdan se depărtează de stație cu <strong>0,1 <var>c</var></strong>. Bogdan trage înainte un proiectil care, pentru el, are <strong>0,1 <var>c</var></strong>.</p>
+      <p>Adunarea simplă dă 0,2 <var>c</var>. Regula corectă dă 0,198 <var>c</var>: cele două semne de pe bară aproape se suprapun.</p>
+      <p><strong>La viteze de zi cu zi</strong> — mașini, avioane, chiar rachete — corecția este atât de mică, încât se pierde în erorile de măsurare. De aceea adunarea simplă pare „legea”.</p>
+    </section>
+
+    <section class="step" data-stage="1">
+      <h3>2 · Viteze mari: ghicește</h3>
+      <p>Acum nava merge cu <strong>0,8 <var>c</var></strong>, iar proiectilul pleacă cu <strong>0,8 <var>c</var></strong> față de navă. Adunarea simplă ar da 1,6 <var>c</var> — mai mult decât viteza luminii.</p>
+      <div class="predict" data-correct="c">
+        <p class="predict__q">Ce viteză măsoară Ana, la stație, pentru proiectil?</p>
+        <ul class="predict__opts">
+          <li data-k="a">1,6 <var>c</var> — vitezele se adună.</li>
+          <li data-k="b">Exact <var>c</var> — viteza crește până la limită și se oprește acolo.</li>
+          <li data-k="c">Puțin sub <var>c</var> — mai mult decât 0,8 <var>c</var>, dar fără să atingă <var>c</var>.</li>
+          <li data-k="d">0,8 <var>c</var> — mișcarea navei nu schimbă nimic pentru Ana.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong>Puțin sub <var>c</var></strong> (aproximativ 0,98 <var>c</var>). Nu 1,6 <var>c</var>, dar nici exact <var>c</var>: nu există un „plafon” care taie brusc suma în dreptul lui <var>c</var>. Suma este <em>strânsă</em> treptat — cu atât mai tare cu cât vitezele sunt mai mari — și rămâne sub <var>c</var>. Pe bară a apărut semnul verde: stă lângă zid, fără să-l atingă.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="2">
+      <h3>3 · Proiectilul este lumină</h3>
+      <p>Bogdan trimite înainte un <strong>impuls de lumină</strong>: pentru el, viteza lui este <var>c</var>. Adunarea simplă ar da <var>c</var> + <var>v</var> — mereu peste <var>c</var>.</p>
+      <p>Regula corectă dă <strong>exact <var>c</var></strong>, oricât de repede ar merge nava. Urmărește bara: viteza navei se schimbă, semnul verde nu se mișcă din loc.</p>
+      <p>Este Postulatul I: <strong>dacă <var>u</var>′ = <var>c</var>, atunci <var>u</var> = <var>c</var></strong>. Regula de compunere nu contrazice postulatul — îl respectă, pentru că vine din transformările Lorentz, care păstrează <var>c</var>.</p>
+    </section>
+
+    <section class="step" data-stage="3">
+      <h3>4 · Lumina vine din urmă: ghicește</h3>
+      <p>Acum inversăm rolurile. Nava fuge de stație cu <strong>0,9 <var>c</var></strong>, iar Ana trimite după ea un impuls de lumină. În sistemul Anei, distanța dintre impuls și navă se micșorează cu un ritm de <var>c</var> − 0,9 <var>c</var> = <strong>0,1 <var>c</var></strong>.</p>
+      <div class="predict" data-correct="b">
+        <p class="predict__q">Ce viteză măsoară Bogdan pentru impulsul care îl ajunge din urmă?</p>
+        <ul class="predict__opts">
+          <li data-k="a">0,1 <var>c</var> — exact cât vede Ana că se apropie impulsul de navă.</li>
+          <li data-k="b"><var>c</var> — la fel ca Ana.</li>
+          <li data-k="c">Mai puțin de 0,1 <var>c</var> — ceasurile navei merg mai încet, deci ea măsoară mai puțin.</li>
+          <li data-k="d">Depinde de navă: cu cât fuge mai repede, cu atât măsoară o viteză mai mică.</li>
+        </ul>
+        <div class="predict__reveal">
+          <p><strong><var>c</var>.</strong> Cei 0,1 <var>c</var> sunt doar <em>ritmul</em> cu care se micșorează distanța dintre impuls și navă, ambele măsurate de <strong>Ana</strong>, cu rigla și ceasul ei. Bogdan măsoară altceva: viteza impulsului față de el, cu riglele și ceasurile navei — și obține <var>c</var>. Regula spune același lucru în sens invers: dacă <var>u</var> = <var>c</var>, atunci <var>u</var>′ = <var>c</var>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-stage="4">
+      <h3>5 · De ce se strânge suma?</h3>
+      <p>Pentru că <strong>viteza e distanță ÷ durată</strong>, iar Ana și Bogdan nu măsoară aceeași durată între lansarea proiectilului și lovirea țintei.</p>
+      <p>În „dicționarul” Lorentz din capitolul 3, timpul stației depinde nu doar de timpul navei, ci și de <strong>locul din navă</strong>. Efectul contracției și al dilatării (factorul γ) apare la fel în distanță și în durată și <em>se simplifică în raport</em>. Rămâne termenul de loc — adică exact <strong>nesincronizarea ceasurilor navei</strong>, văzută de Ana (capitolul 4).</p>
+      <p>Această nesincronizare „umflă” durata zborului măsurată de Ana, deci micșorează viteza. Proiectilul <strong>nu este încetinit</strong> de nimic: Ana și Bogdan folosesc doar rigle și ceasuri diferite.</p>
+    </section>
+
+    <section class="step" data-stage="5">
+      <h3>6 · Ce ai văzut</h3>
+      <ul>
+        <li><strong>Vitezele mici</strong> se adună practic simplu.</li>
+        <li><strong>Vitezele mari</strong> se „strâng”: rezultatul este mai mic decât suma simplă și rămâne sub <var>c</var>.</li>
+        <li><strong>Lumina rămâne <var>c</var></strong> pentru amândoi observatorii, în orice sens ar veni.</li>
+        <li>Totul vine din faptul că distanțele <em>și duratele</em> nu sunt aceleași pentru Ana și Bogdan.</li>
+      </ul>
+      <p>În secțiunea următoare primești comenzile: schimbi tu vitezele.</p>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="sim">
+  <h2>Încearcă tu: nava și proiectilul</h2>
+  <p>Sus vezi „cursa” în sistemul Anei: ce ar face fiecare proiectil dacă ar conta numai adunarea simplă, și ce face de fapt. Jos, aceleași viteze pe bara de la 0 la 2 <var>c</var>.</p>
+
+  <figure data-sim="c07Nava">
+    <figcaption>Nava și proiectilul</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> (1) pune ambele viteze la 0,1 <var>c</var> — cele două rezultate aproape coincid; (2) urcă-le spre 0,9 <var>c</var> — marcajul roșu iese din zona permisă, cel verde rămâne lângă <var>c</var>; (3) pornește „proiectilul este lumină” și mișcă viteza navei: verdele nu se clintește. <b>Observă</b> și afișajul din dreapta jos, „Suma simplă depășește rezultatul corect cu”: cu cât produsul vitezelor e mai mare, cu atât greșește mai mult suma simplă.</p>
+  </figure>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="regula">
+  <h2>Regula corectă, în cuvinte</h2>
+  <p>Ai văzut ce <em>face</em> regula. Iată enunțul ei.</p>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț — compunerea vitezelor</span>
+    <p>Dacă S′ se mișcă cu viteza <var>v</var> față de S, pe axa <var>x</var>, iar un corp are în S′ viteza <var>u</var>′, atunci viteza lui în S <strong>nu este <var>u</var>′ + <var>v</var></strong>, ci această sumă <strong>împărțită la 1 + <var>v</var>·<var>u</var>′/<var>c</var>²</strong>.</p>
+    <p>În sens invers (de la S la S′) se schimbă semnul lui <var>v</var>. Iar <strong>dacă <var>u</var> = <var>c</var>, atunci <var>u</var>′ = <var>c</var></strong> — Postulatul I.</p>
+  </aside>
+
+  <p>Numitorul 1 + <var>v</var>·<var>u</var>′/<var>c</var>² este „butonul” regulii. Ce face el:</p>
+  <ul>
+    <li><strong>Viteze mici</strong> (<var>v</var>, <var>u</var>′ ≪ <var>c</var>): produsul e aproape zero, numitorul e ≈ 1 și ajungi la adunarea simplă. Ea nu e o greșeală, ci <em>cazul-limită</em> al regulii — la fel cum transformările Lorentz devin cele ale lui Galilei.</li>
+    <li><strong>Viteze mari</strong>: numitorul crește peste 1, deci rezultatul este <em>mai mic</em> decât suma simplă (pentru un proiectil tras în sensul mișcării navei). Dacă ambele viteze sunt sub <var>c</var>, <strong>rezultatul rămâne sub <var>c</var></strong>: poți repeta compunerea de câte ori vrei — o navă lansează o navă care lansează o navă… — și te apropii de <var>c</var>, fără să-l atingi.</li>
+    <li><strong>Lumină</strong>: dacă una dintre viteze este <var>c</var>, rezultatul este <var>c</var>.</li>
+  </ul>
+
+  <p>Ca să vezi tiparul (nu ca să calculezi), iată câteva cazuri, cu proiectilul tras în sensul mișcării navei:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th><var>v</var> și <var>u</var>′</th><th>Adunarea simplă</th><th>Regula corectă</th></tr></thead>
+    <tbody>
+      <tr><td>tren 100 km/h și minge 20 km/h</td><td>120 km/h</td><td>120 km/h (diferență de nemăsurat)</td></tr>
+      <tr><td>0,1 <var>c</var> și 0,1 <var>c</var></td><td>0,20 <var>c</var></td><td>0,198 <var>c</var></td></tr>
+      <tr><td>0,5 <var>c</var> și 0,5 <var>c</var></td><td>1,00 <var>c</var></td><td>0,80 <var>c</var></td></tr>
+      <tr><td>0,9 <var>c</var> și 0,9 <var>c</var></td><td>1,80 <var>c</var></td><td>0,994 <var>c</var></td></tr>
+      <tr><td>0,99 <var>c</var> și 0,99 <var>c</var></td><td>1,98 <var>c</var></td><td>0,99995 <var>c</var></td></tr>
+      <tr><td><var>v</var> oarecare și lumină (<var>c</var>)</td><td><var>c</var> + <var>v</var></td><td><var>c</var>, mereu</td></tr>
+    </tbody>
+  </table></div>
+  <p>Cu cât vitezele se apropie de <var>c</var>, cu atât diferența crește: întâi abia se simte, apoi devine uriașă. Un corp cu <var>v</var> ≈ <var>c</var> se numește <span class="term">ultrarelativist</span>: rezultatul compunerii „se lipește” de <var>c</var> și aproape că nu mai crește, oricât ai adăuga.</p>
+
+  <aside class="callout note">
+    <span class="callout__title">Și dacă proiectilul e tras înapoi?</span>
+    <p>Atunci <var>u</var>′ are semn negativ și regula funcționează la fel; rezultatul rămâne între −<var>c</var> și +<var>c</var>. (De aceea am spus mai sus „proiectil tras în sensul mișcării”: la tragerea înapoi nu mai e vorba de o „sumă strânsă”.)</p>
+  </aside>
+
+  <aside class="callout note">
+    <span class="callout__title">De unde vine regula</span>
+    <p>Viteza este raportul dintre distanța și durata dintre două evenimente. Pune în acest raport relațiile Lorentz din capitolul 3, scrise pentru <em>diferențe</em> între evenimente, și factorul γ se simplifică; numitorul vine din termenul <var>v</var>·<var>x</var>′/<var>c</var>² din relația timpului. Nu trebuie să faci calculul — trebuie să știi <em>de unde</em> vine corecția.</p>
+  </aside>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcană: cine măsoară ce</span>
+    <p><var>u</var>′ <strong>nu este o viteză măsurată de Ana</strong>. Regula nu adună trei viteze luate de același observator: ea <em>traduce</em> o viteză măsurată de Bogdan (cu instrumentele navei) în viteza măsurată de Ana (cu instrumentele stației).</p>
+    <p>De aceea „suma simplă” nu are nicio garanție: ea amestecă măsurători făcute cu rigle și ceasuri diferite.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="lumina">
+  <h2>Lumina rămâne <var>c</var> — în ambele sensuri</h2>
+  <p>Cel mai important caz al regulii îl cunoști din Postulatul I: <strong>dacă proiectilul este lumină, rezultatul este <var>c</var></strong>, oricât de repede ar merge nava. Iar regula merge și invers: ce e <var>c</var> pentru Ana e <var>c</var> pentru Bogdan.</p>
+  <p>În capitolul 1 a rămas însă o întrebare: Ana vede lumina depărtându-se de navă cu doar <var>c</var> − <var>v</var>, dar Bogdan măsoară <var>c</var>. Cum se împacă?</p>
+
+  <aside class="callout warn">
+    <span class="callout__title">Capcana <var>c</var> − <var>v</var></span>
+    <p><strong><var>c</var> − <var>v</var> nu este viteza luminii în sistemul navei.</strong> Este <em>ritmul</em> cu care crește distanța dintre impuls și navă, măsurat de Ana: două viteze luate de același observator, scăzute între ele. Viteza impulsului <em>în sistemul navei</em> se măsoară cu instrumentele navei — și dă <var>c</var>.</p>
+  </aside>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Ce se măsoară</th><th>Cine</th><th>Valoarea</th></tr></thead>
+    <tbody>
+      <tr><td>viteza impulsului</td><td>Bogdan (S′)</td><td><var>c</var></td></tr>
+      <tr><td>viteza impulsului</td><td>Ana (S)</td><td><var>c</var></td></tr>
+      <tr><td>viteza navei</td><td>Ana (S)</td><td><var>v</var></td></tr>
+      <tr><td>cât crește pe unitatea de timp distanța navă–impuls</td><td>Ana (S)</td><td><var>c</var> − <var>v</var></td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Primele două rânduri sunt viteza <em>aceluiași</em> impuls în două sisteme: ele se leagă prin regula de compunere. Ultimul rând este o diferență între două viteze din <em>același</em> sistem; nu are nevoie de nicio regulă relativistă și nu este viteza nimănui în S′.</p>
+  <p>La fel în sens invers, ca în povestea de mai sus: Ana trimite lumină după navă, ea vede că impulsul recuperează distanța cu doar <var>c</var> − <var>v</var>, iar Bogdan măsoară tot <var>c</var>.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="perpendicular">
+  <h2>Și pe verticală se schimbă ceva</h2>
+  <p>Până acum totul s-a petrecut pe axa <var>x</var>, pe direcția mișcării. Dar ce se întâmplă cu <span class="term">componenta perpendiculară a vitezei</span> — de exemplu a unei bile aruncate în sus de Bogdan?</p>
+  <p>Pe verticală, distanțele sunt aceleași pentru Ana și Bogdan (<var>y</var> = <var>y</var>′ — dicționarul Lorentz din capitolul 3 nu le atinge). E tentant să crezi că și viteza pe verticală e aceeași.</p>
+
+  <div class="predict" data-correct="d">
+    <p class="predict__q">Nava merge orizontal cu 0,8 <var>c</var> față de stație. Bogdan aruncă o bilă exact în sus, cu 0,5 <var>c</var> față de navă. Ce viteză pe verticală măsoară Ana?</p>
+    <ul class="predict__opts">
+      <li data-k="a">0,5 <var>c</var> — distanțele verticale sunt aceleași, deci și viteza.</li>
+      <li data-k="b">Mai mare decât 0,5 <var>c</var> — mișcarea navei îi dă bilei un plus de viteză.</li>
+      <li data-k="c">1,3 <var>c</var> — se adună viteza navei cu a bilei.</li>
+      <li data-k="d">Mai mică decât 0,5 <var>c</var> — aceeași distanță verticală, dar parcursă într-o durată mai lungă.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Mai mică</strong> — aproximativ 0,3 <var>c</var>. Distanța pe verticală este aceeași, dar <strong>durata</strong> nu: bila urcă exact vertical, deci două momente ale zborului ei se petrec în același loc din navă, iar ceasul navei arată durata proprie, mai scurtă decât cea măsurată de Ana (dilatarea timpului, capitolul 6). Aceeași distanță în mai mult timp ⟹ viteză mai mică.</p>
+    </div>
+  </div>
+
+  <figure data-sim="c07Vertical">
+    <figcaption>Roza vitezelor: pe verticală</figcaption>
+    <p class="sim__hint"><b>Observă:</b> săgeata roz este ce măsoară Bogdan pe verticală; săgețile cyan sunt ce măsoară Ana — pe orizontală <var>v</var>, pe verticală mai puțin. Cercul galben este <var>c</var>. Apoi pornește „impuls de lumină” și mărește <var>v</var>: vârful vectorului Anei alunecă pe cerc, nu iese din el, în timp ce „fără corecție” (roșu) ar ieși.</p>
+  </figure>
+
+  <aside class="callout idea">
+    <span class="callout__title">Enunț — componenta perpendiculară</span>
+    <p>Componenta <var>u</var><sub>y</sub> se schimbă la trecerea între sisteme, deși <var>y</var> = <var>y</var>′, pentru că <strong>durata nu este aceeași</strong>. Dacă bila pleacă strict perpendicular în S′ (<var>u</var>′<sub>x</sub> = 0), atunci <var>u</var><sub>y</sub> = <var>u</var>′<sub>y</sub>/γ — mai mică.</p>
+  </aside>
+  <p>Cu un impuls de lumină, imaginea este cea a ceasului cu lumină din capitolul 6: Bogdan măsoară <var>c</var> pe verticală; Ana vede impulsul mergând pe diagonală, cu componenta verticală <var>c</var>/γ și cea orizontală <var>v</var>. Împreună dau exact <var>c</var> — Postulatul I rămâne respectat.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="apropiere">
+  <h2>Viteza de apropiere nu e viteza relativă <span class="badge bonus">Adaos</span></h2>
+  <aside class="callout bonus">
+    <span class="callout__title">Adaos</span>
+    <p>Nu face parte din regula de bază, dar fără această precizare poți crede că regula de mai sus este încălcată atunci când două nave se apropie una de alta.</p>
+  </aside>
+
+  <p>Ana vede două nave care vin una spre alta, fiecare cu 0,9 <var>c</var> față de stație. Distanța dintre ele scade, în sistemul Anei, cu 0,9 <var>c</var> + 0,9 <var>c</var> = <strong>1,8 <var>c</var></strong>. Peste <var>c</var>! Se încalcă limita?</p>
+
+  <div class="predict" data-correct="b">
+    <p class="predict__q">Cu ce viteză măsoară nava A mișcarea navei B?</p>
+    <ul class="predict__opts">
+      <li data-k="a">1,8 <var>c</var> — la fel ca distanța care scade în stație.</li>
+      <li data-k="b">Sub <var>c</var>, foarte aproape de <var>c</var>.</li>
+      <li data-k="c">Exact <var>c</var> — viteza „se oprește” la limită.</li>
+      <li data-k="d">0,9 <var>c</var> — nava B vine spre A la fel de repede ca spre stație.</li>
+    </ul>
+    <div class="predict__reveal">
+      <p><strong>Sub <var>c</var></strong> — aproximativ 0,994 <var>c</var>. Cei 1,8 <var>c</var> nu sunt viteza niciunei nave: sunt un <em>ritm</em> măsurat de Ana, cu o singură riglă și un singur ceas. Viteza lui B în sistemul lui A cere regula de compunere.</p>
+    </div>
+  </div>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th></th><th><span class="term">Viteza de apropiere</span></th><th><span class="term">Viteza relativă</span></th></tr></thead>
+    <tbody>
+      <tr><td>Întrebarea</td><td>Cu ce ritm scade distanța dintre două corpuri?</td><td>Cu ce viteză se mișcă B în sistemul în care A stă pe loc?</td></tr>
+      <tr><td>Cine o măsoară</td><td>Un singur observator (Ana)</td><td>A, cu rigla și ceasul lui</td></tr>
+      <tr><td>Cum se obține</td><td>Adunare simplă (aceleași instrumente)</td><td>Regula relativistă de compunere</td></tr>
+      <tr><td>Poate trece de <var>c</var>?</td><td>Da, până la 2<var>c</var> — nu e viteza vreunui corp</td><td>Nu</td></tr>
+    </tbody>
+  </table></div>
+
+  <figure data-sim="c07Apropiere">
+    <figcaption>Două nave care se apropie</figcaption>
+    <p class="sim__hint"><b>Încearcă:</b> pune ambele nave la 0,9 <var>c</var> — ritmul de apropiere din stație trece de <var>c</var>, dar fiecare navă o măsoară pe cealaltă sub <var>c</var>, și cu aceeași valoare. Apoi coboară vitezele: la valori mici cele două numere coincid (limita Galilei).</p>
+  </figure>
+
+  <p>Ritmul de 1,8 <var>c</var> nu transportă nimic de la o navă la alta: este o diferență între doi vectori măsurați de aceeași Ana. Nicio navă nu măsoară că cealaltă vine spre ea cu mai mult de <var>c</var>.</p>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="recap">
+  <h2>Pe scurt: ce se schimbă și ce nu</h2>
+  <aside class="callout note">
+    <span class="callout__title">Se schimbă de la Ana la Bogdan</span>
+    <ul>
+      <li>viteza proiectilului (<var>u</var> ≠ <var>u</var>′);</li>
+      <li>distanța parcursă și durata zborului;</li>
+      <li>componenta perpendiculară a vitezei;</li>
+      <li>ritmul de apropiere sau de depărtare dintre două corpuri (<var>c</var> − <var>v</var>, 1,8 <var>c</var>).</li>
+    </ul>
+  </aside>
+  <aside class="callout good">
+    <span class="callout__title">Rămâne la fel pentru amândoi</span>
+    <ul>
+      <li>viteza luminii în vid, <var>c</var> — în orice sistem și în orice sens (Postulatul I);</li>
+      <li>forma regulii: de la S la S′ arată la fel ca de la S′ la S, cu <var>v</var> → −<var>v</var> (Postulatul al II-lea);</li>
+      <li>mărimea vitezei relative: Ana măsoară nava la fel de repede cum Bogdan măsoară stația;</li>
+      <li>faptul că rămâi sub <var>c</var>: pornind de la viteze sub <var>c</var>, nicio compunere nu te scoate peste <var>c</var>.</li>
+    </ul>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="mituri">
+  <h2>Mituri vs. realitate</h2>
+  <p>Apasă pe fiecare afirmație ca să vezi de ce nu e adevărată.</p>
+  <div class="myths">
+    <article class="myth">
+      <p class="myth__false">Două nave care vin una spre alta cu câte 0,9 <var>c</var> își trec una pe lângă alta cu 1,8 <var>c</var>.</p>
+      <div class="myth__true"><p>1,8 <var>c</var> este doar ritmul cu care scade distanța dintre ele, în sistemul stației. Fiecare navă măsoară viteza celeilalte la ≈ 0,994 <var>c</var> — sub <var>c</var>.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Regula relativistă este doar pentru lumină; pentru restul rămâne adunarea simplă.</p>
+      <div class="myth__true"><p>Regula e valabilă pentru orice viteze. La viteze mici, numitorul 1 + <var>v</var>·<var>u</var>′/<var>c</var>² este practic 1 și corecția nu se vede; pentru lumină, corecția devine decisivă.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Adunarea simplă a vitezelor a fost o greșeală și trebuie aruncată.</p>
+      <div class="myth__true"><p>Este cazul-limită al regulii corecte, pentru <var>v</var>, <var>u</var>′ ≪ <var>c</var> — la fel cum transformările Lorentz devin cele ale lui Galilei. Pentru mașini, avioane și rachete este perfectă.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Dacă tragi cu 0,5 <var>c</var> dintr-o navă care merge cu 0,5 <var>c</var>, proiectilul atinge viteza luminii și nu poate merge mai departe.</p>
+      <div class="myth__true"><p>Nu există un plafon care taie suma: stația măsoară 0,8 <var>c</var>. Rezultatul se strânge treptat, încă de la viteze moderate, și rămâne sub <var>c</var>.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Lumina trimisă înainte dintr-o navă se depărtează de navă cu <var>c</var> − <var>v</var>, deci și pilotul trebuie să măsoare <var>c</var> − <var>v</var>.</p>
+      <div class="myth__true"><p><var>c</var> − <var>v</var> este ritmul de depărtare măsurat de Ana, nu viteza luminii în sistemul navei. Bogdan măsoară <var>c</var>, cu rigla și ceasul lui.</p></div>
+    </article>
+    <article class="myth">
+      <p class="myth__false">Pe direcția perpendiculară nu se schimbă nimic: dacă <var>y</var> = <var>y</var>′, atunci și viteza pe verticală e aceeași.</p>
+      <div class="myth__true"><p>Distanța e aceeași, dar durata nu (dilatarea timpului). De aceea componenta perpendiculară a vitezei se schimbă: pentru o bilă aruncată strict în sus în navă, în stație ea este împărțită la γ.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="spune">
+  <h2>Ce trebuie să poți spune la test</h2>
+  <aside class="say" data-summary="7"></aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="formula">
+  <h2>Formula, în cuvinte</h2>
+  <p>Nu trebuie să știi formulele pe de rost, dar merită să înțelegi ce spun cele două din acest capitol.</p>
+
+  <aside class="formula">
+    <span class="formula__label">Compunerea vitezelor, pe direcția mișcării</span>
+    <math display="block">
+      <msub><mi>u</mi><mi>x</mi></msub><mo>=</mo>
+      <mfrac>
+        <mrow><msubsup><mi>u</mi><mi>x</mi><mo>′</mo></msubsup><mo>+</mo><mi>v</mi></mrow>
+        <mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>v</mi><mo>·</mo><msubsup><mi>u</mi><mi>x</mi><mo>′</mo></msubsup></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow>
+      </mfrac>
+    </math>
+    <p class="formula__read">Citește-o așa: „Viteza măsurată de Ana = (viteza măsurată de Bogdan + viteza navei), împărțită la 1 plus produsul celor două viteze, exprimate în fracții din <var>c</var>.” Dacă vitezele sunt mici, produsul e aproape 0, numitorul e aproape 1 și revii la adunarea simplă. Dacă una dintre viteze este <var>c</var>, numitorul reduce exact suma la <var>c</var>. (Invers, de la S la S′, se schimbă semnul lui <var>v</var>.)</p>
+  </aside>
+
+  <aside class="formula">
+    <span class="formula__label">Componenta perpendiculară</span>
+    <math display="block">
+      <msub><mi>u</mi><mi>y</mi></msub><mo>=</mo>
+      <mfrac>
+        <msubsup><mi>u</mi><mi>y</mi><mo>′</mo></msubsup>
+        <mrow><mi>γ</mi><mo>(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mi>v</mi><mo>·</mo><msubsup><mi>u</mi><mi>x</mi><mo>′</mo></msubsup></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>)</mo></mrow>
+      </mfrac>
+    </math>
+    <p class="formula__read">Citește-o așa: „Viteza pe verticală măsurată de Ana = viteza pe verticală măsurată de Bogdan, împărțită la γ și la același număr ca mai sus.” Pe verticală distanțele coincid (<var>y</var> = <var>y</var>′), dar duratele nu — de aceea viteza se schimbă. Pentru un corp aruncat strict în sus în navă (<var>u</var>′<sub>x</sub> = 0) rămâne doar împărțirea la γ.</p>
+  </aside>
+
+  <aside class="callout light">
+    <span class="callout__title">Mai departe</span>
+    <p>Compunerea vitezelor îți arată că, pornind de la viteze sub <var>c</var>, nu ajungi la <var>c</var> nici prin mii de pași. Dar nu răspunde încă la întrebarea dinamicii: ce se întâmplă dacă <em>împingi</em> mereu un corp cu aceeași forță? În capitolul 8 vezi că el tot accelerează, dar din ce în ce mai puțin — și de aceea un corp cu masă nu atinge niciodată <var>c</var>.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ -->
+<section class="sec" id="test">
+  <h2>Verifică-te</h2>
+  <div class="quiz" data-chapter="7" data-n="7"></div>
+</section>
+
+</main>
+</div>
+
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/sim.js"></script>
+<script src="../assets/js/art.js"></script>
+<script src="../assets/js/art-space.js"></script>
+<script src="../assets/js/art-light.js"></script>
+<script src="../assets/js/art-lab.js"></script>
+<script src="../assets/js/art-graph.js"></script>
+<script src="../assets/js/art-spacetime.js"></script>
+<script src="../assets/js/steps.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/data/cap07.js"></script>
+<script src="../assets/js/sims/cap07-nava.js"></script>
+<script src="../assets/js/sims/cap07-vertical.js"></script>
+<script src="../assets/js/sims/cap07-apropiere.js"></script>
+<script>RF.init();</script>
+</body>
+</html>
