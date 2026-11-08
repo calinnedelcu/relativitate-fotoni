@@ -10,9 +10,10 @@
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
     return a;
   }
+  var tipN = 0;
   function section(root, id, kicker, title, lead) {
     var s = el('section', { class: 'pb-sec', id: id });
-    s.appendChild(el('p', { class: 'pb-kicker', text: kicker }));
+    s.appendChild(el('p', { class: 'pb-kicker', text: 'Tip ' + (++tipN) }));
     s.appendChild(el('h2', { text: title }));
     if (lead) s.appendChild(el('p', { class: 'pb-lead', html: lead }));
     root.appendChild(s);
@@ -101,6 +102,11 @@
     if (t.length === 1) return String(t[0]);
     return t.slice(0, -1).join(', ') + ' și ' + t[t.length - 1];
   }
+  var LABELS = ['1 și 2', '1 și 3', '1 și 4', '2 și 3', '2 și 4', '3 și 4', '1, 2 și 3', '1, 2 și 4', '1, 3 și 4', '2, 3 și 4', 'toate'];
+  function comboOpts(right) {
+    var others = shuffle(LABELS.filter(function (l) { return l !== right; })).slice(0, 3).concat([right]);
+    return LABELS.filter(function (l) { return others.indexOf(l) >= 0; });
+  }
   function buildCombo(root, list) {
     if (!list.length) return;
     var sec = section(root, 'combo', 'Tip 3', 'Care dintre afirmații sunt corecte?',
@@ -114,9 +120,10 @@
       card.appendChild(ol);
       var truth = []; q.s.forEach(function (s, i) { if (s[1]) truth.push(i); });
       var right = listLabel(truth);
+      var qopts = q.o || comboOpts(right);
       var list = el('div', { class: 'pb-optlist' }), why = el('div', { class: 'pb-why', hidden: true });
       var btns = [];
-      q.o.forEach(function (o, i) {
+      qopts.forEach(function (o, i) {
         var b = el('button', { class: 'pb-opt', type: 'button', html: '<span class="pb-n">' + 'abcd'[i] + ')</span> ' + o });
         b._ok = o === right;
         b.addEventListener('click', function () {
@@ -133,6 +140,108 @@
         btns.push(b); list.appendChild(b);
       });
       card.appendChild(list); card.appendChild(why);
+      sec.appendChild(card);
+    });
+  }
+
+  /* ---------- Completează spațiile ---------- */
+  function buildCloze(root, list) {
+    if (!list.length) return;
+    var sec = section(root, 'cloze', '', 'Completează spațiile',
+      'Alege din listă cuvântul sau expresia potrivită pentru fiecare spațiu.');
+    var card = el('div', { class: 'pb-card' });
+    list.forEach(function (txt, i) {
+      var row = el('div', { class: 'pb-stmt' });
+      var p = el('p', { class: 'pb-stmt__t pb-cloze' });
+      p.appendChild(el('span', { class: 'pb-n', text: (i + 1) + '. ' }));
+      var sels = [];
+      txt.split(/(\[\[[^\]]*\]\])/).forEach(function (part) {
+        var m = /^\[\[([^\]]*)\]\]$/.exec(part);
+        if (!m) { p.appendChild(document.createTextNode(part)); return; }
+        var opts = m[1].split('|'), right = opts[0];
+        var sel = el('select', { class: 'pb-sel' });
+        sel.appendChild(el('option', { value: '', text: '—' }));
+        shuffle(opts).forEach(function (o) { sel.appendChild(el('option', { value: o, text: o })); });
+        sel._right = right; sels.push(sel);
+        p.appendChild(sel);
+      });
+      row.appendChild(p);
+      var out = el('div', { class: 'pb-out' });
+      var btn = el('button', { class: 'btn btn--primary pb-btn-sm', type: 'button', text: 'Verifică' });
+      btn.addEventListener('click', function () {
+        var ok = 0;
+        sels.forEach(function (x) { var good = x.value === x._right; x.classList.toggle('is-right', good); x.classList.toggle('is-wrong', !good); if (good) ok++; });
+        out.innerHTML = '';
+        var all = ok === sels.length;
+        out.appendChild(verdict(all, all ? 'propoziția e completă și corectă.' : ok + ' din ' + sels.length + ' spații corecte' + '. Corect: <b>' + sels.map(function (x) { return x._right; }).join(' · ') + '</b>'));
+      });
+      row.appendChild(btn); row.appendChild(out);
+      card.appendChild(row);
+    });
+    sec.appendChild(card);
+  }
+
+  /* ---------- Potrivește ---------- */
+  function buildMatch(root, list) {
+    if (!list.length) return;
+    var sec = section(root, 'match', '', 'Potrivește', 'Alege pentru fiecare noțiune descrierea sau valoarea care i se potrivește.');
+    list.forEach(function (m) {
+      var card = el('div', { class: 'pb-card' });
+      card.appendChild(el('h3', { text: m.t }));
+      var rights = shuffle(m.pairs.map(function (p) { return p[1]; }));
+      var sels = [];
+      m.pairs.forEach(function (p) {
+        var row = el('div', { class: 'pb-match' });
+        row.appendChild(el('span', { class: 'pb-match__l', html: p[0] }));
+        var sel = el('select', { class: 'pb-sel pb-sel--wide' });
+        sel.appendChild(el('option', { value: '', text: '— alege —' }));
+        rights.forEach(function (r) { sel.appendChild(el('option', { value: r, text: r })); });
+        sel._right = p[1]; sels.push(sel);
+        row.appendChild(sel);
+        card.appendChild(row);
+      });
+      var out = el('div', { class: 'pb-out' });
+      var btn = el('button', { class: 'btn btn--primary', type: 'button', text: 'Verifică' });
+      btn.addEventListener('click', function () {
+        var ok = 0;
+        sels.forEach(function (x) { var good = x.value === x._right; x.classList.toggle('is-right', good); x.classList.toggle('is-wrong', !good); if (good) ok++; });
+        out.innerHTML = '';
+        out.appendChild(verdict(ok === sels.length, ok + ' din ' + sels.length + ' perechi corecte.'));
+      });
+      card.appendChild(el('div', { class: 'pb-acts' }, [btn]));
+      card.appendChild(out);
+      sec.appendChild(card);
+    });
+  }
+
+  /* ---------- Ordonează pașii ---------- */
+  function buildOrder(root, list) {
+    if (!list.length) return;
+    var sec = section(root, 'order', '', 'Ordonează pașii', 'Pașii sunt amestecați. Numerotează-i în ordinea corectă (1 = primul).');
+    list.forEach(function (o) {
+      var card = el('div', { class: 'pb-card' });
+      card.appendChild(el('h3', { text: o.t }));
+      var n = o.steps.length, sels = [];
+      shuffle(o.steps.map(function (t, i) { return { t: t, i: i }; })).forEach(function (st) {
+        var row = el('div', { class: 'pb-match' });
+        var sel = el('select', { class: 'pb-sel' });
+        sel.appendChild(el('option', { value: '', text: '—' }));
+        for (var k = 1; k <= n; k++) sel.appendChild(el('option', { value: String(k), text: String(k) }));
+        sel._right = String(st.i + 1); sels.push(sel);
+        row.appendChild(sel);
+        row.appendChild(el('span', { class: 'pb-match__l', html: st.t }));
+        card.appendChild(row);
+      });
+      var out = el('div', { class: 'pb-out' });
+      var btn = el('button', { class: 'btn btn--primary', type: 'button', text: 'Verifică' });
+      btn.addEventListener('click', function () {
+        var ok = 0;
+        sels.forEach(function (x) { var good = x.value === x._right; x.classList.toggle('is-right', good); x.classList.toggle('is-wrong', !good); if (good) ok++; });
+        out.innerHTML = '';
+        out.appendChild(verdict(ok === n, ok + ' din ' + n + ' pași la locul lor.'));
+      });
+      card.appendChild(el('div', { class: 'pb-acts' }, [btn]));
+      card.appendChild(out);
       sec.appendChild(card);
     });
   }
@@ -277,27 +386,33 @@
 
   /* ---------- pagina: alegerea capitolului ---------- */
   function calcById(id) { for (var i = 0; i < P.calc.length; i++) if (P.calc[i].id === id) return P.calc[i]; return null; }
-  function chapterSets(id) {
+  function pool(id) {
     var c = P.ch[id];
     return {
       af: c.af.map(function (a) { return { t: a[0], a: a[1], why: a[2] }; }),
-      single: c.single, combo: c.combo, short: c.short,
-      calc: c.calc.map(calcById).filter(Boolean)
+      single: c.single || [], combo: c.combo || [], cloze: c.cloze || [], match: c.match || [], order: c.order || [], short: c.short || [],
+      calc: (c.calc || []).map(calcById).filter(Boolean)
     };
   }
   function sample(a, k) { return shuffle(a).slice(0, k); }
+  function chapterSets(id) {
+    var p = pool(id);
+    return { af: sample(p.af, 6), single: sample(p.single, 4), combo: sample(p.combo, 2), cloze: sample(p.cloze, 3), match: sample(p.match, 1), order: sample(p.order, 1), short: sample(p.short, 2), calc: p.calc };
+  }
+  function poolSize(id) {
+    var p = pool(id);
+    return p.af.length + p.single.length + p.combo.length + p.cloze.length + p.match.length + p.order.length + p.short.length + p.calc.length;
+  }
   function mixedSets() {
-    var af = [], single = [], combo = [], short = [], calc = [];
-    Object.keys(P.ch).forEach(function (k) {
-      var s = chapterSets(k);
-      af = af.concat(s.af); single = single.concat(s.single); combo = combo.concat(s.combo); short = short.concat(s.short);
-    });
-    return { af: sample(af, 5), single: sample(single, 4), combo: sample(combo, 2), short: sample(short, 2), calc: sample(P.calc, 2) };
+    var all = { af: [], single: [], combo: [], cloze: [], match: [], order: [], short: [], calc: [] };
+    Object.keys(P.ch).forEach(function (k) { var p = pool(k); Object.keys(all).forEach(function (t) { all[t] = all[t].concat(p[t]); }); });
+    return { af: sample(all.af, 6), single: sample(all.single, 5), combo: sample(all.combo, 2), cloze: sample(all.cloze, 3), match: sample(all.match, 1), order: sample(all.order, 1), short: sample(all.short, 2), calc: sample(P.calc, 2) };
   }
 
   var root, chips;
   function select(sel) {
     root.innerHTML = '';
+    tipN = 0;
     var sets, head;
     if (sel === 'mix') {
       sets = mixedSets();
@@ -312,10 +427,13 @@
       sets = chapterSets(id);
       head = el('div', { class: 'pb-head' });
       head.appendChild(el('h2', { text: 'Capitolul ' + id + ' · ' + ch.title }));
-      head.appendChild(el('p', { class: 'pb-lead', html: 'Itemi ca la test, doar din acest capitol. <a href="' + RF.chapterUrl(ch) + '">Recitește capitolul →</a>' }));
+      head.appendChild(el('p', { class: 'pb-lead', html: 'Itemi ca la test, doar din acest capitol (' + poolSize(id) + ' în bibliotecă; la fiecare „Alt set” apar alții). <a href="' + RF.chapterUrl(ch) + '">Recitește capitolul →</a>' }));
+      var nb2 = el('button', { class: 'btn btn--primary', type: 'button', text: '↻ Alt set' });
+      nb2.addEventListener('click', function () { select(sel); });
+      head.appendChild(nb2);
     }
     root.appendChild(head);
-    buildAF(root, sets.af); buildSingle(root, sets.single); buildCombo(root, sets.combo); buildShort(root, sets.short); buildCalc(root, sets.calc);
+    buildAF(root, sets.af); buildSingle(root, sets.single); buildCombo(root, sets.combo); buildCloze(root, sets.cloze); buildMatch(root, sets.match); buildOrder(root, sets.order); buildShort(root, sets.short); buildCalc(root, sets.calc);
     [].forEach.call(chips.children, function (c) { c.classList.toggle('is-active', c.getAttribute('data-sel') === String(sel)); });
   }
   function fromHash() {

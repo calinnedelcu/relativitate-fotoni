@@ -62,3 +62,13 @@
 .pb-sol__t { margin: 0 0 .4rem; font-weight: 650; }
 .pb-steps { margin: 0; padding-left: 1.3rem; display: grid; gap: .4rem; }
 @media print { .pb-chaps, .pb-acts, .pb-ta { display: none; } }
+
+.pb-sel { font: inherit; color: var(--tx); background: var(--card-solid); border: 1px solid var(--line2); border-radius: 8px; padding: .2rem .4rem; margin: 0 .15rem; max-width: 100%; }
+.pb-sel--wide { flex: 1 1 14rem; padding: .35rem .5rem; }
+.pb-sel.is-right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, var(--card-solid)); }
+.pb-sel.is-wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 13%, var(--card-solid)); }
+.pb-cloze { line-height: 2.1; }
+.pb-btn-sm { margin-top: .3rem; padding: .3rem .9rem; }
+.pb-match { display: flex; flex-wrap: wrap; gap: .4rem .7rem; align-items: center; padding: .45rem 0; border-top: 1px solid var(--line); }
+.pb-match:first-of-type { border-top: 0; }
+.pb-match__l { flex: 1 1 12rem; }

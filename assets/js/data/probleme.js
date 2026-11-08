@@ -137,6 +137,36 @@
             '<var>F</var> ∥ <var>v</var>: <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var> ⇒ <var>a</var> = <var>F</var>/(γ³<var>m</var><sub>0</sub>) = <var>a</var><sub>cl</sub>/γ³ = <var>a</var><sub>cl</sub>/' + n(g * g * g, 2) + ' = <b>' + n(par, 1) + ' %</b> din <var>a</var><sub>cl</sub>.',
             '<var>F</var> ⟂ <var>v</var>: <var>F</var> = γ<var>m</var><sub>0</sub><var>a</var> ⇒ <var>a</var> = <var>a</var><sub>cl</sub>/γ = <b>' + n(perp, 1) + ' %</b> din <var>a</var><sub>cl</sub>.',
             'Accelerația scade pe măsură ce v crește, mai tare pe direcția mișcării (γ³) decât perpendicular (γ).'] };
+      } },
+    { id: 'contractie_inv', title: 'La ce viteză se contractă o bară la o fracțiune dată?',
+      gen: function () {
+        var f = pick([0.8, 0.6, 0.5]), v = Math.sqrt(1 - f * f), L0 = pick([10, 20, 50]);
+        return {
+          text: 'O bară are lungimea proprie <var>L</var><sub>0</sub> = ' + L0 + ' m. La ce viteză (în unități de <var>c</var>) lungimea ei măsurată pe direcția mișcării devine ' + n(f * L0, 0) + ' m, adică ' + n(f * 100, 0) + '% din <var>L</var><sub>0</sub>?',
+          parts: [{ k: 'v (în c)', ans: v, tol: 0.01, d: 3 }],
+          steps: ['<var>L</var>/<var>L</var><sub>0</sub> = 1/γ = ' + n(f, 1) + ' ⇒ γ = ' + n(1 / f, 3) + '.',
+            '1/γ = √(1 − <var>v</var>²/<var>c</var>²) ⇒ <var>v</var>²/<var>c</var>² = 1 − (1/γ)² = 1 − ' + n(f * f, 2) + ' = ' + n(1 - f * f, 2) + '.',
+            '<var>v</var> = <var>c</var>·√' + n(1 - f * f, 2) + ' = <b>' + n(v, 3) + '<var>c</var></b>.'] };
+      } },
+    { id: 'muon', title: 'Muonul: durata măsurată pe Pământ și drumul parcurs',
+      gen: function () {
+        var v = pick([0.9, 0.95, 0.99]), g = gam(v), t0 = 2.2, t = g * t0, d = v * 3e8 * t * 1e-6 / 1000;
+        return {
+          text: 'Un muon are durata de viață proprie Δ<var>t</var><sub>0</sub> = 2,2 μs și se mișcă față de Pământ cu <var>v</var> = ' + n(v, 2) + '·<var>c</var> (<var>c</var> = 3·10<sup>8</sup> m/s). Calculați: a) γ; b) durata de viață măsurată de un observator de pe Pământ (în μs); c) distanța parcursă de muon în sistemul Pământului (în km).',
+          parts: [{ k: 'γ', ans: g, tol: 0.01, d: 2 }, { k: 'Δt (μs)', ans: t, tol: 0.015, d: 1 }, { k: 'd (km)', ans: d, tol: 0.02, d: 2 }],
+          steps: ['γ = 1/√(1 − ' + n(v * v, 4) + ') = <b>' + n(g, 2) + '</b>.',
+            'Δ<var>t</var> = γΔ<var>t</var><sub>0</sub> = ' + n(g, 2) + '·2,2 = <b>' + n(t, 1) + ' μs</b> (durata proprie se înmulțește cu γ).',
+            '<var>d</var> = <var>v</var>Δ<var>t</var> = ' + n(v, 2) + '·3·10<sup>8</sup>·' + n(t, 1) + '·10<sup>−6</sup> = <b>' + n(d, 2) + ' km</b>. Fără dilatare ar fi fost doar ' + n(v * 3e8 * 2.2e-6 / 1000, 2) + ' km.'] };
+      } },
+    { id: 'lambda', title: 'Din energia fotonului: lungime de undă, frecvență și culoare',
+      gen: function () {
+        var E = pick([1.8, 2.0, 2.5, 3.1, 4.0]), lam = 1240 / E, nu = E / HEV;
+        return {
+          text: 'Un foton are energia <var>E</var> = ' + n(E, 1) + ' eV. Calculați: a) lungimea de undă λ (în nm, cu <var>hc</var> ≈ 1240 eV·nm); b) frecvența ν (în THz, cu <var>h</var> ≈ 4,14·10<sup>−15</sup> eV·s).',
+          parts: [{ k: 'λ (nm)', ans: lam, tol: 0.015, d: 0 }, { k: 'ν (THz)', ans: nu, tol: 0.015, d: 0 }],
+          steps: ['λ = <var>hc</var>/<var>E</var> = 1240/' + n(E, 1) + ' = <b>' + n(lam, 0) + ' nm</b>.',
+            'ν = <var>E</var>/<var>h</var> = ' + n(E, 1) + '/(4,14·10<sup>−15</sup>) = <b>' + n(nu, 0) + ' THz</b>.',
+            'Verificare: λν = <var>c</var> ⇒ ' + n(lam, 0) + '·10<sup>−9</sup>·' + n(nu, 0) + '·10<sup>12</sup> ≈ 3·10<sup>8</sup> m/s.'] };
       } }
   ];
 })();
