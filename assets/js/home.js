@@ -130,6 +130,8 @@
         html: '<small>De repetat</small><strong>Capitolul ' + weak.c.id + ' · ' + weak.c.title + '</strong><span>Stăpânire ' + weak.m.pct + '% — încă un test și capcanele dispar.</span>' }));
       else row.appendChild(el('a', { class: 'nextcard', href: RF.url('test-final.html'),
         html: '<small>Verifică-te</small><strong>Testul final amestecat</strong><span>Vezi pe loc ce capitole stăpânești și unde ai capcane.</span>' }));
+      row.appendChild(el('a', { class: 'nextcard', href: RF.url('probleme.html'),
+        html: '<small>Exersează</small><strong>Probleme tip test</strong><span>Adevărat/Fals, alegere, răspunsuri scurte și calcule, ca la test.</span>' }));
     }
 
     var map = RF.$('#map'); if (map) map.innerHTML = buildMap();

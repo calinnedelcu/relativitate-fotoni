@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probleme tip test — Relativitate &amp; Fotoni</title>
+<meta name="description" content="Exerciții în stilul testului: Adevărat/Fals, un singur răspuns, care afirmații sunt corecte, răspunsuri scurte și probleme de calcul cu numere generate.">
+<script>try{var t=localStorage.getItem('rf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/probleme.css">
+</head>
+<body>
+<div class="home-main" id="main">
+  <header class="page-hero">
+    <p class="hero__kicker">Exersează</p>
+    <h1>Probleme tip test</h1>
+    <p>Testul de la celelalte clase a avut cinci feluri de itemi. Aici le ai pe toate: răspunzi, vezi pe loc de ce, iar la calcule numerele se schimbă la fiecare variantă.</p>
+    <nav class="pb-toc" aria-label="Tipuri de itemi">
+      <a class="chip" href="#af">1 · Adevărat/Fals</a>
+      <a class="chip" href="#single">2 · Un singur răspuns</a>
+      <a class="chip" href="#combo">3 · Care afirmații</a>
+      <a class="chip" href="#short">4 · Răspunsuri scurte</a>
+      <a class="chip" href="#calc">5 · Calcule</a>
+    </nav>
+  </header>
+  <div id="pb-root"></div>
+</div>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/sim.js"></script>
+<script src="assets/js/data/probleme.js"></script>
+<script src="assets/js/probleme.js"></script>
+<script>RF.init(); RF.probleme.init();</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Relativitate & Fotoni — material de studiu interactiv
 
-Site static (HTML + CSS + JavaScript simplu, fără dependențe și fără instalări) pentru învățarea **conceptuală** a relativității restrânse, a energiei relativiste, a fotonului și a efectului fotoelectric extern. Fără probleme de calcul: simulări, povești „pe pași”, mituri vs. realitate și întrebări grele de gândire.
+Site static (HTML + CSS + JavaScript simplu, fără dependențe și fără instalări) pentru învățarea **conceptuală** a relativității restrânse, a energiei relativiste, a fotonului și a efectului fotoelectric extern. Simulări, povești „pe pași”, mituri vs. realitate, întrebări grele de gândire și probleme tip test (cu calcule).
 
 ## Cum îl deschizi
 
@@ -14,6 +14,7 @@ Site static (HTML + CSS + JavaScript simplu, fără dependențe și fără insta
 |---|---|
 | `index.html` | start: harta conceptelor, „continuă”, „de repetat”, cardurile capitolelor |
 | `cap/NN-*.html` | cele 11 capitole (scroll, cu simulări și secvențe „pe pași”) |
+| `probleme.html` | probleme tip test: Adevărat/Fals, un singur răspuns, „care afirmații”, răspunsuri scurte cu model și calcule cu numere generate (date în `assets/js/data/probleme.js`) |
 | `test-final.html` | test amestecat din toate capitolele + harta stăpânirii |
 | `fisa.html` | fișa de recapitulare (din `summary`-ul fiecărui capitol; se poate tipări) |
 | `glosar.html` | glosar cu căutare (din `glossary`-ul fiecărui capitol) |

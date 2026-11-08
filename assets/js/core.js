@@ -205,6 +205,7 @@
       '<a class="brand" href="' + RF.url('index.html') + '"><span class="brand__mark" aria-hidden="true"></span><span>Relativitate <em>&amp;</em> Fotoni</span></a>' +
       (cur ? '<span class="topbar__crumb">/ Cap. ' + cur.id + ' · ' + cur.title + '</span>' : '') +
       '<nav class="topbar__nav" aria-label="Navigare">' +
+      '<a class="chip chip--tool" href="' + RF.url('probleme.html') + '">Probleme</a>' +
       '<a class="chip chip--tool" href="' + RF.url('test-final.html') + '">Test final</a>' +
       '<a class="chip chip--tool" href="' + RF.url('fisa.html') + '">Fișă</a>' +
       '<a class="chip chip--tool" href="' + RF.url('glosar.html') + '">Glosar</a>' +
@@ -230,6 +231,7 @@
       });
       h += '<div class="menu__sep"></div><div class="menu__label">Unelte</div>' +
         '<a class="menu__item" href="' + RF.url('index.html') + '"><span class="menu__num">⌂</span><span>Pagina de start și harta</span></a>' +
+        '<a class="menu__item" href="' + RF.url('probleme.html') + '"><span class="menu__num">✎</span><span>Probleme tip test</span></a>' +
         '<a class="menu__item" href="' + RF.url('test-final.html') + '"><span class="menu__num">✓</span><span>Test final amestecat</span></a>' +
         '<a class="menu__item" href="' + RF.url('fisa.html') + '"><span class="menu__num">≡</span><span>Fișa de recapitulare</span></a>' +
         '<a class="menu__item" href="' + RF.url('glosar.html') + '"><span class="menu__num">Aa</span><span>Glosar</span></a>' +
