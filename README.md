@@ -14,7 +14,7 @@ Site static (HTML + CSS + JavaScript simplu, fără dependențe și fără insta
 |---|---|
 | `index.html` | start: harta conceptelor, „continuă”, „de repetat”, cardurile capitolelor |
 | `cap/NN-*.html` | cele 11 capitole (scroll, cu simulări și secvențe „pe pași”) |
-| `probleme.html` | probleme tip test: Adevărat/Fals, un singur răspuns, „care afirmații”, răspunsuri scurte cu model și calcule cu numere generate (itemi pe capitole în `assets/js/data/probleme-cap.js`, generatoarele de calcule în `assets/js/data/probleme.js`) |
+| `probleme.html` | probleme tip test: Adevărat/Fals, un singur răspuns, „care afirmații”, „construiește răspunsul” (bifezi propozițiile corecte, fără scris) și calcule cu numere generate (itemi pe capitole în `assets/js/data/probleme-cap.js`, generatoarele de calcule în `assets/js/data/probleme.js`) |
 | `test-final.html` | test amestecat din toate capitolele + harta stăpânirii |
 | `fisa.html` | fișa de recapitulare (din `summary`-ul fiecărui capitol; se poate tipări) |
 | `glosar.html` | glosar cu căutare (din `glossary`-ul fiecărui capitol) |

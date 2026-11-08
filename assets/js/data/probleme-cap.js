@@ -1,7 +1,7 @@
 /* Probleme tip test, pe capitole. Fiecare capitol are: Adevărat/Fals (af), un singur răspuns (single),
    „care afirmații sunt corecte” (combo), răspunsuri scurte (short) și calcule (calc = id-uri din RF.problems.calc).
    af: [text, adevărat?, explicație] · single: {q, o:[[text, corect?]…], why} · combo: {q, s:[[text, adevărat?, explicație]…], o:[etichete]}
-   short: {q, model, pts} */
+   short: {q, model, ok:[propoziții corecte], bad:[[propoziție capcană, de ce e greșită]…]} */
 (function () {
   'use strict';
   var RF = window.RF, P = RF.problems = RF.problems || {};
@@ -33,10 +33,10 @@
       short: [
         { q: 'Enunțați cele două postulate ale teoriei relativității restrânse și precizați de ce postulatul constanței vitezei luminii nu este compatibil cu legea clasică de compunere a vitezelor.',
           model: '<p><strong>Postulatele:</strong> (1) viteza luminii în vid este constantă universală, c ≈ 3·10<sup>8</sup> m/s, în orice S.R.I.; (2) legile fizicii au aceeași formă în toate S.R.I. <em>(Atenție: în unele surse ordinea e inversă; dacă întrebarea zice „al doilea postulat”, enunță ambele și spune clar care e care.)</em></p><p><strong>Incompatibilitatea:</strong> legea clasică u = u′ + v ar da, pentru lumina emisă de o sursă în mișcare, viteza c ± v, deci diferită pentru observatori diferiți. Postulatul spune că toți observatorii măsoară exact c ⇒ legea clasică de compunere nu mai e valabilă la viteze mari și se înlocuiește cu cea relativistă, u = (u′ + v)/(1 + vu′/c²).</p>',
-          pts: ['Enunță constanța lui c în orice S.R.I.', 'Enunță că legile fizicii sunt aceleași în toți S.R.I.', 'Arată că u = u′ + v ar da lumina c ± v', 'Concluzia: toți măsoară c ⇒ compunerea clasică nu e valabilă'] },
+          ok: ["Viteza luminii în vid este constantă universală (c ≈ 3·10⁸ m/s) în orice S.R.I.", "Legile fizicii au aceeași formă în toți S.R.I.", "Legea clasică u = u′ + v ar da luminii viteza c ± v, diferită pentru observatori diferiți.", "Deoarece toți observatorii măsoară c, adunarea clasică a vitezelor nu mai e valabilă la viteze mari."], bad: [["Viteza luminii crește cu viteza sursei: c + v.", "Fals: viteza luminii nu depinde de mișcarea sursei."], ["Legile fizicii se schimbă de la un S.R.I. la altul.", "Fals: au aceeași formă în toți S.R.I."], ["Compunerea clasică rămâne valabilă la orice viteză, deci nu există nicio incompatibilitate.", "Fals: la viteze apropiate de c ar contrazice postulatul constanței lui c."]] },
         { q: 'De ce lumina „nu se adună” cu viteza sursei, așa cum se adună viteza unei mingi aruncate dintr-un tren?',
           model: '<p>Pentru că viteza luminii în vid este constantă universală: are valoarea c în orice S.R.I., indiferent de mișcarea sursei sau a observatorului. Adunarea u = u′ + v este o aproximație valabilă doar la viteze mici, v ≪ c; la viteze apropiate de c ea trebuie înlocuită cu compunerea relativistă, care nu poate da niciodată o viteză peste c.</p>',
-          pts: ['c e constantă universală, independentă de sursă', 'Adunarea clasică e doar aproximație la v ≪ c', 'Compunerea relativistă păstrează c'] }
+          ok: ["Viteza luminii în vid este aceeași, c, în orice S.R.I., indiferent de sursă și de observator.", "Adunarea u = u′ + v este doar o aproximație, valabilă la v ≪ c.", "La viteze mari se folosește compunerea relativistă, care păstrează c."], bad: [["Lumina e un caz special: viteza ei se adună cu a sursei doar la distanțe mari.", "Fals: nu există o astfel de excepție."], ["Mingea și lumina se comportă la fel, deci u = u′ + v merge și pentru lumină.", "Fals: pentru lumină ar da c ± v."], ["Viteza luminii e mai mare dacă sursa se apropie de observator.", "Fals: rămâne c."]] }
       ],
       calc: []
     },
@@ -67,10 +67,10 @@
       short: [
         { q: 'Ce este intervalul spațio-temporal și de ce se numește invariant relativist? Ce se schimbă și ce nu se schimbă de la un S.R.I. la altul?',
           model: '<p>Intervalul dintre două evenimente este (Δs)² = (Δx)² + (Δy)² + (Δz)² − (cΔt)². Este <strong>invariant relativist</strong> pentru că are aceeași valoare în orice S.R.I.: observatorii diferiți găsesc Δx și Δt diferite (acestea se schimbă), dar combinația de mai sus iese aceeași (aceasta nu se schimbă). Analogie: la rotirea axelor în plan se schimbă coordonatele, dar nu distanța dintre puncte. Pentru lumină (Δs)² = 0 în orice S.R.I.</p>',
-          pts: ['Scrie formula cu minus pe termenul de timp', 'Aceeași valoare în orice S.R.I.', 'Se schimbă Δx, Δt separat; nu se schimbă Δs', 'Analogia cu distanța la rotirea axelor sau cazul luminii'] },
+          ok: ["(Δs)² = (Δx)² + (Δy)² + (Δz)² − (cΔt)².", "Are aceeași valoare în orice S.R.I.", "Δx și Δt se schimbă de la un S.R.I. la altul, dar combinația (Δs)² nu.", "La rotirea axelor în plan se păstrează distanța; la schimbarea S.R.I. se păstrează intervalul."], bad: [["Δs se schimbă, în schimb Δx și Δt rămân aceleași pentru toți observatorii.", "Fals: invers."], ["(Δs)² = (Δx)² + (Δy)² + (Δz)² + (cΔt)², cu plus pe termenul de timp.", "Fals: timpul intră cu minus."], ["Invariant înseamnă că nu se schimbă în timp.", "Fals: înseamnă aceeași valoare în toți S.R.I."]] },
         { q: 'De ce timpul nu este „încă o lungime”? Ce înseamnă „trucul ict”?',
           model: '<p>În interval, termenul de timp intră cu semn <strong>opus</strong> celor spațiale; doar așa combinația este aceeași pentru toți observatorii și iese 0 pentru lumină. „Trucul ict”: cu i² = −1, (ict)² = −c²t², deci (Δs)² = Δx² + Δy² + Δz² + (icΔt)², o sumă de patru pătrate; este doar o notație comodă, nu înseamnă că timpul ar fi „imaginar”.</p>',
-          pts: ['Timpul intră cu semn opus', 'Doar așa Δs = 0 pentru lumină și e invariant', 'ict: notație cu i² = −1, nu „timp imaginar”'] }
+          ok: ["Timpul intră în interval cu semn opus celor spațiale.", "Doar așa (Δs)² = 0 pentru lumină, în orice S.R.I., iar intervalul e invariant.", "Trucul ict (i² = −1) scrie intervalul ca o sumă de patru pătrate.", "ict este doar o notație; nu înseamnă că timpul ar fi „imaginar”."], bad: [["Timpul e o lungime imaginară, de aceea apare minus.", "Fals: e doar o notație."], ["Minusul apare fiindcă timpul curge doar înainte.", "Fals: motivul e invarianța și Δs = 0 pentru lumină."], ["Cu semn plus intervalul ar fi tot invariant; minusul e doar o convenție.", "Fals: cu plus nu ar mai fi invariant."]] }
       ],
       calc: ['interval']
     },
@@ -101,7 +101,7 @@
       short: [
         { q: 'Ce devin transformările Lorentz pentru v ≪ c? Dar pentru v ≈ c?',
           model: '<p>Pentru <strong>v ≪ c</strong>: γ → 1 și termenul vx/c² dispare, deci x′ = x − vt, t′ = t — transformările lui Galilei (limita clasică). Pentru <strong>v ≈ c</strong> (caz ultrarelativist): γ este mare, termenul vx/c² nu mai poate fi neglijat, timpul t′ ≠ t, iar efectele relativiste (contracție, dilatare, simultaneitate relativă) devin vizibile; formulele relativiste sunt obligatorii.</p>',
-          pts: ['v ≪ c: γ → 1, Lorentz → Galilei', 'v ≈ c: γ mare, t′ ≠ t', 'Efectele relativiste devin vizibile'] }
+          ok: ["Pentru v ≪ c: γ → 1 și termenul vx/c² dispare.", "Atunci x′ = x − vt și t′ = t: transformările lui Galilei.", "Pentru v ≈ c: γ este mare și t′ ≠ t.", "La v ≈ c efectele relativiste (contracție, dilatare, simultaneitate relativă) devin vizibile."], bad: [["Pentru v ≪ c transformările Lorentz dau x′ = x și t′ = t pentru orice viteză.", "Fals: x′ = x − vt."], ["Pentru v ≈ c transformările rămân aceleași ca la Galilei.", "Fals: abaterile sunt mari."], ["Pentru v ≈ c, γ devine mai mic decât 1.", "Fals: γ ≥ 1 mereu."]] }
       ],
       calc: ['lorentz']
     },
@@ -132,7 +132,7 @@
       short: [
         { q: 'Descrieți trenul lui Einstein și spuneți ce concluzie trage fiecare observator.',
           model: '<p>Două fulgere lovesc capetele unui tren în mișcare. Observatorul de pe peron (în mijlocul distanței dintre loviri) primește cele două lumini în același moment ⇒ concluzionează că fulgerele au fost <strong>simultane</strong>. Călătorul din mijlocul trenului se mișcă spre fulgerul din față, deci îi vede lumina primul, iar lumina are aceeași viteză c pentru amândoi ⇒ concluzionează că fulgerul din față a lovit <strong>mai devreme</strong>. Ambii au dreptate, fiecare în S.R.I. lui: simultaneitatea este relativă.</p>',
-          pts: ['Fulgere la capetele trenului; peronul le vede simultane', 'Călătorul vede primul fulgerul din față', 'Viteza luminii e c pentru ambii', 'Concluzie: simultaneitatea e relativă; ambii au dreptate'] }
+          ok: ["Două fulgere lovesc capetele trenului; observatorul de pe peron primește lumina lor în același moment, deci le vede simultane.", "Călătorul din mijlocul trenului merge spre fulgerul din față și îi vede lumina primul.", "Viteza luminii este c pentru amândoi observatorii.", "Concluzie: simultaneitatea este relativă; ambii observatori au dreptate."], bad: [["Călătorul vede întâi fulgerul din spate.", "Fals: merge spre cel din față."], ["Unul dintre observatori greșește: fulgerele sunt simultane sau nu, la fel pentru toți.", "Fals: simultaneitatea depinde de S.R.I."], ["Dezacordul apare doar din cauza întârzierii luminii.", "Fals: se ține cont de timpul de drum; cauza e c constant."]] }
       ],
       calc: ['simult']
     },
@@ -163,7 +163,7 @@
       short: [
         { q: 'Este contracția lungimilor reală? Cine vede bara mai scurtă? De ce apare?',
           model: '<p>Contracția este reală ca <strong>rezultat al măsurării</strong> (nu iluzie optică și nu „turtire” a obiectului în sine): lungimea se măsoară marcând simultan capetele, iar pentru un corp în mișcare simultaneitatea în sistemul observatorului nu coincide cu cea din sistemul corpului. Efectul este <strong>reciproc</strong>: fiecare observator vede mai scurtă bara celuilalt. Apare doar pe direcția mișcării, L = L₀/γ.</p>',
-          pts: ['Rezultat al măsurării, nu iluzie optică', 'Capetele se marchează simultan în sistemul observatorului', 'Reciproc; doar pe direcția mișcării; L = L₀/γ'] }
+          ok: ["Contracția este rezultat al măsurării, nu iluzie optică.", "Lungimea se măsoară marcând simultan capetele, în sistemul observatorului.", "Efectul este reciproc: fiecare observator vede mai scurtă bara celuilalt.", "Apare doar pe direcția mișcării: L = L₀/γ."], bad: [["Contracția este doar o iluzie optică provocată de perspectivă.", "Fals: e rezultat de măsurare."], ["Doar observatorul în mișcare vede bara scurtată; bara chiar se micșorează.", "Fals: efectul e reciproc."], ["Contracția apare și pe direcția perpendiculară pe mișcare.", "Fals: doar pe direcția mișcării."]] }
       ],
       calc: ['contractie']
     },
@@ -194,10 +194,10 @@
       short: [
         { q: 'Dilatarea timpului este reciprocă. Cum se rezolvă atunci paradoxul gemenilor?',
           model: '<p>Reciprocitatea e valabilă doar în mișcare rectilinie uniformă, când nu se pot compara direct ceasurile. La gemeni, cel care călătorește își schimbă S.R.I. la întoarcere (accelerează), iar cel rămas acasă rămâne tot timpul în același S.R.I. ⇒ situația nu e simetrică. La revedere ceasurile se compară direct, în același loc și moment, deci fără ambiguitate: gemenul călător este mai tânăr.</p>',
-          pts: ['Reciprocitatea doar în mișcare uniformă', 'Călătorul își schimbă S.R.I. (accelerează)', 'La revedere ceasurile se compară direct', 'Concluzie: călătorul e mai tânăr'] },
+          ok: ["Reciprocitatea e valabilă doar în mișcare rectilinie uniformă.", "Gemenul care călătorește își schimbă S.R.I. la întoarcere (accelerează).", "Cel rămas acasă rămâne tot timpul în același S.R.I., deci situația nu e simetrică.", "La revedere ceasurile se compară direct: gemenul călător e mai tânăr."], bad: [["Ambii gemeni îmbătrânesc la fel, fiindcă efectul e reciproc.", "Fals: situația nu e simetrică."], ["Gemenul rămas acasă e mai tânăr.", "Fals: mai tânăr e cel care a călătorit."], ["Accelerația este cea care încetinește ceasul călătorului.", "Fals: accelerația doar marchează schimbarea de S.R.I."]] },
         { q: 'Care este diferența dintre durata proprie și durata măsurată între două evenimente? Dați relația dintre ele.',
           model: '<p>Durata proprie Δt₀ este cea dintre două evenimente petrecute în același loc, măsurată de un singur ceas aflat acolo (ceasul stă pe loc). Un observator față de care ceasul se mișcă măsoară o durată mai mare: Δt = γΔt₀ &gt; Δt₀. Durata proprie este deci cea mai mică; ea se <em>înmulțește</em> cu γ (lungimea proprie, în schimb, se <em>împarte</em> la γ).</p>',
-          pts: ['Proprie = același loc, un singur ceas', 'Δt = γΔt₀', 'Proprie = cea mai mică; măsurată > proprie'] }
+          ok: ["Durata proprie e cea dintre două evenimente petrecute în același loc, măsurată de un singur ceas.", "Un observator față de care ceasul se mișcă măsoară Δt = γΔt₀.", "Durata proprie este cea mai mică dintre duratele măsurate."], bad: [["Durata proprie este cea mai mare dintre durate.", "Fals: e cea mai mică."], ["Durata proprie se împarte la γ: Δt = Δt₀/γ.", "Fals: se înmulțește cu γ."], ["Durata proprie se măsoară cu două ceasuri sincronizate aflate în locuri diferite.", "Fals: un singur ceas, în același loc."]] }
       ],
       calc: ['dilatare']
     },
@@ -228,7 +228,7 @@
       short: [
         { q: 'Explicați de ce suma simplă a vitezelor nu mai este corectă la viteze apropiate de c și cum se compun vitezele relativist.',
           model: '<p>Suma simplă u = u′ + v ar da, pentru lumină, c + v, contrazicând postulatul că toți observatorii măsoară c; ar permite și viteze peste c. Formula relativistă este u = (u′ + v)/(1 + vu′/c²): numitorul „strânge” rezultatul, care rămâne sub c; dacă u′ = c, rezultă u = c. La viteze mici (v, u ≪ c) termenul vu′/c² dispare și se regăsește u ≈ u′ + v (Galilei).</p>',
-          pts: ['Suma simplă ar da c + v și viteze peste c', 'Formula u = (u′ + v)/(1 + vu′/c²)', 'u′ = c ⇒ u = c; rezultatul rămâne < c', 'La v ≪ c se regăsește u ≈ u′ + v'] }
+          ok: ["Suma simplă ar da pentru lumină c + v și ar permite viteze peste c.", "Formula relativistă este u = (u′ + v)/(1 + vu′/c²).", "Dacă u′ = c, atunci u = c; rezultatul rămâne sub c.", "La v, u ≪ c se regăsește u ≈ u′ + v (Galilei)."], bad: [["Formula relativistă dă tot suma vitezelor, doar cu 1% mai mică.", "Fals: diferența poate fi mare."], ["Numitorul 1 + vu′/c² este egal cu 1 pentru orice viteze.", "Fals: devine important la viteze mari."], ["Rezultatul compunerii poate depăși c dacă ambele viteze sunt aproape c.", "Fals: rămâne sub c."]] }
       ],
       calc: ['compunere']
     },
@@ -259,7 +259,7 @@
       short: [
         { q: 'De ce un corp cu masă de repaus nenulă nu poate atinge viteza luminii în vid?',
           model: '<p>Energia totală este E = γm₀c², cu γ = 1/√(1 − v²/c²). Când v → c, γ → ∞, deci și energia (și impulsul) ar crește fără limită. Ar fi nevoie de o energie infinită; practic, aceeași forță produce o accelerație tot mai mică (F = γ³m₀a pentru F ∥ v). Viteza se apropie de c, dar nu o atinge.</p>',
-          pts: ['E = γm₀c²', 'γ → ∞ când v → c', 'Ar trebui energie/impuls infinit', 'Accelerația scade (γ³) pentru aceeași forță'] }
+          ok: ["Energia totală este E = γm₀c², cu γ = 1/√(1 − v²/c²).", "Când v → c, γ → ∞, deci energia și impulsul cresc fără limită.", "Ar fi nevoie de o energie infinită.", "Aceeași forță dă o accelerație tot mai mică (F = γ³m₀a pentru F ∥ v)."], bad: [["Corpul nu atinge c fiindcă masa lui de repaus devine zero.", "Fals: m₀ este invariantă."], ["Corpul atinge c dacă forța este suficient de mare.", "Fals: ar trebui energie infinită."], ["Energia corpului tinde la zero când v → c.", "Fals: tinde la infinit."]] }
       ],
       calc: ['dinamica']
     },
@@ -290,7 +290,7 @@
       short: [
         { q: 'Ce NU spune relația E = mc²? Explicați și ce sunt mc² și m₀c².',
           model: '<p><strong>m₀c²</strong> este energia de repaus (a corpului în repaus); <strong>mc² = γm₀c²</strong> este energia totală a corpului în mișcare, E = E₀ + E_c. Relația <em>nu</em> spune că masa „se transformă” în energie și nici că un corp în mișcare are „mai multă materie”: spune că energia și masa de mișcare sunt proporționale (m = E/c²) și că un corp în repaus are energie de repaus.</p>',
-          pts: ['m₀c² = energia de repaus', 'mc² = energia totală (E₀ + E_c)', 'Nu: masa nu se „transformă”; proporționalitatea m = E/c²'] }
+          ok: ["m₀c² este energia de repaus a corpului în repaus.", "mc² = γm₀c² este energia totală, E₀ + E_c.", "Masa nu se „transformă” în energie.", "Energia și masa de mișcare sunt proporționale: m = E/c²."], bad: [["E = mc² înseamnă că orice masă se transformă integral în energie.", "Fals: nu spune asta."], ["Un corp în mișcare are „mai multă materie”.", "Fals: crește energia și masa de mișcare, nu cantitatea de materie."], ["m₀c² este energia cinetică a corpului.", "Fals: e energia de repaus."]] }
       ],
       calc: ['energie', 'viteza']
     },
@@ -321,7 +321,7 @@
       short: [
         { q: 'De ce fotonul are masa de repaus zero? Ce legătură există între energia și impulsul lui?',
           model: '<p>Fotonul se mișcă cu v = c, deci γ = ∞. Energia lui E = γm₀c² și masa de mișcare m = γm₀ sunt însă finite (le măsurăm), așa că m₀ = m/γ = 0. Din triunghiul energie–impuls, E² = (pc)² + (m₀c²)², cu m₀ = 0 rezultă E = pc, adică p = E/c = hν/c = h/λ.</p>',
-          pts: ['v = c ⇒ γ = ∞ dar E și m finite ⇒ m₀ = 0', 'Triunghiul energie–impuls: E² = (pc)² + (m₀c²)²', 'Concluzie: E = pc, p = hν/c'] }
+          ok: ["Fotonul se mișcă cu v = c, deci γ = ∞.", "Energia și masa de mișcare ale fotonului sunt finite, deci m₀ = m/γ = 0.", "Din triunghiul energie–impuls cu m₀ = 0 rezultă E = pc.", "Impulsul fotonului este p = E/c = hν/c."], bad: [["Fotonul are masă de repaus foarte mică, dar nenulă.", "Fals: m₀ = 0."], ["Fotonul are impuls nul, fiindcă masa de repaus este zero.", "Fals: p = hν/c ≠ 0."], ["E = pc este valabilă doar pentru corpuri cu m₀ ≠ 0.", "Fals: este tocmai cazul m₀ = 0."]] }
       ],
       calc: ['foton']
     },
@@ -352,10 +352,10 @@
       short: [
         { q: '„Dacă mărim suficient intensitatea luminii incidente, putem extrage electroni din orice metal, indiferent de frecvența radiației.” Precizați dacă afirmația este corectă și justificați.',
           model: '<p><strong>Afirmația este falsă.</strong> Un electron este extras de un singur foton, iar energia unui foton este hν. Dacă ν este sub frecvența de prag, hν &lt; L<sub>ex</sub>, deci niciun foton nu are destulă energie, iar energiile mai multor fotoni nu se adună. Creșterea intensității înseamnă doar <em>mai mulți</em> fotoni, nu fotoni mai energici. Efectul apare doar dacă ν ≥ ν₀ = L<sub>ex</sub>/h, iar ν₀ depinde de metal.</p>',
-          pts: ['Spune clar: FALS', 'Un foton cedează energia unui singur electron', 'hν < L_ex sub prag: energia fotonului e insuficientă', 'Energiile mai multor fotoni nu se adună; intensitatea = numărul de fotoni, nu energia lor'] },
+          ok: ["Afirmația este falsă.", "Un electron este extras de un singur foton, cu energia hν.", "Sub prag hν < L_ex, deci niciun foton nu are destulă energie.", "Energiile mai multor fotoni nu se adună; intensitatea înseamnă mai mulți fotoni, nu fotoni mai energici."], bad: [["Afirmația este corectă: destui fotoni își adună energiile.", "Fals: energiile nu se adună."], ["Efectul apare cu întârziere, când s-a acumulat destulă energie.", "Fals: nu există acumulare."], ["Frecvența de prag nu depinde de metal.", "Fals: ν₀ = L_ex/h depinde de metal."]] },
         { q: 'Cum se pot determina constanta lui Planck și lucrul mecanic de extracție din graficul energiei cinetice maxime a fotoelectronilor în funcție de frecvență?',
           model: '<p>Din E<sub>c</sub> = hν − L<sub>ex</sub> graficul E<sub>c</sub>(ν) este o dreaptă. <strong>Panta</strong> este h (aceeași pentru toate metalele), <strong>ordonata la origine</strong> (prelungind dreapta) este −L<sub>ex</sub>, iar <strong>intersecția cu axa ν</strong> este frecvența de prag ν₀ = L<sub>ex</sub>/h.</p>',
-          pts: ['E_c = hν − L_ex este o dreaptă', 'Panta = h', 'Ordonata la origine = −L_ex; intersecția cu axa ν = ν₀'] }
+          ok: ["E_c = hν − L_ex, deci graficul E_c(ν) este o dreaptă.", "Panta dreptei este h, aceeași pentru toate metalele.", "Ordonata la origine (prelungind dreapta) este −L_ex.", "Intersecția cu axa ν este frecvența de prag ν₀ = L_ex/h."], bad: [["Panta dreptei este L_ex și diferă de la metal la metal.", "Fals: panta este h."], ["Graficul E_c(ν) este o parabolă.", "Fals: este o dreaptă."], ["Ordonata la origine este +L_ex.", "Fals: este −L_ex."]] }
       ],
       calc: ['fotoelectric', 'prag']
     }

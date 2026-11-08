@@ -37,6 +37,14 @@
 .pb-ul { margin: .5rem 0 0; padding-left: 1.1rem; }
 .pb-ta { width: 100%; font: inherit; color: var(--tx); background: var(--card2); border: 1px solid var(--line2); border-radius: 12px; padding: .6rem .8rem; margin: .2rem 0 .7rem; resize: vertical; }
 .pb-model p { margin: 0 0 .6rem; }
+.pb-picks { display: grid; gap: .45rem; margin: .3rem 0 .8rem; }
+.pb-pick { display: flex; flex-wrap: wrap; gap: .3rem .6rem; align-items: flex-start; padding: .55rem .8rem; border: 1px solid var(--line2); border-radius: 12px; background: var(--card2); cursor: pointer; line-height: 1.5; }
+.pb-pick input { margin-top: .3rem; }
+.pb-pick__t { flex: 1 1 14rem; }
+.pb-pick__note { flex-basis: 100%; font-size: .85rem; color: var(--tx2); padding-left: 1.55rem; }
+.pb-pick.is-right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, var(--card2)); }
+.pb-pick.is-wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 13%, var(--card2)); }
+.pb-pick.is-miss { border-color: var(--warn); border-style: dashed; }
 .pb-check { margin-top: .8rem; padding-top: .7rem; border-top: 1px solid var(--line); }
 .pb-check__t { margin: 0 0 .4rem; font-weight: 650; font-size: .88rem; }
 .pb-check__i { display: block; margin: .2rem 0; cursor: pointer; }

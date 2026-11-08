@@ -137,37 +137,62 @@
     });
   }
 
-  /* ---------- 4. Răspunsuri scurte ---------- */
+  /* ---------- 4. Construiește răspunsul (fără scris) ---------- */
   function buildShort(root, list) {
     if (!list.length) return;
-    var sec = section(root, 'short', 'Tip 4', 'Răspunsuri scurte, cu justificare',
-      'Scrie răspunsul pe o foaie (sau în gând), apoi apasă „Arată modelul”. Bifează în lista de verificare ce ai spus: pe test se punctează pașii.');
+    var sec = section(root, 'short', 'Tip 4', 'Construiește răspunsul',
+      'La test ți se cere un răspuns scurt, cu justificare. Aici nu scrii nimic: <b>bifează propozițiile care ar face parte dintr-un răspuns corect</b> (unele sunt capcane), apoi apasă „Verifică”.');
     list.forEach(function (it, i) {
       var card = el('div', { class: 'pb-card' });
       card.appendChild(el('p', { class: 'pb-stmt__t', html: '<span class="pb-n">' + (i + 1) + '.</span> ' + it.q }));
-      var ta = el('textarea', { class: 'pb-ta', rows: '3', placeholder: 'Scrie aici răspunsul tău (nu se salvează nicăieri)…' });
-      card.appendChild(ta);
-      var open = el('button', { class: 'btn btn--primary', type: 'button', text: 'Arată modelul' });
-      var box = el('div', { class: 'pb-why', hidden: true });
-      open.addEventListener('click', function () {
-        box.hidden = !box.hidden;
-        open.textContent = box.hidden ? 'Arată modelul' : 'Ascunde modelul';
-      });
-      var chk = el('div', { class: 'pb-check' });
-      chk.appendChild(el('p', { class: 'pb-check__t', text: 'Ai inclus în răspunsul tău:' }));
-      var sc = el('p', { class: 'pb-score', text: '0 / ' + it.pts.length + ' puncte' });
-      var c = 0;
-      it.pts.forEach(function (p) {
-        var lab = el('label', { class: 'pb-check__i' });
+      var cands = [];
+      it.ok.forEach(function (t) { cands.push({ t: t, ok: true }); });
+      it.bad.forEach(function (b) { cands.push({ t: b[0], ok: false, why: b[1] }); });
+      cands = shuffle(cands);
+      var list = el('div', { class: 'pb-picks' });
+      cands.forEach(function (c) {
+        var lab = el('label', { class: 'pb-pick' });
         var cb = el('input', { type: 'checkbox' });
-        cb.addEventListener('change', function () { c += cb.checked ? 1 : -1; sc.textContent = c + ' / ' + it.pts.length + ' puncte'; });
-        lab.appendChild(cb); lab.appendChild(el('span', { html: ' ' + p }));
-        chk.appendChild(lab);
+        c.cb = cb; c.lab = lab;
+        lab.appendChild(cb);
+        lab.appendChild(el('span', { class: 'pb-pick__t', html: c.t }));
+        c.note = el('span', { class: 'pb-pick__note', hidden: true });
+        lab.appendChild(c.note);
+        list.appendChild(lab);
       });
-      chk.appendChild(sc);
+      card.appendChild(list);
+      var acts = el('div', { class: 'pb-acts' });
+      var bCheck = el('button', { class: 'btn btn--primary', type: 'button', text: 'Verifică' });
+      var bModel = el('button', { class: 'btn', type: 'button', text: 'Arată răspunsul-model' });
+      var bReset = el('button', { class: 'btn btn--ghost', type: 'button', text: '↺ Resetează' });
+      acts.appendChild(bCheck); acts.appendChild(bModel); acts.appendChild(bReset);
+      card.appendChild(acts);
+      var out = el('div', { class: 'pb-out' });
+      card.appendChild(out);
+      var box = el('div', { class: 'pb-why', hidden: true });
       box.appendChild(el('div', { class: 'pb-model', html: it.model }));
-      box.appendChild(chk);
-      card.appendChild(open); card.appendChild(box);
+      card.appendChild(box);
+      var checked = false;
+      bCheck.addEventListener('click', function () {
+        var hit = 0, miss = 0, wrong = 0;
+        cands.forEach(function (c) {
+          var on = c.cb.checked;
+          c.lab.classList.remove('is-right', 'is-wrong', 'is-miss');
+          c.note.hidden = true;
+          if (c.ok && on) { hit++; c.lab.classList.add('is-right'); }
+          else if (c.ok && !on) { miss++; c.lab.classList.add('is-miss'); c.note.hidden = false; c.note.textContent = 'Lipsea: aceasta făcea parte din răspuns.'; }
+          else if (!c.ok && on) { wrong++; c.lab.classList.add('is-wrong'); c.note.hidden = false; c.note.textContent = c.why || 'Nu face parte din răspunsul corect.'; }
+        });
+        var full = !miss && !wrong;
+        out.innerHTML = '';
+        out.appendChild(verdict(full, full ? 'răspuns complet și fără capcane.' : hit + ' din ' + it.ok.length + ' propoziții corecte bifate' + (wrong ? ', ' + wrong + ' capcană/capcane bifate' : '') + (miss ? ', ' + miss + ' lipsă' : '') + '.'));
+        checked = true;
+      });
+      bModel.addEventListener('click', function () { box.hidden = !box.hidden; bModel.textContent = box.hidden ? 'Arată răspunsul-model' : 'Ascunde răspunsul-model'; });
+      bReset.addEventListener('click', function () {
+        cands.forEach(function (c) { c.cb.checked = false; c.lab.classList.remove('is-right', 'is-wrong', 'is-miss'); c.note.hidden = true; });
+        out.innerHTML = '';
+      });
       sec.appendChild(card);
     });
   }
