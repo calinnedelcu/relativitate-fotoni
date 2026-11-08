@@ -318,7 +318,11 @@
     if (RF.steps) RF.steps.init(doc);
     if (RF.quiz) RF.quiz.init(doc);
     var items = main ? buildToc(main) : null;
-    if (main && chId) buildChapNav(main, chId);
+    if (main && chId) {
+      var tsec = RF.$('#test', main);
+      if (tsec) tsec.appendChild(RF.el('p', { class: 'pb-link', html: '<a class="btn" href="' + RF.url('probleme.html') + '#cap' + chId + '">✎ Probleme tip test pentru capitolul ' + chId + ' →</a>' }));
+      buildChapNav(main, chId);
+    }
     buildFooter();
     trackScroll(chId, items);
     doc.dispatchEvent(new CustomEvent('rf:ready'));

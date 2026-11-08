@@ -1,129 +1,9 @@
-/* Probleme tip test: modelul testului (evaluare sumativă) — Adevărat/Fals, un singur răspuns,
-   „care afirmații sunt corecte”, răspunsuri scurte cu model și calcule cu numere generate.
-   Notă: în notițe Postulatul I = c constant, Postulatul II = legile fizicii; în unele surse ordinea e inversă. */
+/* Problemele de calcul (generatoare cu numere aleatoare). Itemii A/F, alegere, combinații și răspunsuri scurte
+   sunt pe capitole în probleme-cap.js. */
 (function () {
   'use strict';
   var RF = window.RF;
-  var P = RF.problems = {};
-
-  /* ======================= 1. ADEVĂRAT / FALS ======================= */
-  P.af = [
-    { title: 'Setul 1 · postulate, Galilei, contracție, prag', items: [
-      { t: 'Viteza luminii în vid are aceeași valoare în toți S.R.I.', a: true, why: 'Este Postulatul privind constanța lui c: nu depinde de mișcarea sursei sau a observatorului.' },
-      { t: 'Pentru viteze apropiate de viteza luminii, transformările Galilei descriu mulțumitor relațiile dintre coordonatele spațio-temporale ale evenimentelor.', a: false, why: 'Galilei merge doar la v ≪ c; la v ≈ c apar abateri mari și se folosește Lorentz.' },
-      { t: 'Un observator față de care un corp se mișcă măsoară, pe direcția mișcării, o lungime mai mare decât lungimea proprie.', a: false, why: 'Măsoară una mai mică: L = L₀/γ. Lungimea proprie este cea mai mare.' },
-      { t: 'Lungimea proprie a unui corp este lungimea măsurată în S.R.I. în care corpul este în repaus.', a: true, why: 'Așa se definește lungimea proprie L₀.' },
-      { t: 'În efectul fotoelectric extern, frecvența de prag depinde de materialul catodului.', a: true, why: 'ν₀ = L_ex/h, iar L_ex este o constantă de material.' }
-    ] },
-    { title: 'Setul 2 · timp, interval, compunere, energie', items: [
-      { t: 'Durata proprie dintre două evenimente este mai mare decât durata măsurată de un observator față de care ceasul se mișcă.', a: false, why: 'Durata proprie este cea mai mică: Δt = γΔt₀ > Δt₀.' },
-      { t: 'Intervalul spațio-temporal Δs dintre două evenimente are aceeași valoare în orice S.R.I.', a: true, why: 'Este invariantul relativist: Δx și Δt se schimbă, combinația (Δs)² nu.' },
-      { t: 'Dacă un corp are viteza c față de S′, el are viteza c și față de S, oricare ar fi viteza lui S′ față de S.', a: true, why: 'Din compunerea relativistă: u′ = c ⇒ u = c. Exact Postulatul constanței lui c.' },
-      { t: 'Un corp aflat în repaus față de un S.R.I. are energie totală zero.', a: false, why: 'Are energie de repaus E₀ = m₀c².' },
-      { t: 'Fotonul are masă de repaus nenulă.', a: false, why: 'm₀ = 0 (altfel energia i-ar deveni infinită la v = c); are însă energie, impuls și masă de mișcare.' }
-    ] },
-    { title: 'Setul 3 · fotoelectric și dinamică', items: [
-      { t: 'Dacă frecvența luminii e sub frecvența de prag, creșterea intensității poate determina apariția efectului fotoelectric.', a: false, why: 'Nu: fiecare foton are hν < L_ex și energiile mai multor fotoni nu se adună.' },
-      { t: 'Energia cinetică maximă a fotoelectronilor depinde de frecvența radiației, nu de intensitate.', a: true, why: 'E_c = hν − L_ex; intensitatea schimbă doar numărul de electroni.' },
-      { t: 'Un fotoelectron poate fi extras de mai mulți fotoni care își adună energiile.', a: false, why: 'Un electron absoarbe energia unui singur foton.' },
-      { t: 'Când F este paralelă cu v, aceeași forță produce o accelerație tot mai mică pe măsură ce viteza crește.', a: true, why: 'a = F/(γ³m₀): γ crește cu v.' },
-      { t: 'Un corp cu masă de repaus nenulă poate atinge viteza luminii dacă forța este suficient de mare.', a: false, why: 'Când v → c, γ → ∞: ar trebui energie și impuls infinite.' }
-    ] },
-    { title: 'Setul 4 · simultaneitate, gemeni, γ', items: [
-      { t: 'Două evenimente simultane într-un S.R.I., petrecute în locuri diferite, sunt simultane în orice alt S.R.I.', a: false, why: 'Simultaneitatea e relativă: Δt′ = −γvΔx/c² ≠ 0 dacă Δx ≠ 0.' },
-      { t: 'Două evenimente petrecute în același loc și în același moment (o coincidență) sunt coincidente pentru toți observatorii.', a: true, why: 'Coincidențele sunt invariante: ciocnirea are loc pentru toți.' },
-      { t: 'Dilatarea timpului este reciprocă în mișcare rectilinie uniformă: fiecare observator găsește că ceasul celuilalt merge mai încet.', a: true, why: 'Nu e contradicție: ceasurile nu se pot compara direct și sincronizările diferă.' },
-      { t: 'În paradoxul gemenilor, gemenul care se întoarce își schimbă S.R.I.', a: true, why: 'De aceea situația nu e simetrică; la revedere el e mai tânăr.' },
-      { t: 'Factorul Lorentz γ poate fi mai mic decât 1.', a: false, why: 'γ ≥ 1 întotdeauna; γ = 1 doar pentru v = 0.' }
-    ] }
-  ];
-
-  /* ======================= 2. UN SINGUR RĂSPUNS ======================= */
-  P.single = [
-    { q: 'O bară are lungimea proprie L₀ și se deplasează longitudinal cu viteza v față de un S.R.I. Lungimea barei, măsurată de acesta, este:',
-      o: [['L = γL₀', 0], ['L = L₀/γ', 1], ['L = L₀', 0], ['L = γ²L₀', 0]],
-      why: 'Contracție pe direcția mișcării: L = L₀/γ < L₀, cu γ > 1.' },
-    { q: 'Un ceas se mișcă cu viteza v față de un observator. Între două ticuri, ceasul însuși măsoară durata proprie Δt₀. Observatorul măsoară:',
-      o: [['Δt₀/γ', 0], ['γΔt₀', 1], ['Δt₀', 0], ['γ²Δt₀', 0]],
-      why: 'Dilatare: Δt = γΔt₀ > Δt₀. Durata proprie se înmulțește cu γ.' },
-    { q: 'Pentru un corp aflat în repaus față de un S.R.I., factorul Lorentz este:',
-      o: [['0', 0], ['1', 1], ['∞', 0], ['c', 0]],
-      why: 'γ = 1/√(1 − v²/c²); la v = 0 rezultă 1.' },
-    { q: 'Care dintre următoarele mărimi are aceeași valoare în toți S.R.I.?',
-      o: [['lungimea unei bare în mișcare', 0], ['durata dintre două evenimente', 0], ['intervalul spațio-temporal dintre două evenimente', 1], ['simultaneitatea a două evenimente îndepărtate', 0]],
-      why: 'Δs este invariant relativist; lungimile, duratele și simultaneitatea depind de observator.' },
-    { q: 'Energia de repaus a unui corp cu masa de repaus m₀ este:',
-      o: [['m₀c²', 1], ['½m₀c²', 0], ['γm₀c²', 0], ['m₀c', 0]],
-      why: 'E₀ = m₀c². γm₀c² este energia totală a corpului în mișcare.' },
-    { q: 'Energia unui foton cu frecvența ν este:',
-      o: [['hν', 1], ['h/ν', 0], ['ν/h', 0], ['hν/c', 0]],
-      why: 'Legea lui Planck: E = hν. (hν/c este impulsul.)' },
-    { q: 'Efectul fotoelectric extern se produce dacă:',
-      o: [['frecvența radiației ≥ frecvența de prag', 1], ['intensitatea radiației este foarte mare, indiferent de frecvență', 0], ['frecvența este mai mică decât frecvența de prag, dar intensitatea e mare', 0], ['lungimea de undă este foarte mare', 0]],
-      why: 'Condiția este hν ≥ L_ex ⇔ ν ≥ ν₀; intensitatea nu contează.' },
-    { q: 'Pentru mișcarea rectilinie (F ∥ v), legea a II-a în TRR se scrie:',
-      o: [['F = m₀a', 0], ['F = γm₀a', 0], ['F = γ³m₀a', 1], ['F = γ⁴m₀a', 0]],
-      why: 'F = γ³m₀a = γ²ma; pentru F ⟂ v ar fi F = γm₀a.' },
-    { q: 'Dacă în S′ un impuls de lumină are viteza c, în S (față de care S′ se mișcă cu v) viteza lui este:',
-      o: [['c + v', 0], ['c', 1], ['c − v', 0], ['c/γ', 0]],
-      why: 'u′ = c ⇒ u = (c + v)/(1 + v/c) = c.' },
-    { q: 'Tensiunea de stopare din efectul fotoelectric depinde de:',
-      o: [['frecvența luminii și de materialul catodului', 1], ['intensitatea luminii', 0], ['numărul de fotoni pe secundă', 0], ['numai de anod', 0]],
-      why: '|e|U_s = hν − L_ex: depinde de ν și de L_ex, nu de intensitate.' },
-    { q: 'Ce se întâmplă cu energia unui corp cu m₀ ≠ 0 când v → c?',
-      o: [['tinde la zero', 0], ['rămâne m₀c²', 0], ['tinde la infinit', 1], ['devine c²', 0]],
-      why: 'E = γm₀c² și γ → ∞; de aceea corpul nu poate atinge c.' }
-  ];
-
-  /* ============ 3. „CARE DINTRE AFIRMAȚII SUNT CORECTE?” (combinații) ============ */
-  P.combo = [
-    { q: 'Care dintre următoarele afirmații despre contracția lungimilor sunt corecte?',
-      s: [['Apare doar pe direcția mișcării.', 1, 'Pe perpendiculară lungimile nu se schimbă.'], ['Este reciprocă.', 1, 'Fiecare observator vede scurtă bara celuilalt.'], ['Este doar o iluzie optică.', 0, 'E rezultat de măsurare (capete marcate simultan), nu iluzie.'], ['Lungimea proprie este cea mai mare.', 1, 'L = L₀/γ ≤ L₀.']],
-      o: ['1 și 2', '1, 2 și 4', '2, 3 și 4', 'toate'] },
-    { q: 'Care dintre următoarele afirmații despre efectul fotoelectric extern sunt corecte?',
-      s: [['Energia cinetică maximă depinde de frecvență.', 1, 'E_c = hν − L_ex.'], ['Sub prag, o intensitate mare poate produce efect.', 0, 'Nu: fotonii luați separat nu au destulă energie.'], ['Un foton extrage cel mult un electron.', 1, 'Energiile fotonilor nu se adună.'], ['Frecvența de prag depinde de catod.', 1, 'ν₀ = L_ex/h.']],
-      o: ['1, 3 și 4', '2 și 3', '1 și 2', 'toate'] },
-    { q: 'Care dintre următoarele afirmații despre foton sunt corecte?',
-      s: [['Are masa de repaus zero.', 1, 'm₀ = 0.'], ['Energia lui este E = pc.', 1, 'Din triunghiul energie–impuls cu m₀ = 0.'], ['Se deplasează cu c în orice S.R.I.', 1, 'Postulatul constanței lui c.'], ['Are impuls nul.', 0, 'p = hν/c = h/λ ≠ 0.']],
-      o: ['1 și 2', '1, 2 și 3', '1, 2, 3 și 4', '2 și 4'] },
-    { q: 'Care dintre următoarele afirmații despre dilatarea timpului sunt corecte?',
-      s: [['Durata proprie este cea mai mică.', 1, 'Δt = γΔt₀ ≥ Δt₀.'], ['Efectul este reciproc în mișcare uniformă.', 1, 'Fiecare vede ceasul celuilalt încetinit.'], ['La revedere, gemenul rămas acasă este mai tânăr.', 0, 'Mai tânăr este gemenul care a călătorit.'], ['Un ceas în mișcare merge mai încet, văzut de observator.', 1, 'Asta e dilatarea.']],
-      o: ['1, 2 și 3', '1, 2 și 4', '3 și 4', 'toate'] },
-    { q: 'Care dintre următoarele afirmații despre energia relativistă sunt corecte?',
-      s: [['E = γm₀c².', 1, 'Energia totală.'], ['E_c = (γ − 1)m₀c².', 1, 'Energia totală minus energia de repaus.'], ['Când v → c, energia tinde la infinit.', 1, 'γ → ∞.'], ['Energia de repaus depinde de viteză.', 0, 'E₀ = m₀c² este aceeași pentru toți.']],
-      o: ['1, 2 și 3', '1, 2 și 4', '2 și 3', 'toate'] },
-    { q: 'Care dintre următoarele afirmații despre factorul Lorentz sunt corecte?',
-      s: [['γ ≥ 1.', 1, 'Mereu.'], ['Pentru un corp în repaus față de S.R.I., γ = 1.', 1, 'v = 0.'], ['γ crește odată cu modulul vitezei relative.', 1, 'Pentru viteze admisibile fizic (v < c).'], ['Un corp cu masă de repaus nenulă poate atinge c dacă forța e suficient de mare.', 0, 'Pentru v = c, γ ar fi infinit.']],
-      o: ['1 și 4', '2 și 4', '1, 2 și 3', 'toate'] }
-  ];
-
-  /* ============ 4. RĂSPUNSURI SCURTE (cu model și listă de verificare) ============ */
-  P.short = [
-    { q: 'Enunțați cele două postulate ale teoriei relativității restrânse și precizați de ce postulatul constanței vitezei luminii nu este compatibil cu legea clasică de compunere a vitezelor.',
-      model: '<p><strong>Postulatele:</strong> (1) viteza luminii în vid este constantă universală, c ≈ 3·10<sup>8</sup> m/s, în orice S.R.I.; (2) legile fizicii au aceeași formă în toate S.R.I. <em>(Atenție: în unele surse ordinea e inversă; dacă întrebarea zice „al doilea postulat”, enunță ambele și spune clar care e care.)</em></p><p><strong>Incompatibilitatea:</strong> legea clasică u = u′ + v ar da, pentru lumina emisă de o sursă în mișcare, viteza c ± v, deci diferită pentru observatori diferiți. Postulatul spune că toți observatorii măsoară exact c ⇒ legea clasică de compunere nu mai e valabilă la viteze mari și se înlocuiește cu cea relativistă, u = (u′ + v)/(1 + vu′/c²).</p>',
-      pts: ['Enunță constanța lui c în orice S.R.I.', 'Enunță că legile fizicii sunt aceleași în toți S.R.I.', 'Arată că u = u′ + v ar da lumina c ± v', 'Concluzia: toți măsoară c ⇒ compunerea clasică nu e valabilă'] },
-    { q: '„Dacă mărim suficient intensitatea luminii incidente, putem extrage electroni din orice metal, indiferent de frecvența radiației.” Precizați dacă afirmația este corectă și justificați.',
-      model: '<p><strong>Afirmația este falsă.</strong> Un electron este extras de un singur foton, iar energia unui foton este hν. Dacă ν este sub frecvența de prag, hν &lt; L<sub>ex</sub>, deci niciun foton nu are destulă energie, iar energiile mai multor fotoni nu se adună. Creșterea intensității înseamnă doar <em>mai mulți</em> fotoni, nu fotoni mai energici. Efectul apare doar dacă ν ≥ ν₀ = L<sub>ex</sub>/h, iar ν₀ depinde de metal.</p>',
-      pts: ['Spune clar: FALS', 'Un foton cedează energia unui singur electron', 'hν < L_ex sub prag: energia fotonului e insuficientă', 'Energiile mai multor fotoni nu se adună; intensitatea = numărul de fotoni, nu energia lor'] },
-    { q: 'De ce un corp cu masă de repaus nenulă nu poate atinge viteza luminii în vid?',
-      model: '<p>Energia totală este E = γm₀c², cu γ = 1/√(1 − v²/c²). Când v → c, γ → ∞, deci și energia (și impulsul) ar crește fără limită. Ar fi nevoie de o energie infinită; practic, aceeași forță produce o accelerație tot mai mică (F = γ³m₀a pentru F ∥ v). Viteza se apropie de c, dar nu o atinge.</p>',
-      pts: ['E = γm₀c²', 'γ → ∞ când v → c', 'Ar trebui energie/impuls infinit', 'Accelerația scade (γ³) pentru aceeași forță'] },
-    { q: 'Două evenimente sunt simultane pentru un observator, dar petrecute în locuri diferite. Sunt simultane și pentru un observator aflat în mișcare față de primul? Explicați (pe scurt, cu exemplul trenului).',
-      model: '<p><strong>Nu în general.</strong> Simultaneitatea este relativă: Δt′ = −γvΔx/c² ≠ 0 dacă Δx ≠ 0. Exemplu: două fulgere lovesc simultan capetele unui tren, pentru cel de pe peron. Călătorul din mijlocul trenului merge spre fulgerul din față și îi vede lumina primul, iar lumina are aceeași viteză c pentru amândoi ⇒ concluzionează că a lovit mai devreme. Ambii au dreptate, fiecare în sistemul lui. Coincidențele (același loc și moment) și ordinea cauză-efect rămân neschimbate.</p>',
-      pts: ['Răspunde: nu (în general)', 'Menționează că viteza luminii e aceeași c pentru ambii', 'Exemplul trenului: călătorul vede primul fulgerul din față', 'Ambii au dreptate; coincidențele se păstrează'] },
-    { q: 'De ce fotonul are masa de repaus zero? Ce legătură există între energia și impulsul lui?',
-      model: '<p>Fotonul se mișcă cu v = c, deci γ = ∞. Energia lui E = γm₀c² și masa de mișcare m = γm₀ sunt însă finite (le măsurăm), așa că m₀ = m/γ = 0. Din triunghiul energie–impuls, E² = (pc)² + (m₀c²)², cu m₀ = 0 rezultă E = pc, adică p = E/c = hν/c = h/λ.</p>',
-      pts: ['v = c ⇒ γ = ∞ dar E și m finite ⇒ m₀ = 0', 'Triunghiul energie–impuls: E² = (pc)² + (m₀c²)²', 'Concluzie: E = pc, p = hν/c'] },
-    { q: 'Dilatarea timpului este reciprocă. Cum se rezolvă atunci paradoxul gemenilor?',
-      model: '<p>Reciprocitatea e valabilă doar în mișcare rectilinie uniformă, când nu se pot compara direct ceasurile. La gemeni, cel care călătorește își schimbă S.R.I. la întoarcere (accelerează), iar cel rămas acasă rămâne tot timpul în același S.R.I. ⇒ situația nu e simetrică. La revedere ceasurile se compară direct, în același loc și moment, deci fără ambiguitate: gemenul călător este mai tânăr.</p>',
-      pts: ['Reciprocitatea doar în mișcare uniformă', 'Călătorul își schimbă S.R.I. (accelerează)', 'La revedere ceasurile se compară direct', 'Concluzie: călătorul e mai tânăr'] },
-    { q: 'Care este diferența dintre durata proprie și durata măsurată între două evenimente? Dați relația dintre ele.',
-      model: '<p>Durata proprie Δt₀ este cea dintre două evenimente petrecute în același loc, măsurată de un singur ceas aflat acolo (ceasul stă pe loc). Un observator față de care ceasul se mișcă măsoară o durată mai mare: Δt = γΔt₀ &gt; Δt₀. Durata proprie este deci cea mai mică; ea se <em>înmulțește</em> cu γ (lungimea proprie, în schimb, se <em>împarte</em> la γ).</p>',
-      pts: ['Proprie = același loc, un singur ceas', 'Δt = γΔt₀', 'Proprie = cea mai mică; măsurată > proprie'] },
-    { q: 'Cum se pot determina constanta lui Planck și lucrul mecanic de extracție din graficul energiei cinetice maxime a fotoelectronilor în funcție de frecvență?',
-      model: '<p>Din E<sub>c</sub> = hν − L<sub>ex</sub> graficul E<sub>c</sub>(ν) este o dreaptă. <strong>Panta</strong> este h (aceeași pentru toate metalele), <strong>ordonata la origine</strong> (prelungind dreapta) este −L<sub>ex</sub>, iar <strong>intersecția cu axa ν</strong> este frecvența de prag ν₀ = L<sub>ex</sub>/h.</p>',
-      pts: ['E_c = hν − L_ex este o dreaptă', 'Panta = h', 'Ordonata la origine = −L_ex; intersecția cu axa ν = ν₀'] }
-  ];
+  var P = RF.problems = RF.problems || {};
 
   /* ============================ 5. CALCULE ============================ */
   function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
@@ -225,6 +105,38 @@
           parts: [{ k: 'v (în c)', ans: v, tol: 0.005, d: 3 }],
           steps: ['<var>E</var><sub>c</sub> = ' + (k === 1 ? '' : k + '·') + '<var>m</var><sub>0</sub><var>c</var>² ⇒ (γ − 1) = ' + k + ' ⇒ γ = ' + g + '.',
             '<var>v</var> = <var>c</var>·√(1 − 1/γ²) = <var>c</var>·√(1 − 1/' + (g * g) + ') = <b>' + n(v, 3) + '<var>c</var></b>.'] };
+      } },
+    { id: 'lorentz', title: 'Transformarea coordonatelor unui eveniment (Lorentz)',
+      gen: function () {
+        var v = pick([0.6, 0.8, 0.5]), x = pick([3, 5, 10]), t = pick([1, 2, 4]), g = gam(v), xp = g * (x - v * t), tp = g * (t - v * x);
+        return {
+          text: 'Un eveniment are, în sistemul S, coordonatele <var>x</var> = ' + x + ' ani-lumină și <var>t</var> = ' + t + ' ani (cu <var>c</var> = 1 an-lumină/an). Sistemul S′ se mișcă cu viteza <var>v</var> = ' + n(v, 1) + '·<var>c</var> față de S, în sensul axei <var>x</var> (axele paralele, originile coincid la <var>t</var> = <var>t</var>′ = 0). Calculați: a) γ; b) <var>x</var>′ (în ani-lumină); c) <var>t</var>′ (în ani).',
+          parts: [{ k: 'γ', ans: g, tol: 0.01, d: 3 }, { k: "x′ (al)", ans: xp, tol: 0.01, abs: 0.02, d: 2 }, { k: "t′ (ani)", ans: tp, tol: 0.01, abs: 0.02, d: 2 }],
+          steps: ['γ = 1/√(1 − ' + n(v * v, 2) + ') = <b>' + n(g, 3) + '</b>.',
+            '<var>x</var>′ = γ(<var>x</var> − <var>vt</var>) = ' + n(g, 3) + '·(' + x + ' − ' + n(v, 1) + '·' + t + ') = ' + n(g, 3) + '·' + n(x - v * t, 2) + ' = <b>' + n(xp, 2) + ' ani-lumină</b>.',
+            '<var>t</var>′ = γ(<var>t</var> − <var>vx</var>/<var>c</var>²) = ' + n(g, 3) + '·(' + t + ' − ' + n(v, 1) + '·' + x + ') = ' + n(g, 3) + '·' + n(t - v * x, 2) + ' = <b>' + n(tp, 2) + ' ani</b>.',
+            'Verificare: (Δ<var>s</var>)² se păstrează: ' + n(x * x - t * t, 2) + ' = ' + n(xp * xp - tp * tp, 2) + '.'] };
+      } },
+    { id: 'simult', title: 'Simultaneitatea relativă: decalajul de timp în S′',
+      gen: function () {
+        var v = pick([0.6, 0.8, 0.5]), dx = pick([2, 5, 10]), g = gam(v), dtp = -g * v * dx;
+        return {
+          text: 'În sistemul S două evenimente sunt <b>simultane</b> (Δ<var>t</var> = 0) și au loc în locuri diferite pe axa <var>x</var>, la distanța Δ<var>x</var> = ' + dx + ' ani-lumină. Sistemul S′ se mișcă cu <var>v</var> = ' + n(v, 1) + '·<var>c</var> față de S, în sensul axei <var>x</var>. Calculați: a) γ; b) decalajul de timp Δ<var>t</var>′ dintre evenimente în S′ (în ani, cu semn; cu <var>c</var> = 1 al/an). Sunt ele simultane în S′?',
+          parts: [{ k: 'γ', ans: g, tol: 0.01, d: 3 }, { k: "Δt′ (ani)", ans: dtp, tol: 0.01, abs: 0.02, d: 2 }],
+          steps: ['γ = 1/√(1 − ' + n(v * v, 2) + ') = <b>' + n(g, 3) + '</b>.',
+            'Δ<var>t</var>′ = γ(Δ<var>t</var> − <var>v</var>Δ<var>x</var>/<var>c</var>²) = γ·(0 − ' + n(v, 1) + '·' + dx + ') = −' + n(g, 3) + '·' + n(v * dx, 2) + ' = <b>' + n(dtp, 2) + ' ani</b>.',
+            'Δ<var>t</var>′ ≠ 0 ⇒ evenimentele <b>nu</b> sunt simultane în S′ (simultaneitatea e relativă); semnul arată care dintre ele are loc primul în S′.'] };
+      } },
+    { id: 'dinamica', title: 'Forță și accelerație în TRR',
+      gen: function () {
+        var v = pick([0.6, 0.8, 0.9]), g = gam(v), par = 100 / (g * g * g), perp = 100 / g;
+        return {
+          text: 'O forță constantă <var>F</var> acționează asupra unui corp cu masa de repaus <var>m</var><sub>0</sub>, care se mișcă cu <var>v</var> = ' + n(v, 1) + '·<var>c</var>. Notăm cu <var>a</var><sub>cl</sub> = <var>F</var>/<var>m</var><sub>0</sub> accelerația din mecanica clasică. Calculați: a) γ; b) accelerația când <var>F</var> ∥ <var>v</var>, ca procent din <var>a</var><sub>cl</sub>; c) accelerația când <var>F</var> ⟂ <var>v</var>, ca procent din <var>a</var><sub>cl</sub>.',
+          parts: [{ k: 'γ', ans: g, tol: 0.01, d: 3 }, { k: 'a (F ∥ v), %', ans: par, tol: 0.02, d: 1 }, { k: 'a (F ⟂ v), %', ans: perp, tol: 0.02, d: 1 }],
+          steps: ['γ = 1/√(1 − ' + n(v * v, 2) + ') = <b>' + n(g, 3) + '</b>.',
+            '<var>F</var> ∥ <var>v</var>: <var>F</var> = γ³<var>m</var><sub>0</sub><var>a</var> ⇒ <var>a</var> = <var>F</var>/(γ³<var>m</var><sub>0</sub>) = <var>a</var><sub>cl</sub>/γ³ = <var>a</var><sub>cl</sub>/' + n(g * g * g, 2) + ' = <b>' + n(par, 1) + ' %</b> din <var>a</var><sub>cl</sub>.',
+            '<var>F</var> ⟂ <var>v</var>: <var>F</var> = γ<var>m</var><sub>0</sub><var>a</var> ⇒ <var>a</var> = <var>a</var><sub>cl</sub>/γ = <b>' + n(perp, 1) + ' %</b> din <var>a</var><sub>cl</sub>.',
+            'Accelerația scade pe măsură ce v crește, mai tare pe direcția mișcării (γ³) decât perpendicular (γ).'] };
       } }
   ];
 })();

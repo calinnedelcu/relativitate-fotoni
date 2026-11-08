@@ -387,3 +387,6 @@ details.flash > div > :last-child { margin-bottom: 0; }
 .chapnav .next { text-align: right; grid-column: 2; }
 @media (max-width: 560px) { .chapnav .next { grid-column: 1; } }
 .chapnav .prev:only-child { grid-column: 1; }
+
+/* legătura către problemele tip test, din finalul fiecărui capitol */
+.pb-link { margin: 1rem 0 0; }

@@ -23,51 +23,50 @@
   }
 
   /* ---------- 1. Adevărat / Fals ---------- */
-  function buildAF(root) {
+  function buildAF(root, items) {
+    if (!items.length) return;
     var sec = section(root, 'af', 'Tip 1', 'Adevărat / Fals',
       'Stabilește valoarea de adevăr a fiecărei afirmații. După fiecare răspuns vezi de ce.');
-    P.af.forEach(function (set) {
-      var card = el('div', { class: 'pb-card' });
-      card.appendChild(el('h3', { text: set.title }));
-      var score = el('p', { class: 'pb-score', text: 'Scor: 0 / ' + set.items.length });
-      var got = 0, done = 0;
-      set.items.forEach(function (it, i) {
-        var row = el('div', { class: 'pb-stmt' });
-        row.appendChild(el('p', { class: 'pb-stmt__t', html: '<span class="pb-n">' + 'abcde'[i] + ')</span> ' + it.t }));
-        var btns = el('div', { class: 'pb-btns' });
-        var why = el('div', { class: 'pb-why', hidden: true });
-        [['Adevărat', true], ['Fals', false]].forEach(function (b) {
-          var btn = el('button', { class: 'pb-opt pb-opt--small', type: 'button', text: b[0] });
-          btn.addEventListener('click', function () {
-            if (row.dataset.done) return;
-            row.dataset.done = '1'; done++;
-            var ok = b[1] === it.a;
-            if (ok) got++;
-            btn.classList.add(ok ? 'is-right' : 'is-wrong');
-            if (!ok) [].forEach.call(btns.children, function (x) { if ((x.textContent === 'Adevărat') === it.a) x.classList.add('is-right'); });
-            why.hidden = false;
-            why.innerHTML = '';
-            why.appendChild(verdict(ok, 'afirmația este <b>' + (it.a ? 'adevărată' : 'falsă') + '</b>. ' + it.why));
-            score.textContent = 'Scor: ' + got + ' / ' + set.items.length + (done === set.items.length ? ' — set terminat' : '');
-          });
-          btns.appendChild(btn);
+    var card = el('div', { class: 'pb-card' });
+    var score = el('p', { class: 'pb-score', text: 'Scor: 0 / ' + items.length });
+    var got = 0, done = 0;
+    items.forEach(function (it, i) {
+      var row = el('div', { class: 'pb-stmt' });
+      row.appendChild(el('p', { class: 'pb-stmt__t', html: '<span class="pb-n">' + 'abcdefghij'[i] + ')</span> ' + it.t }));
+      var btns = el('div', { class: 'pb-btns' });
+      var why = el('div', { class: 'pb-why', hidden: true });
+      [['Adevărat', true], ['Fals', false]].forEach(function (b) {
+        var btn = el('button', { class: 'pb-opt pb-opt--small', type: 'button', text: b[0] });
+        btn.addEventListener('click', function () {
+          if (row.dataset.done) return;
+          row.dataset.done = '1'; done++;
+          var ok = b[1] === it.a;
+          if (ok) got++;
+          btn.classList.add(ok ? 'is-right' : 'is-wrong');
+          if (!ok) [].forEach.call(btns.children, function (x) { if ((x.textContent === 'Adevărat') === it.a) x.classList.add('is-right'); });
+          why.hidden = false;
+          why.innerHTML = '';
+          why.appendChild(verdict(ok, 'afirmația este <b>' + (it.a ? 'adevărată' : 'falsă') + '</b>. ' + it.why));
+          score.textContent = 'Scor: ' + got + ' / ' + items.length + (done === items.length ? ' — terminat' : '');
         });
-        row.appendChild(btns); row.appendChild(why);
-        card.appendChild(row);
+        btns.appendChild(btn);
       });
-      card.appendChild(score);
-      sec.appendChild(card);
+      row.appendChild(btns); row.appendChild(why);
+      card.appendChild(row);
     });
+    card.appendChild(score);
+    sec.appendChild(card);
   }
 
   /* ---------- 2. Un singur răspuns ---------- */
-  function buildSingle(root) {
+  function buildSingle(root, list) {
+    if (!list.length) return;
     var sec = section(root, 'single', 'Tip 2', 'Complement simplu (un singur răspuns corect)',
       'Alege varianta corectă. Distractorii sunt greșelile tipice (γ în loc de 1/γ, hν în loc de hν/c etc.).');
     var card = el('div', { class: 'pb-card' });
-    var score = el('p', { class: 'pb-score', text: 'Scor: 0 / ' + P.single.length });
+    var score = el('p', { class: 'pb-score', text: 'Scor: 0 / ' + list.length });
     var got = 0, done = 0;
-    P.single.forEach(function (q, qi) {
+    list.forEach(function (q, qi) {
       var box = el('div', { class: 'pb-stmt' });
       box.appendChild(el('p', { class: 'pb-stmt__t', html: '<span class="pb-n">' + (qi + 1) + '.</span> ' + q.q }));
       var list = el('div', { class: 'pb-optlist' });
@@ -84,7 +83,7 @@
           if (!b._ok) b.classList.add('is-wrong');
           why.hidden = false;
           why.appendChild(verdict(b._ok, q.why));
-          score.textContent = 'Scor: ' + got + ' / ' + P.single.length + (done === P.single.length ? ' — terminat' : '');
+          score.textContent = 'Scor: ' + got + ' / ' + list.length + (done === list.length ? ' — terminat' : '');
         });
         btns.push(b); list.appendChild(b);
       });
@@ -102,10 +101,11 @@
     if (t.length === 1) return String(t[0]);
     return t.slice(0, -1).join(', ') + ' și ' + t[t.length - 1];
   }
-  function buildCombo(root) {
+  function buildCombo(root, list) {
+    if (!list.length) return;
     var sec = section(root, 'combo', 'Tip 3', 'Care dintre afirmații sunt corecte?',
       'Citește toate cele patru afirmații, hotărăște-le pe fiecare, apoi alege combinația.');
-    P.combo.forEach(function (q, qi) {
+    list.forEach(function (q, qi) {
       var card = el('div', { class: 'pb-card' });
       card.appendChild(el('h3', { text: 'Întrebarea ' + (qi + 1) }));
       card.appendChild(el('p', { class: 'pb-stmt__t', text: q.q }));
@@ -138,10 +138,11 @@
   }
 
   /* ---------- 4. Răspunsuri scurte ---------- */
-  function buildShort(root) {
+  function buildShort(root, list) {
+    if (!list.length) return;
     var sec = section(root, 'short', 'Tip 4', 'Răspunsuri scurte, cu justificare',
       'Scrie răspunsul pe o foaie (sau în gând), apoi apasă „Arată modelul”. Bifează în lista de verificare ce ai spus: pe test se punctează pașii.');
-    P.short.forEach(function (it, i) {
+    list.forEach(function (it, i) {
       var card = el('div', { class: 'pb-card' });
       card.appendChild(el('p', { class: 'pb-stmt__t', html: '<span class="pb-n">' + (i + 1) + '.</span> ' + it.q }));
       var ta = el('textarea', { class: 'pb-ta', rows: '3', placeholder: 'Scrie aici răspunsul tău (nu se salvează nicăieri)…' });
@@ -175,10 +176,11 @@
   function parseNum(s) { return parseFloat(String(s).replace(',', '.').replace(/[^0-9eE+\-.]/g, '')); }
   var KINDS = ['tip timp', 'tip spațiu', 'lumină (Δs = 0)'];
 
-  function buildCalc(root) {
+  function buildCalc(root, defs) {
+    if (!defs.length) return;
     var sec = section(root, 'calc', 'Tip 5', 'Probleme de calcul',
       'Ca la test: date simple, formule din foaie. Numerele se schimbă la fiecare variantă — apasă „Altă variantă” până ți se par ușoare. Răspunsurile se acceptă cu o mică toleranță de rotunjire.');
-    P.calc.forEach(function (def) {
+    defs.forEach(function (def) {
       var card = el('div', { class: 'pb-card' });
       card.appendChild(el('h3', { text: def.title }));
       var host = el('div');
@@ -248,12 +250,67 @@
     });
   }
 
-  /* ---------- pagina ---------- */
+  /* ---------- pagina: alegerea capitolului ---------- */
+  function calcById(id) { for (var i = 0; i < P.calc.length; i++) if (P.calc[i].id === id) return P.calc[i]; return null; }
+  function chapterSets(id) {
+    var c = P.ch[id];
+    return {
+      af: c.af.map(function (a) { return { t: a[0], a: a[1], why: a[2] }; }),
+      single: c.single, combo: c.combo, short: c.short,
+      calc: c.calc.map(calcById).filter(Boolean)
+    };
+  }
+  function sample(a, k) { return shuffle(a).slice(0, k); }
+  function mixedSets() {
+    var af = [], single = [], combo = [], short = [], calc = [];
+    Object.keys(P.ch).forEach(function (k) {
+      var s = chapterSets(k);
+      af = af.concat(s.af); single = single.concat(s.single); combo = combo.concat(s.combo); short = short.concat(s.short);
+    });
+    return { af: sample(af, 5), single: sample(single, 4), combo: sample(combo, 2), short: sample(short, 2), calc: sample(P.calc, 2) };
+  }
+
+  var root, chips;
+  function select(sel) {
+    root.innerHTML = '';
+    var sets, head;
+    if (sel === 'mix') {
+      sets = mixedSets();
+      head = el('div', { class: 'pb-head' });
+      head.appendChild(el('h2', { text: 'Test amestecat' }));
+      head.appendChild(el('p', { class: 'pb-lead', text: 'Itemi aleși la întâmplare din toate capitolele, în ordinea tipurilor de la test. Apasă „Alt test” pentru alt set.' }));
+      var nb = el('button', { class: 'btn btn--primary', type: 'button', text: '↻ Alt test' });
+      nb.addEventListener('click', function () { select('mix'); });
+      head.appendChild(nb);
+    } else {
+      var id = Number(sel), ch = RF.chapter(id);
+      sets = chapterSets(id);
+      head = el('div', { class: 'pb-head' });
+      head.appendChild(el('h2', { text: 'Capitolul ' + id + ' · ' + ch.title }));
+      head.appendChild(el('p', { class: 'pb-lead', html: 'Itemi ca la test, doar din acest capitol. <a href="' + RF.chapterUrl(ch) + '">Recitește capitolul →</a>' }));
+    }
+    root.appendChild(head);
+    buildAF(root, sets.af); buildSingle(root, sets.single); buildCombo(root, sets.combo); buildShort(root, sets.short); buildCalc(root, sets.calc);
+    [].forEach.call(chips.children, function (c) { c.classList.toggle('is-active', c.getAttribute('data-sel') === String(sel)); });
+  }
+  function fromHash() {
+    var h = (location.hash || '').replace('#', '');
+    if (h === 'mix') return 'mix';
+    var m = /^cap(\d+)$/.exec(h);
+    return m && P.ch[m[1]] ? m[1] : '1';
+  }
+
   RF.probleme = {
     init: function () {
-      var root = RF.$('#pb-root');
-      if (!root) return;
-      buildAF(root); buildSingle(root); buildCombo(root); buildShort(root); buildCalc(root);
+      root = RF.$('#pb-root'); chips = RF.$('#pb-chaps');
+      if (!root || !chips) return;
+      RF.chapters.forEach(function (c) {
+        var a = el('a', { class: 'chip pb-chip', href: '#cap' + c.id, 'data-sel': String(c.id), title: c.title, html: '<b>' + c.id + '</b><span> ' + c.title + '</span>' });
+        chips.appendChild(a);
+      });
+      chips.appendChild(el('a', { class: 'chip pb-chip pb-chip--mix', href: '#mix', 'data-sel': 'mix', html: '<b>★</b><span> Test amestecat</span>' }));
+      window.addEventListener('hashchange', function () { select(fromHash()); window.scrollTo(0, chips.getBoundingClientRect().top + window.pageYOffset - 70); });
+      select(fromHash());
     }
   };
 })();

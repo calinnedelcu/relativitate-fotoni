@@ -16,14 +16,8 @@
   <header class="page-hero">
     <p class="hero__kicker">Exersează</p>
     <h1>Probleme tip test</h1>
-    <p>Testul de la celelalte clase a avut cinci feluri de itemi. Aici le ai pe toate: răspunzi, vezi pe loc de ce, iar la calcule numerele se schimbă la fiecare variantă.</p>
-    <nav class="pb-toc" aria-label="Tipuri de itemi">
-      <a class="chip" href="#af">1 · Adevărat/Fals</a>
-      <a class="chip" href="#single">2 · Un singur răspuns</a>
-      <a class="chip" href="#combo">3 · Care afirmații</a>
-      <a class="chip" href="#short">4 · Răspunsuri scurte</a>
-      <a class="chip" href="#calc">5 · Calcule</a>
-    </nav>
+    <p>Alege un capitol și vezi itemii ca la test, doar din el: Adevărat/Fals, un singur răspuns, „care afirmații”, răspunsuri scurte și calcule cu numere generate. La final, un test amestecat din toate.</p>
+    <nav class="pb-chaps" id="pb-chaps" aria-label="Capitole"></nav>
   </header>
   <div id="pb-root"></div>
 </div>
@@ -32,6 +26,7 @@
 <script src="assets/js/ui.js"></script>
 <script src="assets/js/sim.js"></script>
 <script src="assets/js/data/probleme.js"></script>
+<script src="assets/js/data/probleme-cap.js"></script>
 <script src="assets/js/probleme.js"></script>
 <script>RF.init(); RF.probleme.init();</script>
 </body>
