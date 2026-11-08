@@ -241,68 +241,6 @@
 </section>
 
 <!-- ============================================================ -->
-<section class="sec" id="phet">
-  <h2>Experimentul real, într-un simulator în care încerci orice</h2>
-  <p>În laboratorul de mai sus ai văzut cum arată efectul. Aici ai un alt simulator, în care poți schimba metalul, culoarea, intensitatea și tensiunea și vezi pe loc ce face fiecare. <strong>Simulatorul nu vine cu explicații</strong>, de aceea sub el ai un ghid: o serie de încercări, fiecare cu ce trebuie să faci, ce vezi și ce lege ți se confirmă.</p>
-
-  <div class="predict" data-correct="b">
-    <p class="predict__q">Înainte să-l pornești: cu un cătod de sodiu, lumină <strong>roșie</strong> (700 nm) la intensitate maximă. Ce crezi că vei vedea?</p>
-    <ul class="predict__opts">
-      <li data-k="a">Mulți electroni, fiindcă lumina e foarte intensă.</li>
-      <li data-k="b">Niciun electron: fotonii roșii au prea puțină energie, oricâți ar fi.</li>
-      <li data-k="c">Câțiva electroni lenți, după o mică întârziere.</li>
-      <li data-k="d">Electroni doar dacă măriți tensiunea bateriei.</li>
-    </ul>
-    <div class="predict__reveal">
-      <p><strong>Niciun electron.</strong> Fiecare foton roșu are energia hν ≈ 1,8 eV, mai mică decât lucrul mecanic de extracție al sodiului (≈ 2,3 eV), iar energiile mai multor fotoni nu se adună. Verifică la încercarea 2.</p>
-    </div>
-  </div>
-
-  <div class="c11-phet wide" id="phet-box">
-    <div class="c11-phet__start" id="phet-start">
-      <p><strong>Simulator PhET · efectul fotoelectric</strong></p>
-      <p>Pornește la cerere, fiindcă rulează un program Java în browser și se încarcă în <b>30–60 de secunde</b> (după prima dată e mai rapid).</p>
-      <button class="btn btn--primary" id="phet-go" type="button">▶ Pornește simulatorul</button>
-    </div>
-    <iframe id="phet-frame" data-src="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric" title="Simulator: efectul fotoelectric (PhET)" hidden allowfullscreen></iframe>
-  </div>
-  <p class="c11-phet__note" id="phet-msg" hidden><strong>Se încarcă simulatorul…</strong> Dacă vezi doar alb sau „Loading”, mai așteaptă: poate dura până la un minut.</p>
-  <p class="c11-phet__note">Are nevoie de internet. Pe telefon e mai comod pe tot ecranul: <a class="btn" href="https://phet.colorado.edu/sims/cheerpj/photoelectric/latest/photoelectric.html?simulation=photoelectric" target="_blank" rel="noopener">Deschide simulatorul într-o filă nouă →</a></p>
-
-  <h3>Cum citești ecranul</h3>
-  <ul>
-    <li><strong>Tubul din mijloc:</strong> în stânga e <strong>catodul</strong> (metalul pe care cade lumina; îl alegi din „Target”), în dreapta <strong>anodul</strong>. Electronii smulși din catod sunt „fotoelectronii”.</li>
-    <li><strong>Sursa de lumină, sus:</strong> glisorul <strong>Intensity</strong> (câți fotoni pe secundă) și bara de culoare (lungimea de undă în nm, de la UV la IR). Conversie: energia unui foton, în eV, este E ≈ 1240/λ[nm].</li>
-    <li><strong>Bateria, jos:</strong> tensiunea dintre anod și catod. Pozitivă = ajută electronii să ajungă la anod; <strong>negativă</strong> = îi frânează (tensiune inversă).</li>
-    <li><strong>„Current”:</strong> fotocurentul. Mai mulți electroni care ajung la anod = curent mai mare.</li>
-    <li><strong>Din dreapta:</strong> „Show only highest energy electrons” (arată doar cei mai rapizi) și trei grafice: curent–tensiune, curent–intensitate, energia electronilor–frecvență.</li>
-  </ul>
-  <div class="callout note">
-    <span class="callout__title">Ține minte</span>
-    <p>Valorile din simulator pot diferi puțin de tabelul din capitol (de exemplu lucrul mecanic al sodiului). Nu contează cifrele exacte, ci <strong>ce se schimbă și ce rămâne la fel</strong>.</p>
-  </div>
-
-  <h3>Încercările, una câte una</h3>
-  <ol class="c11-try">
-    <li><strong>Găsește pragul.</strong> <em>Cum:</em> Target = Sodium, Intensity = 100%, culoarea pe 400 nm (violet). Curentul e mare: electronii zboară. Mută încet culoarea spre roșu. <em>Ce vezi:</em> pe la <b>≈ 540 nm</b> (verde-galben) electronii dispar și curentul devine 0. <em>Ce înseamnă:</em> aceasta e <b>lungimea de undă de prag</b>; din ea afli L<sub>ex</sub> = hc/λ<sub>prag</sub> ≈ 1240/540 ≈ <b>2,3 eV</b>. Legea 1: sub prag nu apare efect.</li>
-    <li><strong>Intensitatea nu ajută sub prag.</strong> <em>Cum:</em> culoarea pe 650–700 nm (roșu), intensitatea de la 0 la 100%. <em>Ce vezi:</em> niciun electron, curent 0, oricât de mare e intensitatea. <em>Ce înseamnă:</em> mai multă lumină = mai mulți fotoni, dar fiecare are prea puțină energie, iar energiile nu se adună. Legea 1, de la altă direcție.</li>
-    <li><strong>Mai multă intensitate, peste prag.</strong> <em>Cum:</em> 400 nm, intensitatea 25% → 50% → 100%. Bifează „Show only highest energy electrons”, apoi deschide graficul <em>Current vs light intensity</em>. <em>Ce vezi:</em> curentul crește proporțional cu intensitatea (grafic = dreaptă prin origine), dar electronii rapizi pleacă tot cu aceeași viteză. <em>Ce înseamnă:</em> mai mulți fotoni ⇒ mai mulți electroni, nu mai energici. Legea 2.</li>
-    <li><strong>Culoarea schimbă energia.</strong> <em>Cum:</em> intensitatea pe 50%, mută culoarea de la 500 nm spre 400 nm și mai departe în UV; deschide graficul <em>Electron energy vs light frequency</em>. <em>Ce vezi:</em> electronii pleacă tot mai repede; graficul e o <b>dreaptă</b> care începe de la frecvența de prag. <em>Ce înseamnă:</em> E<sub>c</sub> = hν − L<sub>ex</sub>: depinde doar de frecvență. Panta dreptei este <b>h</b>. Legea 3.</li>
-    <li><strong>Tensiunea de stopare.</strong> <em>Cum:</em> 400 nm, intensitatea 100%. Mută bateria spre tensiuni <b>negative</b>, până când curentul se anulează; deschide graficul <em>Current vs battery voltage</em>. <em>Ce vezi:</em> curentul scade treptat și devine 0 la ≈ −0,8 V; acesta e U<sub>s</sub> (aprox. 3,1 eV − 2,3 eV = 0,8 eV). Acum schimbă intensitatea: U<sub>s</sub> <b>rămâne la fel</b>. Treci pe 300 nm (UV): U<sub>s</sub> <b>crește</b> (≈ 1,8 V). <em>Ce înseamnă:</em> |e|U<sub>s</sub> = E<sub>c,max</sub> = hν − L<sub>ex</sub>: depinde de culoare, nu de intensitate. Legea 4.</li>
-    <li><strong>Alt metal, alt prag.</strong> <em>Cum:</em> schimbă „Target” pe Zinc, apoi pe Copper. Încearcă 400 nm la 100% intensitate. <em>Ce vezi:</em> nu apare niciun electron; efectul începe abia în UV (zinc ≈ 290 nm, cupru ≈ 265 nm). <em>Ce înseamnă:</em> L<sub>ex</sub> e o constantă de material (zinc ≈ 4,3 eV, cupru ≈ 4,7 eV), deci și frecvența de prag depinde de catod.</li>
-    <li><strong>Provocare: află-l pe h.</strong> <em>Cum:</em> la sodiu, citește energia electronilor din graficul <em>Electron energy vs light frequency</em> pentru două frecvențe. <em>Ce faci:</em> panta = (E<sub>c2</sub> − E<sub>c1</sub>)/(ν<sub>2</sub> − ν<sub>1</sub>) ≈ <b>h</b> ≈ 4,14·10<sup>−15</sup> eV·s. Aceeași pantă iese și la zinc, și la cupru, doar dreapta e deplasată.</li>
-  </ol>
-
-  <h3>Ce să ai în minte după</h3>
-  <ul>
-    <li><strong>Culoarea</strong> (frecvența) decide <em>energia</em> unui electron și dacă efectul apare deloc.</li>
-    <li><strong>Intensitatea</strong> decide <em>câți</em> electroni apar, nu cât de energici sunt.</li>
-    <li><strong>Metalul</strong> decide pragul.</li>
-    <li><strong>Tensiunea inversă</strong> măsoară energia electronilor cei mai rapizi.</li>
-  </ul>
-</section>
-
-<!-- ============================================================ -->
 <section class="sec" id="dreapta">
   <h2>Dreapta care îl arată pe h</h2>
   <p>De unde știm că energia unui foton este tocmai <var>h</var>ν? Din măsurători. Pentru un metal crești frecvența pas cu pas și notezi energia cinetică maximă a electronilor (o afli din tensiunea de stopare). Punctele cad pe o <strong>dreaptă</strong>: <var>E</var><sub>c</sub> = <em>a</em>·ν + <em>b</em>.</p>
@@ -451,21 +389,5 @@
 <script src="../assets/js/sims/cap11-poveste.js"></script>
 <script src="../assets/js/sims/cap11-extra.js"></script>
 <script>RF.init();</script>
-<script>
-(function(){
-  var box=document.getElementById('phet-box'), fr=document.getElementById('phet-frame');
-  if(!box||!fr) return;
-  var W=1024,H=680;
-  function fit(){ var w=box.clientWidth, k=Math.min(1,w/W); fr.style.transform='scale('+k+')'; box.style.height=Math.round(H*k)+'px'; }
-  var go=document.getElementById('phet-go'), st=document.getElementById('phet-start');
-  go.addEventListener('click',function(){
-    st.style.display='none';
-    document.getElementById('phet-msg').hidden=false;
-    setTimeout(function(){ document.getElementById('phet-msg').hidden=true; },90000);
-    fr.hidden=false; fr.src=fr.getAttribute('data-src');
-  });
-  fit(); window.addEventListener('resize',fit);
-})();
-</script>
 </body>
 </html>

@@ -48,15 +48,3 @@ body[data-chapter="11"] .c11-missions li::before {
 body[data-chapter="11"] .c11-tbl td:first-child { font-weight: 600; white-space: nowrap; }
 body[data-chapter="11"] .c11-yes { color: var(--good); font-weight: 700; }
 body[data-chapter="11"] .c11-no { color: var(--bad); font-weight: 700; }
-
-/* simulatorul PhET încorporat */
-body[data-chapter="11"] .c11-phet { position: relative; width: 100%; max-width: 1024px; margin: 1.4rem auto .6rem; background: var(--card-solid); min-height: 200px; border: 1px solid var(--line2); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-body[data-chapter="11"] .c11-phet iframe { position: absolute; left: 0; top: 0; width: 1024px; height: 680px; border: 0; transform-origin: 0 0; }
-body[data-chapter="11"] .c11-phet__note { text-align: center; color: var(--tx2); font-size: .9rem; }
-body[data-chapter="11"] .c11-try { display: grid; gap: .8rem; padding-left: 1.4rem; margin: 1rem 0 1.4rem; }
-body[data-chapter="11"] .c11-try li { padding: .2rem 0; }
-@media print { body[data-chapter="11"] .c11-phet, body[data-chapter="11"] .c11-phet__note { display: none; } }
-body[data-chapter="11"] .c11-phet__start { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; gap: .3rem; padding: 1rem; z-index: 0; }
-body[data-chapter="11"] .c11-phet__start p { margin: 0 0 .5rem; max-width: 46ch; }
-body[data-chapter="11"] .c11-phet iframe { background: #fff; z-index: 1; }
-@media (min-width: 1181px) { body[data-chapter="11"] .c11-phet.wide { margin-left: -90px; margin-right: -90px; width: calc(100% + 180px); max-width: none; } }
